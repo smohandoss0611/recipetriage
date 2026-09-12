@@ -1,5 +1,11 @@
 # Single-server deployment — 2026-09-12
 
+## 2026-09-12 — Streamlit user guide
+
+Added `USER_GUIDE.md`, a 16-page printable PDF under `docs/user-guide/`, and a companion starter JSON file. The guide follows the current Streamlit labels and controls across all seven workspaces, including temporary drafts versus saved versions, explicit human review/preferences, shared-worker conflicts, training progress and gated promotion. README links to all three files. It describes current behavior rather than claiming new training or model improvement.
+
+Verified all 24 guide Markdown references resolve locally. The seven sample records are byte-for-byte copies of the existing seed file; schema validation and an in-memory dataset build passed with 5/1/1 splits and `teaching-draft` status. No approval flags or source provenance were changed. Rendered and visually reviewed all 16 PDF pages, checked text bounds and verified 14 outline entries and 14 distinct contents destinations. The contents links have separate clickable titles and page numbers; an initial assertion expecting one annotation per entry was corrected to count destinations. No application services, database records, jobs or credentials were changed for this documentation task.
+
 ## 2026-09-12 — Review errors and active training progress
 
 Synthetic Review now displays individual quality errors and category guidance, offers only Edit/Reject when automated checks fail, tolerates failed generations without a draft, and reloads the saved revision after a human decision. An edit remains pending and never implies approval. Saved training runs fetch their full detail instead of displaying list summaries, exposing the phase, benchmark case counts and loss history. Rejected SFT and generic job submissions retain the saved-results section. Standalone benchmark manifests are not mistaken for after-training progress.
