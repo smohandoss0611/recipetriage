@@ -2,6 +2,7 @@
 import asyncio
 import atexit
 import logging
+import traceback
 
 import httpx
 import streamlit as st
@@ -30,8 +31,13 @@ class EmbeddedAPI(API):
             response = asyncio.run(dispatch())
         except Exception as exc:
             # Do not expose DB connection strings, SQL payloads or user data.
-            logger.error('Embedded operation failed: %s %s (%s)', method, path, type(exc).__name__)
-            raise APIError('The operation failed. Check the database connection and Streamlit logs. Refresh saved records before resubmitting; a write may already have completed.') from None
+            # Stack locations aid debugging without logging exception values,
+            # which may include connection strings or submitted records.
+            logger.error('Embedded operation failed: %s %s (%s)\n%s', method, path, type(exc).__name__, ''.join(traceback.format_tb(exc.__traceback__)))
+            from sqlalchemy.exc import SQLAlchemyError
+            reason = 'The database operation failed.' if isinstance(exc, SQLAlchemyError) else 'The application operation failed (' + type(exc).__name__ + ').'
+            retry = 'Refresh saved records before resubmitting; a write may already have completed.' if method != 'GET' else 'You can retry loading this page.'
+            raise APIError(reason + ' Check Streamlit logs. ' + retry) from None
         return self.read_response(response, binary=binary)
 
 

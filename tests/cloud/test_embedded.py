@@ -4,6 +4,7 @@ import os
 import subprocess
 import sys
 from uuid import uuid4
+from pathlib import Path
 from zipfile import ZipFile
 
 import pytest
@@ -91,6 +92,19 @@ for path in ['/api/v1/experiments/options', '/api/v1/training/options', '/api/v1
 assert not {'torch', 'trl', 'peft', 'bitsandbytes'}.intersection(sys.modules)
 '''
     subprocess.run([sys.executable, '-c', code], check=True, capture_output=True, text=True)
+
+
+def test_alignment_and_deployment_work_when_cloud_denies_docker_paths(api, monkeypatch):
+    original = Path.is_dir
+    def is_dir(path):
+        if str(path) == '/app/ml':
+            raise PermissionError('Container-owned directory')
+        return original(path)
+    monkeypatch.setattr(Path, 'is_dir', is_dir)
+    assert api.get('/api/v1/alignment/options')['dpo_minimum_independent_choices'] == 3
+    result = api.get('/api/v1/deployment/results')
+    assert len(result['candidates']) >= 3
+    assert result['selection']['production_changed'] is False
 
 
 def test_database_url_requires_postgresql_and_remote_ssl(monkeypatch):

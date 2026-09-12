@@ -18,7 +18,16 @@ REFERENCE_RUN='041818c9-7e00-4802-b53d-f7d567616e2b'
 
 
 def ml_directory():
-    return Path('/app/ml') if Path('/app/ml').is_dir() else Path(__file__).resolve().parents[1]
+    # Docker keeps full experiment artifacts beside the installed package.
+    # Community Cloud may deny traversal of /app altogether; its editable
+    # package already points at the repository, so use that portable fallback.
+    docker_root = Path('/app/ml')
+    try:
+        if docker_root.is_dir():
+            return docker_root
+    except PermissionError:
+        pass
+    return Path(__file__).resolve().parents[1]
 
 
 def reference_directory():
