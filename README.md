@@ -14,6 +14,8 @@ Earlier lessons remain available: [BENCHMARK.md](BENCHMARK.md) covers metrics an
 
 ## Streamlit navigation
 
+For **$0 Streamlit hosting with application logic in the same process**, use [STREAMLIT_FREE.md](STREAMLIT_FREE.md) and entrypoint `cloud/streamlit_app.py`. It needs a hosted PostgreSQL free tier, but no separate API host. Data curation and saved evidence work there; training, paid providers and model serving remain in the local deployment.
+
 The Streamlit app opens directly with tabs for all seven workspaces and their pages. There is no app sign-in screen or checkbox control. Chat Template Preview always requests the formatted model template and shows System, User and Assistant messages directly. Other binary settings use named choices, such as Plain text / Chat template and Save only / Save and run triage. Navigation does not submit reviews or start jobs.
 
 The single-server local-check address is https://localhost:8543/ while running. Anyone who can reach this interface has access to its shared features; local-check mode remains bound to `127.0.0.1`. Backend API authentication remains required in server deployments. Existing private configuration files are preserved and old workspace-password settings are ignored.

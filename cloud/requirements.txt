@@ -1,0 +1,2 @@
+# Run pip from the repository root, as Community Cloud does.
+-r ../requirements.txt

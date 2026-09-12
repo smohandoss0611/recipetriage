@@ -4,6 +4,7 @@
 .env.*
 .streamlit/secrets.toml
 .venv-streamlit/
+.venv-cloud/
 cloud-transfer/
 **/.venv
 **/node_modules

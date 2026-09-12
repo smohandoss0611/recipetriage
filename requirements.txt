@@ -1,3 +1,10 @@
-# Streamlit interface only. Backend and ML dependencies stay in their Docker image.
-streamlit==1.63.0
-httpx==0.28.1
+# Both root and cloud Streamlit entrypoints can use embedded application services.
+# Install from the repository root. Training dependencies are deliberately absent.
+-r streamlit_ui/requirements.txt
+-r backend/requirements.lock
+-e ./ml
+-e ./backend
+transformers==4.57.6
+tokenizers==0.22.2
+huggingface-hub==0.36.2
+jinja2==3.1.6

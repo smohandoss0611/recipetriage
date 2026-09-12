@@ -11,6 +11,7 @@ class APIError(RuntimeError):
 
 @dataclass
 class API:
+    embedded = False
     url: str
     token: str = field(default='', repr=False)
     transport: object = field(default=None, repr=False)
@@ -31,8 +32,7 @@ class API:
         self.url = self.url.rstrip('/')
 
     def request(self, method, path, body=None, *, binary=False):
-        if not path.startswith('/') or path.startswith('//') or '..' in path or '#' in path or '?' in path:
-            raise ValueError('API paths must be fixed relative paths.')
+        self.validate_path(path)
         headers = {'Authorization': 'Bearer ' + self.token} if self.token else {}
         try:
             # Mutations are never retried: a timeout can happen after a job was queued.
@@ -41,8 +41,16 @@ class API:
                 response = client.request(method, self.url + path, json=body, headers=headers)
         except httpx.RequestError as exc:
             raise APIError('The backend could not be reached or the request timed out. Refresh saved records before resubmitting a job.') from exc
+        return self.read_response(response, binary=binary)
+
+    @staticmethod
+    def validate_path(path):
+        if not path.startswith('/') or path.startswith('//') or '..' in path or '#' in path or '?' in path:
+            raise ValueError('API paths must be fixed relative paths.')
+
+    def read_response(self, response, *, binary=False):
         if response.status_code >= 300:
-            if response.status_code in {401, 403}:
+            if response.status_code in {401, 403} and not self.embedded:
                 raise APIError('Backend access denied. Check the private API token in deployment secrets.')
             try:
                 detail = response.json().get('detail', 'Request failed')

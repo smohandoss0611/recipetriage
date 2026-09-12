@@ -3,6 +3,7 @@
 .env.*
 !.env.example
 .venv-streamlit/
+.venv-cloud/
 .streamlit/secrets.toml
 cloud-transfer/
 .venv/

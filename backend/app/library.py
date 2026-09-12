@@ -44,6 +44,11 @@ def intake(body: IntakeRequest, session: Session = Depends(get_session)):
             recipe, provenance = normalize(source_text)
     except (ValueError, ProviderError) as exc:
         raise HTTPException(422 if isinstance(exc, ValueError) else 503, str(exc)) from exc
+    return store_intake(recipe, source, source_text, provenance, session)
+
+
+def store_intake(recipe, source, source_text, provenance, session):
+    """Persist a validated draft without generation or implied human approval."""
     draft = {'draft_id': str(uuid4()), 'created_at': now(), 'recipe': recipe.model_dump(),
              'source': source, 'source_text': source_text, 'normalization': provenance, 'reviewed': False}
     session.execute(text('INSERT INTO recipe_intakes(draft_id,payload) VALUES (:id,CAST(:p AS jsonb))'), {'id': draft['draft_id'], 'p': json.dumps(draft)})

@@ -3,6 +3,29 @@ on: [push, pull_request]
 permissions:
   contents: read
 jobs:
+  streamlit-cloud:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_PASSWORD: local-cloud-test-only
+          POSTGRES_DB: recipetriage_cloud_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d recipetriage_cloud_test"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r cloud/requirements.txt pytest
+      - run: python -m pip check
+      - run: python -m pytest -q tests/cloud
+        env:
+          CLOUD_TEST_DATABASE_URL: postgresql://postgres:local-cloud-test-only@127.0.0.1:5432/recipetriage_cloud_test
   streamlit:
     runs-on: ubuntu-latest
     steps:

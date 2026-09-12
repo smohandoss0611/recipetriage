@@ -78,7 +78,7 @@ def json_action(api, title, path, initial, key, *, method='POST', help_text=None
         if help_text:
             st.caption(help_text)
         body = st.text_area('Configuration JSON', pretty(initial), height=240, key=key + '_json')
-        submitted = st.form_submit_button(title)
+        submitted = st.form_submit_button(title, disabled=api.embedded and path != '/api/v1/deployment/select')
     if submitted:
         try:
             remember(key, api.request(method, path, read_json(body)))
@@ -90,7 +90,7 @@ def json_action(api, title, path, initial, key, *, method='POST', help_text=None
 
 def saved_runs(api, path, key):
     st.subheader('Saved runs')
-    refresh = st.radio('Refresh saved runs', ['Manual', 'Every 5 seconds'], horizontal=True, key=key + '_refresh_mode')
+    refresh = st.radio('Refresh saved runs', ['Manual'] if api.embedded else ['Manual', 'Every 5 seconds'], horizontal=True, key=key + '_refresh_mode')
 
     @st.fragment(run_every=5 if refresh == 'Every 5 seconds' else None)
     def render():
@@ -160,28 +160,36 @@ def model_choices(api):
 def recipes(api, view):
     models = model_choices(api)
     if view == 'Add recipe':
-        with st.form('intake'):
-            kind = st.selectbox('Source', ['text', 'message', 'url', 'screenshot'])
-            content = st.text_area('Recipe text, message or public URL', max_chars=24000)
-            upload = st.file_uploader('Screenshot (PNG, JPEG or WebP; at most 4 MB)', type=['png', 'jpg', 'jpeg', 'webp'])
-            submit = st.form_submit_button('Create recipe draft')
-        if submit:
-            if kind == 'screenshot':
-                if upload is None or upload.size > 4 * 1024 * 1024:
-                    raise ValueError('Choose a screenshot no larger than 4 MB.')
-                content = base64.b64encode(upload.getvalue()).decode()
-            draft = api.post('/api/v1/recipes/intake', {'kind': kind, 'content': content})
-            st.session_state['_recipe_draft'] = draft
+        if api.embedded:
+            st.info('Enter the recipe fields directly. This free profile validates your input without calling a paid extraction model.')
+            with st.form('manual_intake'):
+                recipe = recipe_inputs({}, 'manual_intake')
+                submit = st.form_submit_button('Create recipe draft')
+            if submit:
+                st.session_state['_recipe_draft'] = api.post('/api/v1/recipes/intake', {'kind': 'text', 'content': pretty(recipe)})
+        else:
+            with st.form('intake'):
+                kind = st.selectbox('Source', ['text', 'message', 'url', 'screenshot'])
+                content = st.text_area('Recipe text, message or public URL', max_chars=24000)
+                upload = st.file_uploader('Screenshot (PNG, JPEG or WebP; at most 4 MB)', type=['png', 'jpg', 'jpeg', 'webp'])
+                submit = st.form_submit_button('Create recipe draft')
+            if submit:
+                if kind == 'screenshot':
+                    if upload is None or upload.size > 4 * 1024 * 1024:
+                        raise ValueError('Choose a screenshot no larger than 4 MB.')
+                    content = base64.b64encode(upload.getvalue()).decode()
+                draft = api.post('/api/v1/recipes/intake', {'kind': kind, 'content': content})
+                st.session_state['_recipe_draft'] = draft
         draft = st.session_state.get('_recipe_draft')
         if draft:
             st.subheader('Check the normalized recipe')
             with st.form('save_' + draft['draft_id']):
                 recipe = recipe_inputs(draft['recipe'], draft['draft_id'])
-                save_mode = st.radio('After saving', ['Save only', 'Save and run triage'], horizontal=True)
-                model = st.selectbox('Triage model', list(models), format_func=models.get)
+                save_mode = st.radio('After saving', ['Save only'] if api.embedded else ['Save only', 'Save and run triage'], horizontal=True)
+                model = st.selectbox('Triage model', list(models), format_func=models.get, disabled=api.embedded)
                 save = st.form_submit_button('Save recipe')
             if save:
-                remember('saved_recipe', api.post('/api/v1/recipes', {'draft_id': draft['draft_id'], 'recipe': recipe, 'auto_triage': save_mode == 'Save and run triage', 'model_key': model}))
+                remember('saved_recipe', api.post('/api/v1/recipes', {'draft_id': draft['draft_id'], 'recipe': recipe, 'auto_triage': save_mode == 'Save and run triage', 'model_key': model or 'fireworks'}))
                 del st.session_state['_recipe_draft']
             result('saved_recipe')
         return
@@ -207,7 +215,7 @@ def recipes(api, view):
     with st.expander('Run triage'):
         with st.form('triage_' + key):
             model = st.selectbox('Model', list(models), format_func=models.get, key=key + '_model')
-            submit = st.form_submit_button('Run triage for this revision')
+            submit = st.form_submit_button('Run triage for this revision', disabled=api.embedded)
         if submit:
             remember('library_triage', api.post(f'/api/v1/recipes/{encoded(identity)}/triage', {'revision': revision, 'model_key': model}))
         result('library_triage')
@@ -313,19 +321,29 @@ def dataset_lab(api, view):
         name = st.selectbox('Export file', list(snapshot['files']))
         st.code(snapshot['files'][name], language='json')
         st.download_button('Download selected file', snapshot['files'][name], file_name=name)
+        import io
+        from zipfile import ZipFile, ZIP_DEFLATED
+        archive = io.BytesIO()
+        with ZipFile(archive, 'w', ZIP_DEFLATED) as output:
+            for filename, content in snapshot['files'].items():
+                output.writestr(filename, content)
+            output.writestr('metadata.json', pretty(snapshot['metadata']))
+        st.download_button('Download complete dataset ZIP', archive.getvalue(), file_name='recipetriage-' + snapshot['metadata']['version'] + '.zip', mime='application/zip')
     elif view == 'JSONL Preview':
         st.info('Preview a split in Dataset Studio or load a saved version first.')
 
 
 def synthetic_review(api):
     st.caption('Edits remain pending. Approval requires your explicit decision on the displayed revision.')
+    if api.embedded:
+        st.info('Review existing candidates or queue the original seed recipes. Fireworks generation is disabled in this free profile.')
     notice = st.session_state.pop('_candidate_review_notice', None)
     if notice:
         st.success(notice)
     with st.expander('Generate or prepare review candidates'):
         with st.form('synthetic_generate'):
             count = st.number_input('Number of Fireworks proposals', 1, 6, 6)
-            submit = st.form_submit_button('Generate proposals with Fireworks')
+            submit = st.form_submit_button('Generate proposals with Fireworks', disabled=api.embedded)
         if submit:
             remember('synthetic_generation', api.post('/api/v1/curation/generate', {'count': count}))
         if st.button('Queue original seed recipes for review'):
@@ -389,14 +407,27 @@ def synthetic_review(api):
 def training_lab(api, view):
     options = api.get('/api/v1/training/options')
     default = options['defaults']
-    st.caption('Jobs run on the backend. Opening this page starts no training. Benchmark evidence is saved after training.')
+    if api.embedded:
+        st.info('Training runs in your local deployment. Here you can inspect saved evidence and prepare a local training configuration.')
+        with st.expander('Export a configuration for local training'):
+            versions = api.get('/api/v1/datasets/versions')
+            if versions:
+                version = st.selectbox('Dataset version for local training', [row['version'] for row in versions])
+                method = st.selectbox('Local training method', ['sft', 'lora', 'qlora'])
+                config = {**default, 'dataset_version': version, 'provider': 'local', 'method': method}
+                st.download_button('Download local training config', pretty(config), file_name='training-config.json', mime='application/json')
+                st.caption('Download the matching complete dataset ZIP in Data Lab. Run the training command from STREAMLIT_FREE.md on your Mac.')
+            else:
+                st.info('Save a dataset version in Data Lab first.')
+    else:
+        st.caption('Jobs run on the backend. Opening this page starts no training. Benchmark evidence is saved after training.')
     if view == 'SFT Monitor':
         with st.form('sft'):
             provider = st.selectbox('Training provider', ['local', 'fireworks'])
             raw = st.text_area('Training parameters JSON', pretty(default), height=300)
             action = st.selectbox('Action', ['Check configuration', 'Start training'])
             st.caption('Check configuration validates settings for the selected provider. Start training submits a separate job.')
-            submit = st.form_submit_button('Submit training action')
+            submit = st.form_submit_button('Submit training action', disabled=api.embedded)
         if submit:
             config = {**read_json(raw), 'provider': provider}
             if action == 'Check configuration':
@@ -431,7 +462,7 @@ def training_lab(api, view):
         with st.expander('Resume a saved training run'):
             with st.form('resume'):
                 identifier = st.text_input('Training run ID')
-                resume = st.form_submit_button('Resume run')
+                resume = st.form_submit_button('Resume run', disabled=api.embedded)
             if resume:
                 remember('resume', api.post('/api/v1/training/runs/' + encoded(identifier) + '/resume'))
             result('resume')
@@ -456,8 +487,10 @@ def training_lab(api, view):
 
 def alignment_lab(api, view):
     options = api.get('/api/v1/alignment/options')
+    if api.embedded:
+        st.info('Explicit choices for existing pairs are saved here. Candidate generation and alignment training run in the local deployment.')
     if view == 'Preference Pairs':
-        if st.button('Generate candidate pairs'):
+        if st.button('Generate candidate pairs', disabled=api.embedded):
             remember('pair_generation', api.post('/api/v1/alignment/pairs/generate'))
         result('pair_generation')
         st.button('Refresh pairs')
@@ -495,7 +528,7 @@ def alignment_lab(api, view):
         else:
             with st.form('retrain'):
                 version = st.selectbox('Approved dataset version', [x['version'] for x in versions])
-                submit = st.form_submit_button('Retrain QLoRA and evaluate shortcut accuracy')
+                submit = st.form_submit_button('Retrain QLoRA and evaluate shortcut accuracy', disabled=api.embedded)
             if submit:
                 remember('retrain', api.post('/api/v1/alignment/retrain-approved', {'dataset_version': version}))
             result('retrain')
@@ -511,6 +544,8 @@ def alignment_lab(api, view):
 
 
 def evaluation_lab(api, view):
+    if api.embedded:
+        st.info('Inspect saved benchmark results and analyze their failures here. New model benchmarks and shortcut runs require the local deployment.')
     if view == 'Baseline':
         with st.expander('Fixed benchmark and provider availability'):
             st.json(api.get('/api/v1/benchmarks/manifest'))
@@ -518,7 +553,7 @@ def evaluation_lab(api, view):
         with st.form('benchmark'):
             provider = st.selectbox('Provider', ['hf-base', 'fireworks'])
             tokens = st.number_input('Maximum new tokens', 1, 256, 128)
-            submit = st.form_submit_button('Run fixed benchmark')
+            submit = st.form_submit_button('Run fixed benchmark', disabled=api.embedded)
         if submit:
             remember('benchmark', api.post('/api/v1/benchmarks/runs', dict(provider=provider, temperature=0, max_new_tokens=tokens, reasoning='disabled')))
         result('benchmark')
@@ -548,7 +583,7 @@ def evaluation_lab(api, view):
     else:
         st.write('Title adjectives change; time, ingredients, equipment and instructions remain fixed.')
         st.caption('Inspect prediction-flip rate, misleading-title accuracy, pair coverage and red-team results together.')
-        if st.button('Run shortcut and red-team diagnostics'):
+        if st.button('Run shortcut and red-team diagnostics', disabled=api.embedded):
             remember('diagnostics', api.post('/api/v1/analysis/diagnostics'))
         result('diagnostics')
         saved_runs(api, '/api/v1/analysis/diagnostics', 'diagnostic_runs')
@@ -568,6 +603,8 @@ def playground(api, view):
             st.dataframe([{'Token': token, 'Token ID': identifier} for token, identifier in zip(value['tokens'], value['token_ids'])], hide_index=True)
             st.code(value['rendered_text'])
         return
+    if api.embedded:
+        st.info('Model generation is disabled in this free profile. Token Inspector uses only the tokenizer; saved comparisons remain available.')
     seed = api.get('/api/v1/datasets/seed')['examples']
     selected = st.selectbox('Start from a seed recipe', range(len(seed)), format_func=lambda i: seed[i]['recipe']['title'])
     models = model_choices(api)
@@ -579,7 +616,7 @@ def playground(api, view):
             selected_models = st.multiselect('Models to compare', list(models), default=list(models)[:2], format_func=models.get)
         temperature = st.slider('Temperature', 0.0, 2.0, 0.0, 0.1)
         tokens = st.number_input('Maximum new tokens', 1, 256, 128)
-        submit = st.form_submit_button('Run inference' if view == 'Triage' else 'Start model comparison')
+        submit = st.form_submit_button('Run inference' if view == 'Triage' else 'Start model comparison', disabled=api.embedded)
     if submit:
         body = dict(recipe=recipe, temperature=temperature, max_new_tokens=tokens)
         if view == 'Triage':
@@ -592,6 +629,8 @@ def playground(api, view):
 
 
 def deployment(api, view):
+    if api.embedded:
+        st.info('Compare saved measurements here. Promotion and rollback require the local deployment where model artifacts are stored and verified.')
     if view == 'Measured Candidates':
         data = api.get('/api/v1/deployment/results')
         st.dataframe(data['candidates'], hide_index=True)
@@ -609,7 +648,7 @@ def deployment(api, view):
                 action = st.selectbox('Registry action', ['staging', 'production', 'archived', 'rollback'], index=None)
                 actor = st.text_input('Your name')
                 reason = st.text_area('Reason for this change')
-                submit = st.form_submit_button('Apply stage change subject to quality gates')
+                submit = st.form_submit_button('Apply stage change subject to quality gates', disabled=api.embedded)
             if submit:
                 if action is None:
                     raise ValueError('Choose a stage change explicitly.')
@@ -622,15 +661,20 @@ def deployment(api, view):
             st.json(api.get('/api/v1/models/history'))
 
 
-def main():
+def main(default_mode=None):
     st.set_page_config(page_title='RecipeTriage AI', page_icon='🍲', layout='wide')
-    backend, links = configuration()
+    backend, links = configuration(default_mode=default_mode)
     st.title('RecipeTriage AI')
-    if not backend.get('url'):
+    if not backend.get('url') and backend.get('transport') != 'embedded':
         st.info('Configure backend.url and backend.token in Streamlit secrets. See STREAMLIT_DEPLOYMENT.md.')
         st.stop()
     try:
-        api = API(backend['url'], backend.get('token', ''), docker_network=backend.get('transport') == 'docker')
+        if backend.get('transport') == 'embedded':
+            from .embedded import embedded_api
+            api = embedded_api(backend.get('database_url', ''))
+            st.caption('Streamlit runs the application logic directly · PostgreSQL stores saved records · No paid provider calls')
+        else:
+            api = API(backend['url'], backend.get('token', ''), docker_network=backend.get('transport') == 'docker')
         with st.container(horizontal=True):
             if st.button('Check backend connection'):
                 st.success('Connected: ' + str(api.get('/health')['status']))

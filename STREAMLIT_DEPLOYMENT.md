@@ -1,5 +1,7 @@
 # RecipeTriage on Streamlit Community Cloud
 
+**Current $0 option:** [STREAMLIT_FREE.md](STREAMLIT_FREE.md) uses `cloud/streamlit_app.py` to run the UI and application services together, with externally hosted PostgreSQL. It avoids a separate API host and blocks paid-provider and training jobs. The instructions below describe the optional full API-connected deployment.
+
 For the alternative you selected—**everything on one server**—use [SINGLE_SERVER.md](SINGLE_SERVER.md). That setup runs Streamlit in Docker and does not require Community Cloud or a separate public backend URL. The instructions below remain available for the earlier split-hosting option.
 
 This is the full API-connected interface, not a standalone demo. `streamlit_app.py` exposes the seven workspaces; FastAPI retains inference, PostgreSQL persistence, human-review checks, training jobs and model promotion gates. The React interface remains available through the original Docker Compose setup.
@@ -20,7 +22,7 @@ Browser → Streamlit Community Cloud (Python UI with workspace and page tabs)
                                       → local CPU models or Fireworks
 ```
 
-Streamlit runs only `streamlit` and `httpx` plus their dependencies. It does not install PyTorch, run Docker Compose, host PostgreSQL, store model checkpoints, or connect to your Mac's localhost services. [Community Cloud deployment instructions](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy).
+The API-connected Docker frontend installs only `streamlit` and `httpx` plus their dependencies. The root Community Cloud requirements also install the lightweight application services and tokenizer so embedded mode can be selected in secrets. Neither installs PyTorch, runs Docker Compose, hosts PostgreSQL, persists model checkpoints, or connects to your Mac's localhost services. [Community Cloud deployment instructions](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy).
 
 ## Local preview
 
@@ -73,7 +75,7 @@ The Docker cloud target can also be deployed to an existing Linux server or anot
 
 ## Publish the Streamlit interface
 
-1. Put the reviewed source into the GitHub repository you intend to deploy. This local project currently has no configured remote; repository selection and publishing must be completed before Community Cloud can read it. Exclude `.env`, `.streamlit/secrets.toml`, caches, virtual environments and database/artifact transfer archives. Do not blindly upload the entire local directory.
+1. Put the reviewed source into the GitHub repository you intend to deploy. The configured repository is `smohandoss0611/recipetriage`; push any local changes before Community Cloud can read them. Exclude `.env`, `.streamlit/secrets.toml`, caches, virtual environments and database/artifact transfer archives. Do not blindly upload the entire local directory.
 2. Sign in at https://share.streamlit.io/ and connect the appropriate GitHub account.
 3. Choose **Create app → Deploy a public app from GitHub**. Select the repository, its actual branch, and **`streamlit_app.py`** as the entrypoint. Choose **Python 3.12** in Advanced settings. Root `requirements.txt` contains the UI dependencies. Your connected account lists `smohandoss0611/recipetriage`; the new local files still need to be published there before deployment.
 4. In Streamlit Advanced settings, paste values using [.streamlit/secrets.toml.example](.streamlit/secrets.toml.example):
