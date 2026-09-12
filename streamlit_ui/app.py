@@ -153,7 +153,11 @@ def model_choices(api):
     rows = api.get('/api/v1/playground/models')['models']
     available = {x['key']: x['title'] for x in rows if x['available']}
     with st.expander('Model availability'):
-        st.dataframe([{'Model': x['title'], 'Available': x['available'], 'Details': '' if x['available'] else x.get('reason', '')} for x in rows], hide_index=True)
+        if api.embedded:
+            st.info('Model inference is disabled in this free cloud deployment. Use the local application to run models. Recipe editing, human review and dataset tools remain available here.')
+        st.dataframe([{'Model': x['title'], 'Status': 'Available' if x['available'] else 'Unavailable',
+                       **({} if api.embedded else {'Details': '' if x['available'] else x.get('reason', '')})}
+                      for x in rows], hide_index=True)
     return available
 
 
