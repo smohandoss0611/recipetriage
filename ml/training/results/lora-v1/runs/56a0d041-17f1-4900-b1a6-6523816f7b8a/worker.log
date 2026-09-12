@@ -1,0 +1,21 @@
+{'eval_loss': 2.8582310676574707, 'eval_model_preparation_time': 0.0024, 'eval_runtime': 0.6392, 'eval_samples_per_second': 1.564, 'eval_steps_per_second': 1.564, 'eval_entropy': 2.612621307373047, 'eval_num_tokens': 0.0, 'eval_mean_token_accuracy': 0.3928571343421936}
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+{'loss': 2.4271, 'grad_norm': 4.796021461486816, 'learning_rate': 0.0002, 'entropy': 2.6260679960250854, 'num_tokens': 807.0, 'mean_token_accuracy': 0.4781976640224457, 'epoch': 0.4}
+{'loss': 2.7097, 'grad_norm': 5.513493537902832, 'learning_rate': 0.0002, 'entropy': 2.6855416297912598, 'num_tokens': 1550.0, 'mean_token_accuracy': 0.5231481492519379, 'epoch': 0.8}
+{'loss': 2.2368, 'grad_norm': 4.99683952331543, 'learning_rate': 0.0002, 'entropy': 2.7311477661132812, 'num_tokens': 1921.0, 'mean_token_accuracy': 0.5925925970077515, 'epoch': 1.0}
+{'eval_loss': 2.39289927482605, 'eval_model_preparation_time': 0.0024, 'eval_runtime': 0.646, 'eval_samples_per_second': 1.548, 'eval_steps_per_second': 1.548, 'eval_entropy': 2.663982629776001, 'eval_num_tokens': 1921.0, 'eval_mean_token_accuracy': 0.3928571343421936, 'epoch': 1.0}
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 2.255, 'grad_norm': 3.8196704387664795, 'learning_rate': 0.0002, 'entropy': 2.696073532104492, 'num_tokens': 2685.0, 'mean_token_accuracy': 0.6064814627170563, 'epoch': 1.4}
+{'loss': 1.8457, 'grad_norm': 3.5982253551483154, 'learning_rate': 0.0002, 'entropy': 2.6921772956848145, 'num_tokens': 3492.0, 'mean_token_accuracy': 0.5483284890651703, 'epoch': 1.8}
+{'loss': 2.0404, 'grad_norm': 5.622264385223389, 'learning_rate': 0.0002, 'entropy': 2.808814287185669, 'num_tokens': 3842.0, 'mean_token_accuracy': 0.5925925970077515, 'epoch': 2.0}
+{'eval_loss': 2.104227304458618, 'eval_model_preparation_time': 0.0024, 'eval_runtime': 0.6381, 'eval_samples_per_second': 1.567, 'eval_steps_per_second': 1.567, 'eval_entropy': 2.665766954421997, 'eval_num_tokens': 3842.0, 'eval_mean_token_accuracy': 0.5714285969734192, 'epoch': 2.0}
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.656, 'grad_norm': 3.3625736236572266, 'learning_rate': 0.0002, 'entropy': 2.6863746643066406, 'num_tokens': 4649.0, 'mean_token_accuracy': 0.6300871968269348, 'epoch': 2.4}
+{'loss': 1.8366, 'grad_norm': 3.2657060623168945, 'learning_rate': 0.0002, 'entropy': 2.682018280029297, 'num_tokens': 5413.0, 'mean_token_accuracy': 0.7037037014961243, 'epoch': 2.8}
+{'loss': 1.67, 'grad_norm': 4.728238582611084, 'learning_rate': 0.0002, 'entropy': 2.757856845855713, 'num_tokens': 5763.0, 'mean_token_accuracy': 0.7037037014961243, 'epoch': 3.0}
+{'eval_loss': 1.926065444946289, 'eval_model_preparation_time': 0.0024, 'eval_runtime': 0.6398, 'eval_samples_per_second': 1.563, 'eval_steps_per_second': 1.563, 'eval_entropy': 2.592893600463867, 'eval_num_tokens': 5763.0, 'eval_mean_token_accuracy': 0.6428571343421936, 'epoch': 3.0}
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'train_runtime': 29.3926, 'train_samples_per_second': 0.51, 'train_steps_per_second': 0.306, 'train_loss': 2.0752427180608115, 'epoch': 3.0}

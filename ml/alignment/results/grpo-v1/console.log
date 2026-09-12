@@ -1,0 +1,222 @@
+2026/09/09 13:04:50 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at /Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/mlflow/assistant/skills/instrumenting-with-mlflow-tracing/SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 5e-06, 'num_tokens': 966.0, 'completions/mean_length': 128.0, 'completions/min_length': 128.0, 'completions/max_length': 128.0, 'completions/clipped_ratio': 1.0, 'completions/mean_terminated_length': 0.0, 'completions/min_terminated_length': 0.0, 'completions/max_terminated_length': 0.0, 'rewards/recipe_reward/mean': 0.0, 'rewards/recipe_reward/std': 0.0, 'reward': 0.0, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'entropy': 0.0, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'epoch': 0.2}
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 5e-06, 'num_tokens': 1978.0, 'completions/mean_length': 128.0, 'completions/min_length': 128.0, 'completions/max_length': 128.0, 'completions/clipped_ratio': 1.0, 'completions/mean_terminated_length': 0.0, 'completions/min_terminated_length': 0.0, 'completions/max_terminated_length': 0.0, 'rewards/recipe_reward/mean': 0.0, 'rewards/recipe_reward/std': 0.0, 'reward': 0.0, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'entropy': 0.0, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'epoch': 0.4}
+{'train_runtime': 97.8127, 'train_samples_per_second': 0.041, 'train_steps_per_second': 0.02, 'train_loss': 0.0, 'epoch': 0.4}
+{
+  "run_id": "51f8acba-4be6-41c8-b57c-a51d12e8cd10",
+  "status": "completed",
+  "comparison": {
+    "before": {
+      "macro_f1": 0.2074829931972789,
+      "micro_f1": 0.23529411764705882,
+      "exact_match": 0,
+      "json_validity": 0.4,
+      "schema_validity": 0.4,
+      "per_label": {
+        "weeknight-30min": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 2,
+          "support": 3,
+          "precision": 0.25,
+          "recall": 0.3333333333333333,
+          "f1": 0.2857142857142857
+        },
+        "weekend-project": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "support": 2,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5
+        },
+        "needs-special-equipment": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 3,
+          "support": 4,
+          "precision": 0.5,
+          "recall": 0.25,
+          "f1": 0.3333333333333333
+        },
+        "meal-prep": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 1,
+          "support": 2,
+          "precision": 0.25,
+          "recall": 0.5,
+          "f1": 0.3333333333333333
+        },
+        "dessert": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 3,
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "have-most-of-this": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 2,
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "unclear": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "unclear": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "support": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "false_unclear_cases": 0,
+      "shortcut": {
+        "planned_rows": 12,
+        "recorded_rows": 12,
+        "usable_rows": 9,
+        "planned_pairs": 9,
+        "eligible_pairs": 3,
+        "excluded_pairs": 6,
+        "flipped_pairs": 0,
+        "prediction_flip_rate": 0.0,
+        "pair_coverage": 0.3333333333333333,
+        "exact_set_accuracy": 0.0,
+        "correct_rows": 0,
+        "misleading_title_accuracy": 0.0,
+        "misleading_correct": 0,
+        "misleading_total": 3,
+        "accuracy_policy": "Exact label-set accuracy over all planned cases; invalid/missing answers are incorrect.",
+        "flip_policy": "Usable reference/variant pairs only; exclusions and coverage reported. Invalid-to-invalid is not a stable prediction."
+      },
+      "annotation_status": "provisional; accuracy is agreement with the current answer key"
+    },
+    "after": {
+      "macro_f1": 0.2074829931972789,
+      "micro_f1": 0.23529411764705882,
+      "exact_match": 0,
+      "json_validity": 0.4,
+      "schema_validity": 0.4,
+      "per_label": {
+        "weeknight-30min": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 2,
+          "support": 3,
+          "precision": 0.25,
+          "recall": 0.3333333333333333,
+          "f1": 0.2857142857142857
+        },
+        "weekend-project": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "support": 2,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5
+        },
+        "needs-special-equipment": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 3,
+          "support": 4,
+          "precision": 0.5,
+          "recall": 0.25,
+          "f1": 0.3333333333333333
+        },
+        "meal-prep": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 1,
+          "support": 2,
+          "precision": 0.25,
+          "recall": 0.5,
+          "f1": 0.3333333333333333
+        },
+        "dessert": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 3,
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "have-most-of-this": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 2,
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "unclear": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "unclear": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "support": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "false_unclear_cases": 0,
+      "shortcut": {
+        "planned_rows": 12,
+        "recorded_rows": 12,
+        "usable_rows": 9,
+        "planned_pairs": 9,
+        "eligible_pairs": 3,
+        "excluded_pairs": 6,
+        "flipped_pairs": 0,
+        "prediction_flip_rate": 0.0,
+        "pair_coverage": 0.3333333333333333,
+        "exact_set_accuracy": 0.0,
+        "correct_rows": 0,
+        "misleading_title_accuracy": 0.0,
+        "misleading_correct": 0,
+        "misleading_total": 3,
+        "accuracy_policy": "Exact label-set accuracy over all planned cases; invalid/missing answers are incorrect.",
+        "flip_policy": "Usable reference/variant pairs only; exclusions and coverage reported. Invalid-to-invalid is not a stable prediction."
+      },
+      "annotation_status": "provisional; accuracy is agreement with the current answer key"
+    },
+    "delta": {
+      "macro_f1": 0.0,
+      "micro_f1": 0.0,
+      "exact_match": 0,
+      "json_validity": 0.0,
+      "schema_validity": 0.0,
+      "misleading_title_accuracy": 0.0
+    },
+    "claim": "Descriptive fixed-benchmark comparison. Reward or loss improvement alone is not task improvement."
+  }
+}

@@ -1,0 +1,54 @@
+# OPTIONAL hosting proposal. Review paid instance and disk costs before creating it.
+# Streamlit Community Cloud hosts streamlit_app.py separately.
+services:
+  - type: web
+    name: recipetriage-api
+    runtime: docker
+    region: oregon
+    plan: 4c-8g
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    numInstances: 1
+    autoDeployTrigger: off
+    disk:
+      name: recipetriage-model-data
+      mountPath: /data
+      sizeGB: 30
+    envVars:
+      - key: APP_ENV
+        value: cloud
+      - key: API_AUTH_TOKEN
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: recipetriage-postgres
+          property: connectionString
+      - key: FIREWORKS_API_KEY
+        sync: false
+      - key: FIREWORKS_MODEL
+        value: accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b
+      - key: FIREWORKS_RECIPE_MODEL
+        value: accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b
+      - key: FIREWORKS_SYNTHETIC_MODEL
+        value: accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b
+      - key: FIREWORKS_ACCOUNT_ID
+        value: ""
+      - key: FIREWORKS_SFT_MODEL
+        value: ""
+      - key: FIREWORKS_SFT_DEPLOYMENT_SHAPE
+        value: ""
+      - key: MLFLOW_TRACKING_URI
+        value: ""
+      - key: MLFLOW_EXPERIMENT_NAME
+        value: RecipeTriage-fixed-benchmark
+
+databases:
+  - name: recipetriage-postgres
+    region: oregon
+    plan: 0.5c-1g
+    databaseName: recipetriage
+    user: recipetriage
+    postgresMajorVersion: "17"
+    diskSizeGB: 5
+    ipAllowList: []

@@ -1,0 +1,29 @@
+{
+  "format": "hf-safetensors-fp32",
+  "source_adapter": {
+    "model": "Qwen/Qwen2.5-0.5B+recipetriage-lora/b530230c-018f-4ae5-a3cc-5f6bbf713fd3",
+    "revision": "c9f551019b360538a72b33905c0b226d0236f77b136bea046e8260f48eb49efd",
+    "base_model": "Qwen/Qwen2.5-0.5B",
+    "base_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "training_stage": "supervised-fine-tuned-lora",
+    "prompt_format": "plain-role-completion-v1",
+    "quantization": "none",
+    "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f"
+  },
+  "files": {
+    "model.safetensors": "1d3ae5aa8c1d05fefb1a9ac270ebaa613f25049f43291865958848b96e3a0408",
+    "added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "tokenizer_config.json": "60f6e7bc948cedd377a20f01d022ef664d026fbc93d72e0a9bdac233f8632181",
+    "special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "config.json": "6e60a006e99eb958e35b4edec54fc82d600016cf4e68515f3946382e56e5edf8",
+    "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "generation_config.json": "572b47acfde467f61dc18438b2faf85d1db1ad116c63d93afc23a30634ace770",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "chat_template.jinja": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "dtype": "float32",
+  "merged": true,
+  "production_changed": false,
+  "artifact_sha256": "2210e8f9a3793cf4f7d1c590f05c961b6cb7ecfe8742f5212f57c5e51ba56451"
+}

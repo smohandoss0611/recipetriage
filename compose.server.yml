@@ -1,0 +1,89 @@
+# Standalone deployment, not an override of the local React Compose stack.
+# Requires Docker Compose 2.30+ for raw env files (preserves literal secret characters).
+name: recipetriage-server
+services:
+  gateway:
+    image: caddy:2-alpine
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:?Run python3 infra/server/setup.py first}
+    ports:
+      - "${SERVER_BIND:-0.0.0.0}:${HTTP_PORT:-80}:80"
+      - "${SERVER_BIND:-0.0.0.0}:${HTTPS_PORT:-443}:443"
+    volumes:
+      - ./infra/server/Caddyfile:/etc/caddy/Caddyfile:ro
+      - certificates:/data
+      - gateway_config:/config
+    networks: [web]
+    depends_on:
+      streamlit:
+        condition: service_healthy
+    restart: unless-stopped
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: infra/server/Dockerfile.streamlit
+    env_file:
+      - path: ./.server/streamlit.env
+        format: raw
+    networks: [web, api]
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health', timeout=5)"]
+      interval: 10s
+      timeout: 6s
+      retries: 6
+      start_period: 15s
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      target: cloud
+    env_file:
+      - path: ./.server/backend.env
+        format: raw
+    volumes:
+      - model_data:/data
+    networks: [api, database]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=8)"]
+      interval: 10s
+      timeout: 10s
+      retries: 9
+      start_period: 40s
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:17-alpine
+    env_file:
+      - path: ./.server/postgres.env
+        format: raw
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks: [database]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+
+networks:
+  web:
+  api:
+  database:
+    internal: true
+volumes:
+  postgres_data:
+  model_data:
+  certificates:
+  gateway_config:

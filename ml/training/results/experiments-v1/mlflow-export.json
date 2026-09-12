@@ -1,0 +1,197 @@
+[
+  {
+    "run_id": "f35f9df12afd417fad36966f3da11489",
+    "status": "FINISHED",
+    "params": {
+      "provider": "local",
+      "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "epochs": "3",
+      "learning_rate": "0.0002",
+      "sequence_length": "768",
+      "batch_size": "1",
+      "gradient_accumulation_steps": "2",
+      "seed": "42",
+      "lora_rank": "4",
+      "lora_dropout": "0.0",
+      "lora_target_policy": "query-value",
+      "method": "qlora",
+      "gradient_checkpointing": "True"
+    },
+    "metrics": {
+      "eval_loss": 2.5165576934814453,
+      "loss": 2.607,
+      "grad_norm": 4.443641662597656,
+      "learning_rate": 0.0002,
+      "benchmark_micro_f1": 0.23529411764705882,
+      "benchmark_exact_match": 0.0,
+      "json_validity": 0.4,
+      "training_seconds": 31.776479125022888,
+      "peak_rss_bytes": 1966522368.0,
+      "trainable_parameters": 270336.0
+    },
+    "tags": {
+      "recipetriage_run_id": "041818c9-7e00-4802-b53d-f7d567616e2b",
+      "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "benchmark_sha256": "173e79cc1968dd1207a7aafd051dad40d87ff551c7081a17b896c9556a698448",
+      "method": "qlora",
+      "annotation_status": "provisional-unreviewed",
+      "mlflow.runName": "capable-auk-759"
+    }
+  },
+  {
+    "run_id": "706f19249f4e477b80ece7faa9df1797",
+    "status": "FINISHED",
+    "params": {
+      "provider": "local",
+      "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "epochs": "3",
+      "learning_rate": "0.0002",
+      "sequence_length": "768",
+      "batch_size": "1",
+      "gradient_accumulation_steps": "2",
+      "seed": "42",
+      "lora_rank": "16",
+      "lora_dropout": "0.0",
+      "lora_target_policy": "query-value",
+      "method": "lora",
+      "gradient_checkpointing": "True"
+    },
+    "metrics": {
+      "eval_loss": 1.926065444946289,
+      "loss": 1.67,
+      "grad_norm": 4.728238582611084,
+      "learning_rate": 0.0002,
+      "benchmark_micro_f1": 0.0,
+      "benchmark_exact_match": 0.0,
+      "json_validity": 0.8,
+      "training_seconds": 25.43979016598314,
+      "peak_rss_bytes": 3123003392.0,
+      "trainable_parameters": 1081344.0
+    },
+    "tags": {
+      "recipetriage_run_id": "bd258846-d3bf-4d92-a6ec-0d7556a53867",
+      "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "benchmark_sha256": "173e79cc1968dd1207a7aafd051dad40d87ff551c7081a17b896c9556a698448",
+      "method": "lora",
+      "annotation_status": "provisional-unreviewed",
+      "mlflow.runName": "capable-auk-759"
+    }
+  },
+  {
+    "run_id": "bc69737a988f4e61ba12bb8fbd7faceb",
+    "status": "FINISHED",
+    "params": {
+      "provider": "local",
+      "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "epochs": "3",
+      "learning_rate": "0.0002",
+      "sequence_length": "768",
+      "batch_size": "1",
+      "gradient_accumulation_steps": "2",
+      "seed": "42",
+      "lora_rank": "4",
+      "lora_dropout": "0.0",
+      "lora_target_policy": "query-value",
+      "method": "lora",
+      "gradient_checkpointing": "True"
+    },
+    "metrics": {
+      "eval_loss": 2.37314772605896,
+      "loss": 2.3812,
+      "grad_norm": 4.087469100952148,
+      "learning_rate": 0.0002,
+      "benchmark_micro_f1": 0.41379310344827586,
+      "benchmark_exact_match": 0.0,
+      "json_validity": 0.6,
+      "training_seconds": 27.035169125068933,
+      "peak_rss_bytes": 3215638528.0,
+      "trainable_parameters": 270336.0
+    },
+    "tags": {
+      "recipetriage_run_id": "771d20b1-77df-446b-b34d-b8259ddbc585",
+      "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "benchmark_sha256": "173e79cc1968dd1207a7aafd051dad40d87ff551c7081a17b896c9556a698448",
+      "method": "lora",
+      "annotation_status": "provisional-unreviewed",
+      "mlflow.runName": "capable-auk-759"
+    }
+  },
+  {
+    "run_id": "9bd9bd8211b841429e12e5f5fe80f0c3",
+    "status": "FINISHED",
+    "params": {
+      "provider": "local",
+      "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "epochs": "3",
+      "learning_rate": "5e-05",
+      "sequence_length": "768",
+      "batch_size": "1",
+      "gradient_accumulation_steps": "2",
+      "seed": "42",
+      "lora_rank": "16",
+      "lora_dropout": "0.0",
+      "lora_target_policy": "query-value",
+      "method": "lora",
+      "gradient_checkpointing": "True"
+    },
+    "metrics": {
+      "eval_loss": 2.469073534011841,
+      "loss": 2.4596,
+      "grad_norm": 7.380051612854004,
+      "learning_rate": 5e-05,
+      "benchmark_micro_f1": 0.3448275862068966,
+      "benchmark_exact_match": 0.0,
+      "json_validity": 0.6,
+      "training_seconds": 25.91238120791968,
+      "peak_rss_bytes": 3192569856.0,
+      "trainable_parameters": 1081344.0
+    },
+    "tags": {
+      "recipetriage_run_id": "45b6186c-a5b7-4461-bc6a-4f4a333446c1",
+      "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "benchmark_sha256": "173e79cc1968dd1207a7aafd051dad40d87ff551c7081a17b896c9556a698448",
+      "method": "lora",
+      "annotation_status": "provisional-unreviewed",
+      "mlflow.runName": "capable-auk-759"
+    }
+  },
+  {
+    "run_id": "6b160013f80b4873a16c4d48934f3d53",
+    "status": "FINISHED",
+    "params": {
+      "provider": "local",
+      "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "epochs": "3",
+      "learning_rate": "5e-05",
+      "sequence_length": "768",
+      "batch_size": "1",
+      "gradient_accumulation_steps": "2",
+      "seed": "42",
+      "lora_rank": "4",
+      "lora_dropout": "0.0",
+      "lora_target_policy": "query-value",
+      "method": "lora",
+      "gradient_checkpointing": "True"
+    },
+    "metrics": {
+      "eval_loss": 2.742248058319092,
+      "loss": 2.7964,
+      "grad_norm": 4.550594329833984,
+      "learning_rate": 5e-05,
+      "benchmark_micro_f1": 0.09090909090909091,
+      "benchmark_exact_match": 0.0,
+      "json_validity": 0.4,
+      "training_seconds": 25.906776541029103,
+      "peak_rss_bytes": 3280404480.0,
+      "trainable_parameters": 270336.0
+    },
+    "tags": {
+      "recipetriage_run_id": "95639818-0ed3-4a06-8df0-14fff7074aa4",
+      "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "benchmark_sha256": "173e79cc1968dd1207a7aafd051dad40d87ff551c7081a17b896c9556a698448",
+      "method": "lora",
+      "annotation_status": "provisional-unreviewed",
+      "mlflow.runName": "capable-auk-759"
+    }
+  }
+]

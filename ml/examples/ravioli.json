@@ -1,0 +1,39 @@
+{
+  "source_url": "https://www.kingarthurbaking.com/recipes/homemade-cheese-ravioli-recipe",
+  "source_author": "David Turner / King Arthur Baking",
+  "source_accessed": "2026-09-09",
+  "notes": "Short paraphrase for classification, not a complete cooking recipe. Uses the main machine-assisted method; the source also offers manual alternatives. Title adjectives are controlled experimental interventions, not four independent recipes.",
+  "recipe": {
+    "title": "Traditional Ravioli",
+    "ingredients": [
+      "flour",
+      "eggs",
+      "salt",
+      "optional water",
+      "ricotta",
+      "fresh herbs",
+      "Parmesan",
+      "pecorino Romano",
+      "pepper",
+      "nutmeg"
+    ],
+    "instructions": [
+      "Process the dough ingredients, knead briefly, and allow at least a half-hour rest.",
+      "Combine the cheese filling. Roll thin sheets with a pasta machine, portion filling, seal and cut.",
+      "Boil the filled pasta for 6–8 minutes. Uncooked portions may be frozen for later meals."
+    ],
+    "equipment": [
+      "food processor",
+      "pasta machine",
+      "pot"
+    ],
+    "time_minutes": 70,
+    "pantry_items": null
+  },
+  "expected_labels": [
+    "weekend-project",
+    "needs-special-equipment",
+    "meal-prep"
+  ],
+  "expected_label_status": "Proposed evaluation rubric, not human-verified training labels"
+}

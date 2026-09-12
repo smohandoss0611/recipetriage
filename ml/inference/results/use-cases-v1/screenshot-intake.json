@@ -1,0 +1,47 @@
+{
+  "draft_id": "2f1d7bda-b2f5-4377-a9da-15bc6781f671",
+  "created_at": "2026-09-09T19:54:22.813115+00:00",
+  "recipe": {
+    "title": "Overnight Oatmeal",
+    "ingredients": [
+      "rolled oats",
+      "plain low-fat yogurt",
+      "milk",
+      "berries",
+      "chopped apple"
+    ],
+    "instructions": [
+      "Combine oats with yogurt and milk, then add fruit.",
+      "Cover and chill for 6412 hours; divide into lidded portions."
+    ],
+    "equipment": [
+      "bowl",
+      "refrigerator"
+    ],
+    "time_minutes": 375,
+    "pantry_items": null
+  },
+  "source": {
+    "kind": "screenshot",
+    "input_sha256": "2e2b224813f49fc53146905907e928883ee77e1708b48eea7308cc87c1a90098",
+    "ocr": {
+      "method": "tesseract-ocr",
+      "image_sha256": "2dd8382ec4887fa091f0f684092412466af3037b5a0acf80bc8d737352f3e553",
+      "image_bytes": 47093
+    }
+  },
+  "source_text": "Overnight Oatmeal\n\nIngredients: rolled oats, plain low-fat yogurt, milk, berries,\nchopped apple\n\nInstructions: Combine oats with yogurt and milk, then add fruit.\nCover and chill for 6412 hours; divide into lidded portions.\nEquipment: bowl, refrigerator\n\nMinimum total elapsed time: 375 minutes.\n\nPantry information: not provided.\n",
+  "normalization": {
+    "method": "fireworks-extraction",
+    "model": "accounts/fireworks/models/qwen3p7-plus",
+    "model_revision": null,
+    "prompt_version": "recipe-extraction-v1",
+    "prompt_sha256": "f86c7ff4c9b2d8502291279b6b6a31b8209d5f3eb9eaa2daa877ad90ea82e249",
+    "input_sha256": "92bf2caf23a1451779c7ee37b25af1e43d40118ad588a13b9eb625daedf62023",
+    "raw_output": "{\n\"recipe\": {\n\"title\": \"Overnight Oatmeal\",\n\"ingredients\": [\n\"rolled oats\",\n\"plain low-fat yogurt\",\n\"milk\",\n\"berries\",\n\"chopped apple\"\n],\n\"instructions\": [\n\"Combine oats with yogurt and milk, then add fruit.\",\n\"Cover and chill for 6412 hours; divide into lidded portions.\"\n],\n\"equipment\": [\n\"bowl\",\n\"refrigerator\"\n],\n\"time_minutes\": 375,\n\"pantry_items\": null\n},\n\"issue\": null\n}",
+    "finish_reason": "stop",
+    "input_tokens": 670,
+    "output_tokens": 134
+  },
+  "reviewed": false
+}

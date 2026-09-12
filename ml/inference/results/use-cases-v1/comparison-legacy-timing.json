@@ -1,0 +1,216 @@
+{
+  "kind": "playground-comparison",
+  "error": null,
+  "config": {
+    "models": [
+      "fireworks",
+      "base",
+      "sft",
+      "lora",
+      "qlora"
+    ],
+    "recipe": {
+      "title": "Homemade Cheese Ravioli",
+      "equipment": [
+        "food processor",
+        "pasta machine",
+        "pot"
+      ],
+      "ingredients": [
+        "flour",
+        "eggs",
+        "salt",
+        "optional water",
+        "ricotta",
+        "fresh herbs",
+        "Parmesan",
+        "pecorino Romano",
+        "pepper",
+        "nutmeg"
+      ],
+      "instructions": [
+        "Process the dough ingredients, knead briefly, and allow at least a half-hour rest.",
+        "Combine the cheese filling. Roll thin sheets with a pasta machine, portion filling, seal and cut.",
+        "Boil the filled pasta for 6\u20138 minutes. Uncooked portions may be frozen for later meals."
+      ],
+      "pantry_items": null,
+      "time_minutes": 70
+    },
+    "temperature": 0.0,
+    "max_new_tokens": 128
+  },
+  "result": {
+    "rows": [
+      {
+        "key": "fireworks",
+        "error": null,
+        "title": "Fireworks",
+        "result": {
+          "error": null,
+          "model": "accounts/fireworks/models/qwen3p7-plus",
+          "provider": "fireworks",
+          "revision": null,
+          "latency_ms": 718,
+          "prediction": {
+            "labels": [
+              "weekend-project",
+              "needs-special-equipment",
+              "meal-prep"
+            ],
+            "explanation": "Total time is 70 minutes, exceeding 30 minutes. Requires a pasta machine and food processor. Instructions mention freezing uncooked portions for later meals."
+          },
+          "raw_output": "{\"labels\": [\"weekend-project\", \"needs-special-equipment\", \"meal-prep\"], \"explanation\": \"Total time is 70 minutes, exceeding 30 minutes. Requires a pasta machine and food processor. Instructions mention freezing uncooked portions for later meals.\"}",
+          "valid_json": true,
+          "temperature": 0.0,
+          "input_tokens": 398,
+          "finish_reason": "stop",
+          "output_tokens": 58,
+          "max_new_tokens": 128,
+          "prompt_version": "triage-v1"
+        },
+        "status": "completed"
+      },
+      {
+        "key": "base",
+        "error": null,
+        "title": "Local base",
+        "result": {
+          "error": "Unterminated string starting at: line 4 column 207 (char 406)",
+          "model": "Qwen/Qwen2.5-0.5B",
+          "provider": "base",
+          "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+          "latency_ms": 82791,
+          "prediction": null,
+          "raw_output": "{\n  \"equipment\": [\"food processor\", \"pasta machine\", \"pot\"],\n  \"ingredients\": [\"flour\", \"eggs\", \"salt\", \"optional water\", \"ricotta\", \"fresh herbs\", \"Parmesan\", \"pecorino Romano\", \"pepper\", \"nutmeg\"],\n  \"instructions\": [\"Process the dough ingredients, knead briefly, and allow at least a half-hour rest.\", \"Combine the cheese filling. Roll thin sheets with a pasta machine, portion filling, seal and cut.\", \"Boil the filled pasta for 6\u20138 minutes. Uncooked portions may be frozen for later",
+          "valid_json": false,
+          "temperature": 0.0,
+          "input_tokens": 378,
+          "finish_reason": "length",
+          "output_tokens": 128,
+          "max_new_tokens": 128,
+          "prompt_version": "triage-v1"
+        },
+        "status": "completed"
+      },
+      {
+        "key": "sft",
+        "error": null,
+        "title": "SFT",
+        "result": {
+          "error": null,
+          "model": "Qwen/Qwen2.5-0.5B+recipetriage-lora/30f1b50c-52b3-4336-ae9e-b4d7d2586e08",
+          "provider": "sft",
+          "revision": "1326c654341d537b65795c1854f84bb15edad428ac0e428747c3fbd5d6607f8d",
+          "latency_ms": 14815,
+          "prediction": {
+            "labels": [
+              "weeknight-30min",
+              "needs-special-equipment"
+            ],
+            "explanation": "A substantial cooking project taking more than 30 minutes; passive waiting alone is insufficient."
+          },
+          "raw_output": "{\"labels\": [\"weeknight-30min\", \"needs-special-equipment\"], \"explanation\": \"A substantial cooking project taking more than 30 minutes; passive waiting alone is insufficient.\"}",
+          "valid_json": true,
+          "temperature": 0.0,
+          "input_tokens": 378,
+          "finish_reason": "stop",
+          "output_tokens": 42,
+          "max_new_tokens": 128,
+          "prompt_version": "triage-v1"
+        },
+        "status": "completed"
+      },
+      {
+        "key": "lora",
+        "error": null,
+        "title": "LoRA",
+        "result": {
+          "error": "Unterminated string starting at: line 8 column 18 (char 123)",
+          "model": "Qwen/Qwen2.5-0.5B+recipetriage-lora/771d20b1-77df-446b-b34d-b8259ddbc585",
+          "provider": "lora",
+          "revision": "4a5ac5bdd2f131d468d899dc8575173aa77f2d0196d1d37626394880d2d83f67",
+          "latency_ms": 41772,
+          "prediction": null,
+          "raw_output": "{\n  \"labels\": [\n    \"weeknight-30min\",\n    \"needs-special-equipment\",\n    \"meal-prep\",\n    \"dessert\"\n  ],\n  \"explanation\": \"This recipe is suitable for a weeknight meal. It requires a pasta machine, food processor, blender, waffle iron, and a pasta bowl. The recipe includes a cheese filling, which can be prepared ahead of time. The instructions are clear and concise, and the ingredients are listed in a clear and organized manner. The preparation time is 70 minutes, and the final product is a delicious and easy-to-eat ravi",
+          "valid_json": false,
+          "temperature": 0.0,
+          "input_tokens": 378,
+          "finish_reason": "length",
+          "output_tokens": 128,
+          "max_new_tokens": 128,
+          "prompt_version": "triage-v1"
+        },
+        "status": "completed"
+      },
+      {
+        "key": "qlora",
+        "error": null,
+        "title": "QLORA",
+        "result": {
+          "error": null,
+          "model": "Qwen/Qwen2.5-0.5B+recipetriage-lora/041818c9-7e00-4802-b53d-f7d567616e2b",
+          "provider": "qlora",
+          "revision": "744ed4988c3d7d0fb015d797c306f18876de10842ec86fb025efda095918bdf6",
+          "latency_ms": 31809,
+          "prediction": {
+            "labels": [
+              "weeknight-30min",
+              "weekend-project",
+              "needs-special-equipment",
+              "meal-prep",
+              "dessert"
+            ],
+            "explanation": "This recipe is for homemade cheese ravioli. It requires a pasta machine, food processor, blender, waffle iron or other specialized appliance. It is suitable for preparing portions ahead and intended as dessert."
+          },
+          "raw_output": "{\n  \"labels\": [\n    \"weeknight-30min\",\n    \"weekend-project\",\n    \"needs-special-equipment\",\n    \"meal-prep\",\n    \"dessert\"\n  ],\n  \"explanation\": \"This recipe is for homemade cheese ravioli. It requires a pasta machine, food processor, blender, waffle iron or other specialized appliance. It is suitable for preparing portions ahead and intended as dessert.\"\n}",
+          "valid_json": true,
+          "temperature": 0.0,
+          "input_tokens": 378,
+          "finish_reason": "stop",
+          "output_tokens": 90,
+          "max_new_tokens": 128,
+          "prompt_version": "triage-v1"
+        },
+        "status": "completed"
+      }
+    ],
+    "recipe": {
+      "title": "Homemade Cheese Ravioli",
+      "equipment": [
+        "food processor",
+        "pasta machine",
+        "pot"
+      ],
+      "ingredients": [
+        "flour",
+        "eggs",
+        "salt",
+        "optional water",
+        "ricotta",
+        "fresh herbs",
+        "Parmesan",
+        "pecorino Romano",
+        "pepper",
+        "nutmeg"
+      ],
+      "instructions": [
+        "Process the dough ingredients, knead briefly, and allow at least a half-hour rest.",
+        "Combine the cheese filling. Roll thin sheets with a pasta machine, portion filling, seal and cut.",
+        "Boil the filled pasta for 6\u20138 minutes. Uncooked portions may be frozen for later meals."
+      ],
+      "pantry_items": null,
+      "time_minutes": 70
+    },
+    "status": "completed",
+    "started_at": "2026-09-09T19:48:33.777323+00:00",
+    "finished_at": "2026-09-09T19:51:32.141545+00:00",
+    "temperature": 0.0,
+    "recipe_sha256": "ab106e90eac3c3d8581e7e552f5d8f353b173879eba4976dde960e88578c61ab",
+    "max_new_tokens": 128,
+    "training_exported": false
+  },
+  "run_id": "21651a9b-99f2-42d7-8b86-d9dee3d777aa",
+  "status": "completed",
+  "created_at": "2026-09-09T19:48:33.774519+00:00",
+  "updated_at": "2026-09-09T19:51:32.141562+00:00"
+}

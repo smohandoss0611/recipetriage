@@ -1,0 +1,42 @@
+{
+  "draft_id": "10b38394-5aeb-4f38-8e69-e601ca380152",
+  "created_at": "2026-09-09T19:48:34.550531+00:00",
+  "recipe": {
+    "title": "Overnight Oatmeal",
+    "ingredients": [
+      "rolled oats",
+      "plain low-fat yogurt",
+      "milk",
+      "berries",
+      "chopped apple"
+    ],
+    "instructions": [
+      "Combine oats with yogurt and milk, then add fruit.",
+      "Cover and chill for 6\u201312 hours; divide into lidded portions."
+    ],
+    "equipment": [
+      "bowl",
+      "refrigerator"
+    ],
+    "time_minutes": 375,
+    "pantry_items": null
+  },
+  "source": {
+    "kind": "message",
+    "input_sha256": "dffee6e6bea1837100256757c1182886058bc208f636458006fe56b6f4e46860"
+  },
+  "source_text": "Overnight Oatmeal\nIngredients: rolled oats, plain low-fat yogurt, milk, berries, chopped apple\nInstructions: Combine oats with yogurt and milk, then add fruit. Cover and chill for 6\u201312 hours; divide into lidded portions.\nEquipment: bowl, refrigerator\nMinimum total elapsed time: 375 minutes. Pantry information is not provided.",
+  "normalization": {
+    "method": "fireworks-extraction",
+    "model": "accounts/fireworks/models/qwen3p7-plus",
+    "model_revision": null,
+    "prompt_version": "recipe-extraction-v1",
+    "prompt_sha256": "1c6ceb61e52ed3cf7948ee6465181e76a2ea1bfe17a0e74f32ff531d73156cf2",
+    "input_sha256": "dffee6e6bea1837100256757c1182886058bc208f636458006fe56b6f4e46860",
+    "raw_output": "{\n\"recipe\": {\n\"title\": \"Overnight Oatmeal\",\n\"ingredients\": [\n\"rolled oats\",\n\"plain low-fat yogurt\",\n\"milk\",\n\"berries\",\n\"chopped apple\"\n],\n\"instructions\": [\n\"Combine oats with yogurt and milk, then add fruit.\",\n\"Cover and chill for 6\u201312 hours; divide into lidded portions.\"\n],\n\"equipment\": [\n\"bowl\",\n\"refrigerator\"\n],\n\"time_minutes\": 375,\n\"pantry_items\": null\n},\n\"issue\": null\n}",
+    "finish_reason": "stop",
+    "input_tokens": 665,
+    "output_tokens": 134
+  },
+  "reviewed": false
+}

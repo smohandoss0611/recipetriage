@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "shortcut": {
+    "planned_rows": 12,
+    "recorded_rows": 12,
+    "usable_rows": 0,
+    "planned_pairs": 9,
+    "eligible_pairs": 0,
+    "excluded_pairs": 9,
+    "flipped_pairs": 0,
+    "prediction_flip_rate": null,
+    "pair_coverage": 0.0,
+    "exact_set_accuracy": 0.0,
+    "correct_rows": 0,
+    "misleading_title_accuracy": 0.0,
+    "misleading_correct": 0,
+    "misleading_total": 3,
+    "accuracy_policy": "Exact label-set accuracy over all planned cases; invalid/missing answers are incorrect.",
+    "flip_policy": "Usable reference/variant pairs only; exclusions and coverage reported. Invalid-to-invalid is not a stable prediction."
+  },
+  "red_team_passed": 0
+}

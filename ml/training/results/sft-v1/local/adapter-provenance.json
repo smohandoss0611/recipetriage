@@ -1,0 +1,9 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B+recipetriage-lora/30f1b50c-52b3-4336-ae9e-b4d7d2586e08",
+  "revision": "1326c654341d537b65795c1854f84bb15edad428ac0e428747c3fbd5d6607f8d",
+  "base_model": "Qwen/Qwen2.5-0.5B",
+  "base_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "training_stage": "supervised-fine-tuned-lora",
+  "prompt_format": "plain-role-completion-v1",
+  "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f"
+}

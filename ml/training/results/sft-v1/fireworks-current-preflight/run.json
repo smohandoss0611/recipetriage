@@ -1,0 +1,147 @@
+{
+  "run_id": "dff0eac0-65bd-4efe-b977-9697c0d6aa05",
+  "status": "blocked",
+  "phase": "preflight-finished",
+  "created_at": "2026-09-09T14:44:11.235787+00:00",
+  "updated_at": "2026-09-09T14:44:11.804501+00:00",
+  "finished_at": "2026-09-09T14:44:11.804496+00:00",
+  "config": {
+    "provider": "fireworks",
+    "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+    "epochs": 3,
+    "learning_rate": 0.0002,
+    "sequence_length": 768,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 2,
+    "seed": 42,
+    "lora_rank": 8,
+    "fireworks_model": null,
+    "fireworks_deployment_shape": null
+  },
+  "parameters": {
+    "provider": "fireworks",
+    "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+    "epochs": 3,
+    "learning_rate": 0.0002,
+    "sequence_length": 768,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 2,
+    "seed": 42,
+    "lora_rank": 8,
+    "fireworks_model": null,
+    "fireworks_deployment_shape": null,
+    "effective_batch_size": 2,
+    "base_model": "accounts/fireworks/models/llama-v3p3-70b-instruct",
+    "base_revision": null,
+    "objective": "assistant-token causal cross-entropy; EOS supervised; padding masked",
+    "optimizer": "provider-managed",
+    "weight_decay": 0.0,
+    "scheduler": "constant",
+    "warmup_steps": 0,
+    "eval_batch_size": "provider-managed",
+    "max_grad_norm": "provider-managed",
+    "lora_alpha": "provider-managed",
+    "lora_dropout": "provider-managed",
+    "lora_targets": "provider-managed",
+    "device": "provider-managed",
+    "dtype": "provider-managed",
+    "gradient_checkpointing": "provider-managed",
+    "packing": "provider-managed",
+    "truncation": "reject overlength locally; managed renderer validation required",
+    "checkpoint_selection": "provider final output model",
+    "checkpoint_limit": "provider-managed",
+    "benchmark": {
+      "temperature": 0.0,
+      "max_new_tokens": 128,
+      "reasoning": "disabled"
+    }
+  },
+  "dataset": {
+    "version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+    "counts": {
+      "train": 5,
+      "validation": 1,
+      "test": 1
+    },
+    "split_ids": {
+      "train": [
+        "seed-001",
+        "seed-002",
+        "seed-005",
+        "seed-006",
+        "seed-007"
+      ],
+      "validation": [
+        "seed-004"
+      ],
+      "test": [
+        "seed-003"
+      ]
+    },
+    "logical_messages_sha256": {
+      "train": "a4fbc754f001f8bca4cf861bee25ad9e48f86a29b722cf9f06fbb2d768544777",
+      "validation": "c99ee267fa3bc2ca0141fa1ee04ed7d450baaa9004cc3aeb835b02df7bdee5ac"
+    },
+    "status": "teaching-draft",
+    "warnings": [
+      "Teaching seed only: too small for reliable model-quality estimates.",
+      "Source grouping and exact-body de-duplication do not detect every paraphrase. Assign group_id to known related recipes.",
+      "weeknight-30min: 1 examples; cannot cover all three splits.",
+      "weekend-project: 2 examples; cannot cover all three splits.",
+      "meal-prep: 2 examples; cannot cover all three splits.",
+      "dessert: 0 examples; cannot cover all three splits.",
+      "have-most-of-this: 0 examples; cannot cover all three splits.",
+      "unclear: 1 examples; cannot cover all three splits.",
+      "Unreviewed annotations: this export is a teaching draft, not approved training data."
+    ],
+    "contamination_audit": {
+      "source_body_group_overlap": [],
+      "paraphrases": "not audited",
+      "pretraining": "unknown"
+    },
+    "test_used_for_training_or_selection": false
+  },
+  "history": [],
+  "checkpoints": [],
+  "artifacts": {},
+  "baseline": null,
+  "benchmark": null,
+  "comparison": null,
+  "managed": {
+    "preflight": {
+      "supported": false,
+      "issues": [
+        "validation has 1 examples; Fireworks documents a minimum of 3 per dataset. Add independent hand-reviewed recipes and create a new version; no duplication or automatic re-splitting.",
+        "Set a compatible FIREWORKS_SFT_DEPLOYMENT_SHAPE for temporary preemptible benchmark deployments."
+      ],
+      "account": "accounts/selvamohandoss-mfv6m",
+      "model": "accounts/fireworks/models/llama-v3p3-70b-instruct",
+      "model_metadata": {
+        "name": "accounts/fireworks/models/llama-v3p3-70b-instruct",
+        "state": "READY",
+        "tunable": null,
+        "supportsLora": true,
+        "supervisedLoraTunable": true,
+        "trainingContextLength": 131072,
+        "contextLength": 131072,
+        "updateTime": "2026-08-08T08:08:38.693105Z",
+        "huggingFaceUrl": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct"
+      },
+      "deployment_shape": null,
+      "checked_at": "2026-09-09T14:44:11.803826+00:00",
+      "counts": {
+        "train": 5,
+        "validation": 1,
+        "test": 1
+      },
+      "minimum_examples_per_uploaded_dataset": 3,
+      "renderer": "provider registered chat renderer; token boundaries may differ from local",
+      "upload_performed": false
+    }
+  },
+  "error": "validation has 1 examples; Fireworks documents a minimum of 3 per dataset. Add independent hand-reviewed recipes and create a new version; no duplication or automatic re-splitting.; Set a compatible FIREWORKS_SFT_DEPLOYMENT_SHAPE for temporary preemptible benchmark deployments.",
+  "warnings": [
+    "Learning run with a tiny provisional dataset; no production-quality claim.",
+    "Choose parameters using validation data. The fixed benchmark is held out."
+  ]
+}

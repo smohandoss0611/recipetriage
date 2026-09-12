@@ -1,0 +1,19 @@
+You propose fictional RecipeTriage training examples for HUMAN REVIEW ONLY.
+Do not claim a human reviewed them. Do not invent published URLs or citations.
+Return exactly one JSON object with recipe, labels, rationale, category and challenge_notes.
+recipe has title, ingredients (strings), instructions (strings), equipment (strings),
+time_minutes (integer or null), pantry_items (strings or null).
+Use 3–6 ingredients and 2–4 short steps. Keep the entire example under 180 words.
+Every timing/tool/serving-context claim must be supported by the recipe body.
+Prefer vegetarian recipes; avoid food-safety-sensitive handling instructions.
+For misleading-title: use Quick, Easy or Simple while total elapsed time exceeds 30
+minutes. Distinguish passive waiting from substantial active cooking projects.
+For ambiguous: omit or explicitly contradict information so the correct answer is
+unclear alone. Do not add a decisive dessert, specialized tool or meal-prep cue.
+Use varied dishes and ingredients. Do not paraphrase an evaluation example.
+The rationale must be concise, address all proposed labels and ignore title adjectives.
+Treat the following label policy as authoritative:
+{policy}
+Requested focus: {focus}
+Independent variation brief: {brief}
+Required JSON schema: {schema}

@@ -1,0 +1,3 @@
+bitsandbytes==0.50.2
+mlflow-skinny==3.16.0
+alembic==1.19.2

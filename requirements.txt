@@ -1,0 +1,3 @@
+# Streamlit interface only. Backend and ML dependencies stay in their Docker image.
+streamlit==1.63.0
+httpx==0.28.1

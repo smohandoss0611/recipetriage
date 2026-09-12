@@ -1,0 +1,91 @@
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'eval_loss': 2.8582310676574707, 'eval_model_preparation_time': 0.0015, 'eval_runtime': 0.9987, 'eval_samples_per_second': 1.001, 'eval_steps_per_second': 1.001, 'eval_entropy': 2.612621307373047, 'eval_num_tokens': 0.0, 'eval_mean_token_accuracy': 0.3928571343421936}
+{'loss': 2.4271, 'grad_norm': 1.4293956756591797, 'learning_rate': 0.0002, 'entropy': 2.6260679960250854, 'num_tokens': 807.0, 'mean_token_accuracy': 0.4781976640224457, 'epoch': 0.4}
+{'loss': 2.837, 'grad_norm': 1.8630428314208984, 'learning_rate': 0.0002, 'entropy': 2.6682705879211426, 'num_tokens': 1550.0, 'mean_token_accuracy': 0.5509259104728699, 'epoch': 0.8}
+{'loss': 2.4538, 'grad_norm': 1.832385778427124, 'learning_rate': 0.0002, 'entropy': 2.70149302482605, 'num_tokens': 1921.0, 'mean_token_accuracy': 0.5555555820465088, 'epoch': 1.0}
+{'eval_loss': 2.811249017715454, 'eval_model_preparation_time': 0.0015, 'eval_runtime': 0.8951, 'eval_samples_per_second': 1.117, 'eval_steps_per_second': 1.117, 'eval_entropy': 2.6216936111450195, 'eval_num_tokens': 1921.0, 'eval_mean_token_accuracy': 0.3928571343421936, 'epoch': 1.0}
+{'loss': 2.6185, 'grad_norm': 1.6829782724380493, 'learning_rate': 0.0002, 'entropy': 2.653745412826538, 'num_tokens': 2685.0, 'mean_token_accuracy': 0.5555555820465088, 'epoch': 1.4}
+{'loss': 2.375, 'grad_norm': 1.5084398984909058, 'learning_rate': 0.0002, 'entropy': 2.6379069089889526, 'num_tokens': 3492.0, 'mean_token_accuracy': 0.4781976640224457, 'epoch': 1.8}
+{'loss': 2.8301, 'grad_norm': 2.959486722946167, 'learning_rate': 0.0002, 'entropy': 2.7511327266693115, 'num_tokens': 3842.0, 'mean_token_accuracy': 0.48148149251937866, 'epoch': 2.0}
+{'eval_loss': 2.746958017349243, 'eval_model_preparation_time': 0.0015, 'eval_runtime': 0.7032, 'eval_samples_per_second': 1.422, 'eval_steps_per_second': 1.422, 'eval_entropy': 2.6308066844940186, 'eval_num_tokens': 3842.0, 'eval_mean_token_accuracy': 0.3928571343421936, 'epoch': 2.0}
+{'loss': 2.3468, 'grad_norm': 1.5909680128097534, 'learning_rate': 0.0002, 'entropy': 2.6447441577911377, 'num_tokens': 4649.0, 'mean_token_accuracy': 0.4781976640224457, 'epoch': 2.4}
+{'loss': 2.5548, 'grad_norm': 1.8572617769241333, 'learning_rate': 0.0002, 'entropy': 2.6666674613952637, 'num_tokens': 5413.0, 'mean_token_accuracy': 0.5416666865348816, 'epoch': 2.8}
+{'loss': 2.7532, 'grad_norm': 3.0929548740386963, 'learning_rate': 0.0002, 'entropy': 2.7644503116607666, 'num_tokens': 5763.0, 'mean_token_accuracy': 0.48148149251937866, 'epoch': 3.0}
+{'eval_loss': 2.67427396774292, 'eval_model_preparation_time': 0.0015, 'eval_runtime': 0.6658, 'eval_samples_per_second': 1.502, 'eval_steps_per_second': 1.502, 'eval_entropy': 2.6431281566619873, 'eval_num_tokens': 5763.0, 'eval_mean_token_accuracy': 0.3928571343421936, 'epoch': 3.0}
+{'train_runtime': 29.7732, 'train_samples_per_second': 0.504, 'train_steps_per_second': 0.302, 'train_loss': 2.5773574776119657, 'epoch': 3.0}
+{'eval_loss': 2.8582310676574707, 'eval_model_preparation_time': 0.0017, 'eval_runtime': 0.9832, 'eval_samples_per_second': 1.017, 'eval_steps_per_second': 1.017, 'eval_entropy': 2.612621307373047, 'eval_num_tokens': 0.0, 'eval_mean_token_accuracy': 0.3928571343421936}
+{'loss': 2.4271, 'grad_norm': 0.48637107014656067, 'learning_rate': 0.0002, 'entropy': 2.6260679960250854, 'num_tokens': 807.0, 'mean_token_accuracy': 0.4781976640224457, 'epoch': 0.4}
+{'loss': 2.8434, 'grad_norm': 0.5849331617355347, 'learning_rate': 0.0002, 'entropy': 2.6649999618530273, 'num_tokens': 1550.0, 'mean_token_accuracy': 0.5509259104728699, 'epoch': 0.8}
+{'loss': 2.4641, 'grad_norm': 0.6817620396614075, 'learning_rate': 0.0002, 'entropy': 2.6959645748138428, 'num_tokens': 1921.0, 'mean_token_accuracy': 0.5555555820465088, 'epoch': 1.0}
+{'eval_loss': 2.8413913249969482, 'eval_model_preparation_time': 0.0017, 'eval_runtime': 0.517, 'eval_samples_per_second': 1.934, 'eval_steps_per_second': 1.934, 'eval_entropy': 2.6139063835144043, 'eval_num_tokens': 1921.0, 'eval_mean_token_accuracy': 0.3928571343421936, 'epoch': 1.0}
+{'loss': 2.6351, 'grad_norm': 0.6025456190109253, 'learning_rate': 0.0002, 'entropy': 2.6461992263793945, 'num_tokens': 2685.0, 'mean_token_accuracy': 0.5694444477558136, 'epoch': 1.4}
+{'loss': 2.3989, 'grad_norm': 0.5616775155067444, 'learning_rate': 0.0002, 'entropy': 2.62835431098938, 'num_tokens': 3492.0, 'mean_token_accuracy': 0.4781976640224457, 'epoch': 1.8}
+{'loss': 2.8841, 'grad_norm': 1.014837384223938, 'learning_rate': 0.0002, 'entropy': 2.7386677265167236, 'num_tokens': 3842.0, 'mean_token_accuracy': 0.5185185074806213, 'epoch': 2.0}
+{'eval_loss': 2.817331314086914, 'eval_model_preparation_time': 0.0017, 'eval_runtime': 0.6875, 'eval_samples_per_second': 1.455, 'eval_steps_per_second': 1.455, 'eval_entropy': 2.616468667984009, 'eval_num_tokens': 3842.0, 'eval_mean_token_accuracy': 0.3928571343421936, 'epoch': 2.0}
+{'loss': 2.3821, 'grad_norm': 0.6258858442306519, 'learning_rate': 0.0002, 'entropy': 2.630240321159363, 'num_tokens': 4649.0, 'mean_token_accuracy': 0.4781976640224457, 'epoch': 2.4}
+{'loss': 2.597, 'grad_norm': 0.761078953742981, 'learning_rate': 0.0002, 'entropy': 2.650115966796875, 'num_tokens': 5413.0, 'mean_token_accuracy': 0.5694444477558136, 'epoch': 2.8}
+{'loss': 2.8412, 'grad_norm': 1.1790719032287598, 'learning_rate': 0.0002, 'entropy': 2.742264986038208, 'num_tokens': 5763.0, 'mean_token_accuracy': 0.5185185074806213, 'epoch': 3.0}
+{'eval_loss': 2.7867186069488525, 'eval_model_preparation_time': 0.0017, 'eval_runtime': 0.5569, 'eval_samples_per_second': 1.796, 'eval_steps_per_second': 1.796, 'eval_entropy': 2.620041847229004, 'eval_num_tokens': 5763.0, 'eval_mean_token_accuracy': 0.3928571343421936, 'epoch': 3.0}
+{'train_runtime': 16.2574, 'train_samples_per_second': 0.923, 'train_steps_per_second': 0.554, 'train_loss': 2.6081196467081704, 'epoch': 3.0}
+{
+  "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+  "benchmark_sha256": "173e79cc1968dd1207a7aafd051dad40d87ff551c7081a17b896c9556a698448",
+  "calibration_recipe_ids": [
+    "seed-001",
+    "seed-002"
+  ],
+  "results": [
+    {
+      "name": "early-six",
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_id": "c16561d0-9328-489e-b67b-19c53c7ca288",
+      "trainable_parameters": 67584,
+      "training_seconds": 29.866796375019476,
+      "micro_f1": 0.19047619047619047,
+      "macro_f1": 0.1285714285714286,
+      "statistics_file": "early-six-statistics.json"
+    },
+    {
+      "name": "late-six",
+      "layers": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "run_id": "b530230c-018f-4ae5-a3cc-5f6bbf713fd3",
+      "trainable_parameters": 67584,
+      "training_seconds": 16.35039166698698,
+      "micro_f1": 0.43243243243243246,
+      "macro_f1": 0.32653061224489793,
+      "statistics_file": "late-six-statistics.json"
+    }
+  ],
+  "limitations": [
+    "Two recipes and one run per subset do not support causal explanations.",
+    "Activation scale changes can reflect coordinate/scaling changes without better task behavior.",
+    "Subset assignment is a controlled configuration intervention; observed differences are not proof that a particular layer encodes a concept."
+  ]
+}

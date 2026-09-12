@@ -1,0 +1,63 @@
+name: CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  streamlit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt pytest
+      - run: python -m pytest -q tests/streamlit
+      - name: Validate single-server Compose configuration
+        run: |
+          python -c "from infra.server.setup import create_configuration; import secrets; create_configuration('.server', 'ci.recipetriage.test', secrets.token_urlsafe(32))"
+          docker compose --env-file .server/compose.env -f compose.server.yml config --quiet
+
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+        working-directory: frontend
+      - run: npm test
+        working-directory: frontend
+      - run: npm run build
+        working-directory: frontend
+      - run: cp .env.example .env
+      - run: docker compose config --quiet
+      - run: docker compose up --build --wait --wait-timeout 180
+      - run: docker compose --profile test run --build --rm backend-tests
+      - run: docker compose exec backend python -m pip check
+      - name: Test served UI and reverse proxy
+        run: |
+          curl --fail http://localhost:8080/ | grep -q '<title>RecipeTriage AI</title>'
+          curl --fail http://localhost:8080/api/health | python3 -c 'import json,sys; assert json.load(sys.stdin) == {"status":"ok","database":"ok"}'
+          curl --fail http://localhost:8080/api/v1/datasets/seed | python3 -c 'import json,sys; assert len(json.load(sys.stdin)["examples"]) == 7'
+          curl --fail http://localhost:8080/api/v1/recipes | python3 -c 'import json,sys; d=json.load(sys.stdin); assert len(d["examples"]) == 7; assert not any(r["reviewed"] for r in d["examples"])'
+          curl --fail http://localhost:8080/api/v1/playground/models | python3 -c 'import json,sys; d=json.load(sys.stdin); assert any(r["key"] == "base" and r["available"] for r in d["models"]); assert any(r["key"] == "dpo" and not r["available"] for r in d["models"])'
+          curl --fail http://localhost:8080/api/v1/benchmarks/manifest | python3 -c 'import json,sys; assert len(json.load(sys.stdin)["cases"]) == 10'
+          curl --fail http://localhost:8080/api/v1/training/options | python3 -c 'import json,sys; assert json.load(sys.stdin)["parameters"]["effective_batch_size"] == 2'
+          curl --fail http://localhost:8080/api/v1/training/lora/architecture | python3 -c 'import json,sys; data=json.load(sys.stdin); assert len(data["selected_target_paths"]) == 48; assert data["estimates"]["4"] == 270336'
+          curl --fail http://localhost:8080/api/v1/experiments/options | python3 -c 'import json,sys; data=json.load(sys.stdin); assert data["fixed_benchmark"] is True; assert len(data["defaults"]["runs"]) == 5'
+          curl --fail http://localhost:8080/api/v1/analysis/sources | python3 -c 'import json,sys; assert isinstance(json.load(sys.stdin), list)'
+      - name: Human review and registry HTTP smoke
+        run: |
+          curl --fail http://localhost:8080/api/v1/curation/candidates | python3 -c 'import json,sys; assert isinstance(json.load(sys.stdin), list)'
+          curl --fail http://localhost:8080/api/v1/alignment/options | python3 -c 'import json,sys; d=json.load(sys.stdin); assert d["dpo_minimum_independent_choices"] == 3; assert d["grpo_production_changed"] is False'
+          curl --fail http://localhost:8080/api/v1/models/gate-config | python3 -c 'import json,sys; assert json.load(sys.stdin)["min_macro_f1"] == 0.45'
+          curl --fail http://localhost:8080/api/v1/deployment/results | python3 -c 'import json,sys; d=json.load(sys.stdin); assert len(d["candidates"]) >= 3; assert d["selection"]["production_changed"] is False'
+      - name: Container diagnostics
+        if: failure()
+        run: docker compose logs --no-color
+      - name: Cleanup
+        if: always()
+        run: docker compose --profile test down --volumes

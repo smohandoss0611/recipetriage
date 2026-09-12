@@ -1,0 +1,272 @@
+[
+  {
+    "recipe": {
+      "id": "seed-001",
+      "title": "Overnight Oatmeal",
+      "ingredients": [
+        "rolled oats",
+        "plain low-fat yogurt",
+        "milk",
+        "berries",
+        "chopped apple"
+      ],
+      "instructions": [
+        "Combine oats with yogurt and milk, then add fruit.",
+        "Cover and chill for 6–12 hours; divide into lidded portions."
+      ],
+      "equipment": [
+        "bowl",
+        "refrigerator"
+      ],
+      "time_minutes": 375,
+      "pantry_items": null,
+      "source_type": "published",
+      "source_uri": "https://www.nutrition.gov/recipes/overnight-oatmeal",
+      "source_notes": "Short paraphrase for classification. Source credits Oregon State University Extension and lists 15 minutes preparation plus 6 hours waiting; 375 is the stated minimum total, not active cooking time.",
+      "group_id": null
+    },
+    "labels": [
+      "meal-prep"
+    ],
+    "rationale": "The recipe explicitly prepares lidded portions ahead and needs hours of refrigeration.",
+    "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "recipe": {
+      "id": "seed-002",
+      "title": "Black Bean Quesadillas",
+      "ingredients": [
+        "bell pepper",
+        "cooked black beans",
+        "cheddar",
+        "corn or whole-wheat tortillas",
+        "vegetable oil spray",
+        "salsa",
+        "lettuce"
+      ],
+      "instructions": [
+        "Warm a pan and coat it lightly with oil.",
+        "Fill tortillas with peppers, beans and cheese; fold when the cheese softens and brown both sides.",
+        "Finish with salsa and lettuce."
+      ],
+      "equipment": [
+        "pan",
+        "stove"
+      ],
+      "time_minutes": 30,
+      "pantry_items": null,
+      "source_type": "published",
+      "source_uri": "https://www.texaswic.org/recipes/black-bean-quesadillas",
+      "source_notes": "Short paraphrase of Texas WIC. The source reports less than 30 minutes; 30 is recorded as a conservative upper bound, not an exact measured duration.",
+      "group_id": null
+    },
+    "labels": [
+      "weeknight-30min"
+    ],
+    "rationale": "The published upper bound for total preparation is 30 minutes.",
+    "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "recipe": {
+      "id": "seed-003",
+      "title": "Peanut Butter Banana Smoothie",
+      "ingredients": [
+        "bananas",
+        "skim milk",
+        "peanut butter",
+        "unsweetened cocoa",
+        "vanilla yogurt"
+      ],
+      "instructions": [
+        "Cut peeled bananas and freeze them.",
+        "Blend the frozen pieces with the remaining ingredients; pour and serve."
+      ],
+      "equipment": [
+        "freezer",
+        "blender"
+      ],
+      "time_minutes": null,
+      "pantry_items": null,
+      "source_type": "published",
+      "source_uri": "https://eat-move-save.extension.illinois.edu/eat/recipes/peanut-butter-banana-smoothie",
+      "source_notes": "Short paraphrase of Illinois Extension. No total duration is given and freezing takes unspecified time, so time_minutes is null.",
+      "group_id": null
+    },
+    "labels": [
+      "needs-special-equipment"
+    ],
+    "rationale": "The instructions explicitly require a blender; the freezing duration is unknown.",
+    "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "recipe": {
+      "id": "seed-004",
+      "title": "Oatmeal Pecan Waffles",
+      "ingredients": [
+        "whole-wheat flour",
+        "quick oats",
+        "baking powder",
+        "sugar",
+        "pecans",
+        "eggs",
+        "skim milk",
+        "vegetable oil",
+        "strawberries",
+        "blackberries",
+        "blueberries",
+        "powdered sugar"
+      ],
+      "instructions": [
+        "Combine the dry mixture and separately combine yolks, milk and oil.",
+        "Stir the mixtures together and fold in whipped egg whites.",
+        "Cook in a heated waffle iron; finish with berries and powdered sugar."
+      ],
+      "equipment": [
+        "bowl",
+        "whisk",
+        "waffle iron"
+      ],
+      "time_minutes": null,
+      "pantry_items": null,
+      "source_type": "published",
+      "source_uri": "https://www.nutrition.gov/recipes/oatmeal-pecan-waffles",
+      "source_notes": "Short paraphrase; source credits NHLBI. The waffle method is represented, not its optional pancake variation. The source gives no total duration.",
+      "group_id": null
+    },
+    "labels": [
+      "needs-special-equipment"
+    ],
+    "rationale": "The chosen preparation method requires a waffle iron; no total timing is provided.",
+    "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "recipe": {
+      "id": "seed-005",
+      "title": "Quick and Easy Pizza",
+      "ingredients": [
+        "all-purpose flour",
+        "instant yeast",
+        "sugar",
+        "warm water",
+        "nonstick spray",
+        "marinara",
+        "mozzarella"
+      ],
+      "instructions": [
+        "Mix and knead the yeast dough, then let it rise for 10–15 minutes.",
+        "Spread the dough on a prepared sheet and add sauce and cheese.",
+        "Bake at 375 F for about 15 minutes."
+      ],
+      "equipment": [
+        "bowl",
+        "baking sheet",
+        "oven"
+      ],
+      "time_minutes": 45,
+      "pantry_items": null,
+      "source_type": "published",
+      "source_uri": "https://www.nutrition.gov/recipes/quick-and-easy-pizza",
+      "source_notes": "Short paraphrase of the USDA recipe. Its header lists 30 minutes prep plus 15 minutes baking. Quick in the title does not change the 45-minute total.",
+      "group_id": null
+    },
+    "labels": [
+      "weekend-project"
+    ],
+    "rationale": "Making, kneading and proofing dough is a cooking project with a stated 45-minute total.",
+    "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "recipe": {
+      "id": "seed-006",
+      "title": "Roasted Root Vegetables",
+      "ingredients": [
+        "sweet potato",
+        "rutabaga",
+        "onion",
+        "potato",
+        "carrots",
+        "turnip",
+        "olive oil",
+        "Parmesan",
+        "garlic powder",
+        "sage",
+        "rosemary"
+      ],
+      "instructions": [
+        "Arrange chopped vegetables on a baking sheet with oil and seasonings.",
+        "Roast at 350 F until tender; the directions specify 30–40 minutes.",
+        "Add Parmesan before serving."
+      ],
+      "equipment": [
+        "baking sheet",
+        "oven"
+      ],
+      "time_minutes": null,
+      "pantry_items": null,
+      "source_type": "published",
+      "source_uri": "https://www.nutrition.gov/recipes/roasted-root-vegetables",
+      "source_notes": "Short paraphrase; source credits Virginia Cooperative Extension. The header says 30 minutes total (5 prep, 25 cooking), but directions say bake 30–40 minutes. This conflict is retained for human review; no exact total is inferred.",
+      "group_id": null
+    },
+    "labels": [
+      "unclear"
+    ],
+    "rationale": "The total elapsed time is unresolved; the directions already specify 30–40 minutes of roasting before accounting for preparation.",
+    "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "recipe": {
+      "id": "seed-007",
+      "title": "Homemade Cheese Ravioli",
+      "ingredients": [
+        "flour",
+        "eggs",
+        "salt",
+        "optional water",
+        "ricotta",
+        "fresh herbs",
+        "Parmesan",
+        "pecorino Romano",
+        "pepper",
+        "nutmeg"
+      ],
+      "instructions": [
+        "Process the dough ingredients, knead briefly, and allow at least a half-hour rest.",
+        "Combine the cheese filling. Roll thin sheets with a pasta machine, portion filling, seal and cut.",
+        "Boil the filled pasta for 6–8 minutes. Uncooked portions may be frozen for later meals."
+      ],
+      "equipment": [
+        "food processor",
+        "pasta machine",
+        "pot"
+      ],
+      "time_minutes": 70,
+      "pantry_items": null,
+      "source_type": "published",
+      "source_uri": "https://www.kingarthurbaking.com/recipes/homemade-cheese-ravioli-recipe",
+      "source_notes": "Uses the original published recipe title. Short paraphrase of David Turner / King Arthur Baking; represents the main machine-assisted method. Excludes the four experimental title variants.",
+      "group_id": null
+    },
+    "labels": [
+      "weekend-project",
+      "needs-special-equipment",
+      "meal-prep"
+    ],
+    "rationale": "The recipe takes 70 minutes, uses a pasta machine and food processor, and explicitly allows freezing portions ahead.",
+    "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+    "reviewed": false,
+    "reviewed_by": null
+  }
+]

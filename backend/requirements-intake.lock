@@ -1,0 +1,2 @@
+# Optional host OCR image validation; Docker also installs the Tesseract executable.
+pillow==12.3.0

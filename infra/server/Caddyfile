@@ -1,0 +1,9 @@
+{
+	skip_install_trust
+}
+
+{$APP_DOMAIN} {
+	encode zstd gzip
+	# Streamlit needs WebSocket upgrades; reverse_proxy handles them automatically.
+	reverse_proxy streamlit:8501
+}

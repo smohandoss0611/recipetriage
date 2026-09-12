@@ -1,0 +1,7 @@
+{
+  "rank": 16,
+  "adapter_sha256": "df8c66761dbf0462409d2949c829e070d129fdbcfd600d9f1b0cd65702f840c4",
+  "case_id": "bench-001",
+  "exact_output_match": true,
+  "all_parameters_frozen_for_inference": true
+}

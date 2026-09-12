@@ -1,0 +1,1912 @@
+{
+  "/api/v1/datasets/seed": {
+    "examples": [
+      {
+        "recipe": {
+          "id": "seed-001",
+          "title": "Overnight Oatmeal",
+          "ingredients": [
+            "rolled oats",
+            "plain low-fat yogurt",
+            "milk",
+            "berries",
+            "chopped apple"
+          ],
+          "instructions": [
+            "Combine oats with yogurt and milk, then add fruit.",
+            "Cover and chill for 6\u201312 hours; divide into lidded portions."
+          ],
+          "equipment": [
+            "bowl",
+            "refrigerator"
+          ],
+          "time_minutes": 375,
+          "pantry_items": null,
+          "source_type": "published",
+          "source_uri": "https://www.nutrition.gov/recipes/overnight-oatmeal",
+          "source_notes": "Short paraphrase for classification. Source credits Oregon State University Extension and lists 15 minutes preparation plus 6 hours waiting; 375 is the stated minimum total, not active cooking time.",
+          "group_id": null
+        },
+        "labels": [
+          "meal-prep"
+        ],
+        "rationale": "The recipe explicitly prepares lidded portions ahead and needs hours of refrigeration.",
+        "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+        "reviewed": false,
+        "reviewed_by": null
+      },
+      {
+        "recipe": {
+          "id": "seed-002",
+          "title": "Black Bean Quesadillas",
+          "ingredients": [
+            "bell pepper",
+            "cooked black beans",
+            "cheddar",
+            "corn or whole-wheat tortillas",
+            "vegetable oil spray",
+            "salsa",
+            "lettuce"
+          ],
+          "instructions": [
+            "Warm a pan and coat it lightly with oil.",
+            "Fill tortillas with peppers, beans and cheese; fold when the cheese softens and brown both sides.",
+            "Finish with salsa and lettuce."
+          ],
+          "equipment": [
+            "pan",
+            "stove"
+          ],
+          "time_minutes": 30,
+          "pantry_items": null,
+          "source_type": "published",
+          "source_uri": "https://www.texaswic.org/recipes/black-bean-quesadillas",
+          "source_notes": "Short paraphrase of Texas WIC. The source reports less than 30 minutes; 30 is recorded as a conservative upper bound, not an exact measured duration.",
+          "group_id": null
+        },
+        "labels": [
+          "weeknight-30min"
+        ],
+        "rationale": "The published upper bound for total preparation is 30 minutes.",
+        "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+        "reviewed": false,
+        "reviewed_by": null
+      },
+      {
+        "recipe": {
+          "id": "seed-003",
+          "title": "Peanut Butter Banana Smoothie",
+          "ingredients": [
+            "bananas",
+            "skim milk",
+            "peanut butter",
+            "unsweetened cocoa",
+            "vanilla yogurt"
+          ],
+          "instructions": [
+            "Cut peeled bananas and freeze them.",
+            "Blend the frozen pieces with the remaining ingredients; pour and serve."
+          ],
+          "equipment": [
+            "freezer",
+            "blender"
+          ],
+          "time_minutes": null,
+          "pantry_items": null,
+          "source_type": "published",
+          "source_uri": "https://eat-move-save.extension.illinois.edu/eat/recipes/peanut-butter-banana-smoothie",
+          "source_notes": "Short paraphrase of Illinois Extension. No total duration is given and freezing takes unspecified time, so time_minutes is null.",
+          "group_id": null
+        },
+        "labels": [
+          "needs-special-equipment"
+        ],
+        "rationale": "The instructions explicitly require a blender; the freezing duration is unknown.",
+        "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+        "reviewed": false,
+        "reviewed_by": null
+      },
+      {
+        "recipe": {
+          "id": "seed-004",
+          "title": "Oatmeal Pecan Waffles",
+          "ingredients": [
+            "whole-wheat flour",
+            "quick oats",
+            "baking powder",
+            "sugar",
+            "pecans",
+            "eggs",
+            "skim milk",
+            "vegetable oil",
+            "strawberries",
+            "blackberries",
+            "blueberries",
+            "powdered sugar"
+          ],
+          "instructions": [
+            "Combine the dry mixture and separately combine yolks, milk and oil.",
+            "Stir the mixtures together and fold in whipped egg whites.",
+            "Cook in a heated waffle iron; finish with berries and powdered sugar."
+          ],
+          "equipment": [
+            "bowl",
+            "whisk",
+            "waffle iron"
+          ],
+          "time_minutes": null,
+          "pantry_items": null,
+          "source_type": "published",
+          "source_uri": "https://www.nutrition.gov/recipes/oatmeal-pecan-waffles",
+          "source_notes": "Short paraphrase; source credits NHLBI. The waffle method is represented, not its optional pancake variation. The source gives no total duration.",
+          "group_id": null
+        },
+        "labels": [
+          "needs-special-equipment"
+        ],
+        "rationale": "The chosen preparation method requires a waffle iron; no total timing is provided.",
+        "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+        "reviewed": false,
+        "reviewed_by": null
+      },
+      {
+        "recipe": {
+          "id": "seed-005",
+          "title": "Quick and Easy Pizza",
+          "ingredients": [
+            "all-purpose flour",
+            "instant yeast",
+            "sugar",
+            "warm water",
+            "nonstick spray",
+            "marinara",
+            "mozzarella"
+          ],
+          "instructions": [
+            "Mix and knead the yeast dough, then let it rise for 10\u201315 minutes.",
+            "Spread the dough on a prepared sheet and add sauce and cheese.",
+            "Bake at 375 F for about 15 minutes."
+          ],
+          "equipment": [
+            "bowl",
+            "baking sheet",
+            "oven"
+          ],
+          "time_minutes": 45,
+          "pantry_items": null,
+          "source_type": "published",
+          "source_uri": "https://www.nutrition.gov/recipes/quick-and-easy-pizza",
+          "source_notes": "Short paraphrase of the USDA recipe. Its header lists 30 minutes prep plus 15 minutes baking. Quick in the title does not change the 45-minute total.",
+          "group_id": null
+        },
+        "labels": [
+          "weekend-project"
+        ],
+        "rationale": "Making, kneading and proofing dough is a cooking project with a stated 45-minute total.",
+        "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+        "reviewed": false,
+        "reviewed_by": null
+      },
+      {
+        "recipe": {
+          "id": "seed-006",
+          "title": "Roasted Root Vegetables",
+          "ingredients": [
+            "sweet potato",
+            "rutabaga",
+            "onion",
+            "potato",
+            "carrots",
+            "turnip",
+            "olive oil",
+            "Parmesan",
+            "garlic powder",
+            "sage",
+            "rosemary"
+          ],
+          "instructions": [
+            "Arrange chopped vegetables on a baking sheet with oil and seasonings.",
+            "Roast at 350 F until tender; the directions specify 30\u201340 minutes.",
+            "Add Parmesan before serving."
+          ],
+          "equipment": [
+            "baking sheet",
+            "oven"
+          ],
+          "time_minutes": null,
+          "pantry_items": null,
+          "source_type": "published",
+          "source_uri": "https://www.nutrition.gov/recipes/roasted-root-vegetables",
+          "source_notes": "Short paraphrase; source credits Virginia Cooperative Extension. The header says 30 minutes total (5 prep, 25 cooking), but directions say bake 30\u201340 minutes. This conflict is retained for human review; no exact total is inferred.",
+          "group_id": null
+        },
+        "labels": [
+          "unclear"
+        ],
+        "rationale": "The total elapsed time is unresolved; the directions already specify 30\u201340 minutes of roasting before accounting for preparation.",
+        "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+        "reviewed": false,
+        "reviewed_by": null
+      },
+      {
+        "recipe": {
+          "id": "seed-007",
+          "title": "Homemade Cheese Ravioli",
+          "ingredients": [
+            "flour",
+            "eggs",
+            "salt",
+            "optional water",
+            "ricotta",
+            "fresh herbs",
+            "Parmesan",
+            "pecorino Romano",
+            "pepper",
+            "nutmeg"
+          ],
+          "instructions": [
+            "Process the dough ingredients, knead briefly, and allow at least a half-hour rest.",
+            "Combine the cheese filling. Roll thin sheets with a pasta machine, portion filling, seal and cut.",
+            "Boil the filled pasta for 6\u20138 minutes. Uncooked portions may be frozen for later meals."
+          ],
+          "equipment": [
+            "food processor",
+            "pasta machine",
+            "pot"
+          ],
+          "time_minutes": 70,
+          "pantry_items": null,
+          "source_type": "published",
+          "source_uri": "https://www.kingarthurbaking.com/recipes/homemade-cheese-ravioli-recipe",
+          "source_notes": "Uses the original published recipe title. Short paraphrase of David Turner / King Arthur Baking; represents the main machine-assisted method. Excludes the four experimental title variants.",
+          "group_id": null
+        },
+        "labels": [
+          "weekend-project",
+          "needs-special-equipment",
+          "meal-prep"
+        ],
+        "rationale": "The recipe takes 70 minutes, uses a pasta machine and food processor, and explicitly allows freezing portions ahead.",
+        "annotation_notes": "Source-based summary and proposed labels assembled by the assistant; not yet human reviewed.",
+        "reviewed": false,
+        "reviewed_by": null
+      }
+    ],
+    "labels": [
+      "weeknight-30min",
+      "weekend-project",
+      "needs-special-equipment",
+      "meal-prep",
+      "dessert",
+      "have-most-of-this",
+      "unclear"
+    ],
+    "policy": {
+      "weeknight-30min": "Known total elapsed time <=30 minutes, including waiting; never infer speed from title adjectives.",
+      "weekend-project": "A substantial cooking project taking >30 minutes; passive waiting alone does not qualify.",
+      "needs-special-equipment": "Requires a specialized appliance, such as a blender, food processor, pasta machine, or waffle iron; ordinary kitchen tools do not qualify.",
+      "meal-prep": "Explicitly suitable for preparing portions ahead; record recipe-grounded evidence.",
+      "dessert": "Intended as dessert, not merely sweet.",
+      "have-most-of-this": "Explicit pantry context covers >=80% of ingredient items; never assume the user's pantry. Dataset v1 uses exact normalized ingredient strings for matching.",
+      "unclear": "Insufficient or contradictory evidence; exclusive of all other labels in v1."
+    },
+    "schema": {
+      "$defs": {
+        "Recipe": {
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "maxLength": 2000,
+              "minLength": 1,
+              "title": "Title",
+              "type": "string"
+            },
+            "ingredients": {
+              "items": {
+                "maxLength": 2000,
+                "minLength": 1,
+                "type": "string"
+              },
+              "maxItems": 60,
+              "minItems": 1,
+              "title": "Ingredients",
+              "type": "array"
+            },
+            "instructions": {
+              "items": {
+                "maxLength": 2000,
+                "minLength": 1,
+                "type": "string"
+              },
+              "maxItems": 60,
+              "minItems": 1,
+              "title": "Instructions",
+              "type": "array"
+            },
+            "equipment": {
+              "items": {
+                "maxLength": 2000,
+                "minLength": 1,
+                "type": "string"
+              },
+              "maxItems": 30,
+              "title": "Equipment",
+              "type": "array"
+            },
+            "time_minutes": {
+              "anyOf": [
+                {
+                  "maximum": 10080,
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Time Minutes"
+            },
+            "pantry_items": {
+              "anyOf": [
+                {
+                  "items": {
+                    "maxLength": 2000,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 100,
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Pantry Items"
+            },
+            "id": {
+              "pattern": "^[A-Za-z0-9_-]{1,80}$",
+              "title": "Id",
+              "type": "string"
+            },
+            "source_type": {
+              "enum": [
+                "published",
+                "personal",
+                "synthetic"
+              ],
+              "title": "Source Type",
+              "type": "string"
+            },
+            "source_uri": {
+              "maxLength": 2000,
+              "minLength": 1,
+              "title": "Source Uri",
+              "type": "string"
+            },
+            "source_notes": {
+              "maxLength": 2000,
+              "minLength": 1,
+              "title": "Source Notes",
+              "type": "string"
+            },
+            "group_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[A-Za-z0-9_-]{1,80}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Group Id"
+            }
+          },
+          "required": [
+            "title",
+            "ingredients",
+            "instructions",
+            "equipment",
+            "time_minutes",
+            "id",
+            "source_type",
+            "source_uri",
+            "source_notes"
+          ],
+          "title": "Recipe",
+          "type": "object"
+        },
+        "SyntheticProvenance": {
+          "additionalProperties": false,
+          "properties": {
+            "source": {
+              "const": "synthetic-fireworks",
+              "title": "Source",
+              "type": "string"
+            },
+            "generation_id": {
+              "title": "Generation Id",
+              "type": "string"
+            },
+            "candidate_id": {
+              "title": "Candidate Id",
+              "type": "string"
+            },
+            "candidate_revision": {
+              "minimum": 1,
+              "title": "Candidate Revision",
+              "type": "integer"
+            },
+            "model": {
+              "maxLength": 2000,
+              "minLength": 1,
+              "title": "Model",
+              "type": "string"
+            },
+            "prompt_version": {
+              "maxLength": 2000,
+              "minLength": 1,
+              "title": "Prompt Version",
+              "type": "string"
+            },
+            "prompt_sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "title": "Prompt Sha256",
+              "type": "string"
+            },
+            "human_review_id": {
+              "title": "Human Review Id",
+              "type": "string"
+            },
+            "approved_at": {
+              "maxLength": 2000,
+              "minLength": 1,
+              "title": "Approved At",
+              "type": "string"
+            },
+            "approved_content_sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "title": "Approved Content Sha256",
+              "type": "string"
+            }
+          },
+          "required": [
+            "source",
+            "generation_id",
+            "candidate_id",
+            "candidate_revision",
+            "model",
+            "prompt_version",
+            "prompt_sha256",
+            "human_review_id",
+            "approved_at",
+            "approved_content_sha256"
+          ],
+          "title": "SyntheticProvenance",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "recipe": {
+          "$ref": "#/$defs/Recipe"
+        },
+        "labels": {
+          "items": {
+            "enum": [
+              "weeknight-30min",
+              "weekend-project",
+              "needs-special-equipment",
+              "meal-prep",
+              "dessert",
+              "have-most-of-this",
+              "unclear"
+            ],
+            "type": "string"
+          },
+          "maxItems": 7,
+          "minItems": 1,
+          "title": "Labels",
+          "type": "array"
+        },
+        "rationale": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "annotation_notes": {
+          "default": "",
+          "maxLength": 4000,
+          "title": "Annotation Notes",
+          "type": "string"
+        },
+        "reviewed": {
+          "default": false,
+          "title": "Reviewed",
+          "type": "boolean"
+        },
+        "reviewed_by": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewed By"
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SyntheticProvenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "recipe",
+        "labels",
+        "rationale"
+      ],
+      "title": "TrainingExample",
+      "type": "object"
+    },
+    "recipe_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "ingredients": {
+          "items": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 60,
+          "minItems": 1,
+          "title": "Ingredients",
+          "type": "array"
+        },
+        "instructions": {
+          "items": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 60,
+          "minItems": 1,
+          "title": "Instructions",
+          "type": "array"
+        },
+        "equipment": {
+          "items": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 30,
+          "title": "Equipment",
+          "type": "array"
+        },
+        "time_minutes": {
+          "anyOf": [
+            {
+              "maximum": 10080,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Time Minutes"
+        },
+        "pantry_items": {
+          "anyOf": [
+            {
+              "items": {
+                "maxLength": 2000,
+                "minLength": 1,
+                "type": "string"
+              },
+              "maxItems": 100,
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pantry Items"
+        },
+        "id": {
+          "pattern": "^[A-Za-z0-9_-]{1,80}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "source_type": {
+          "enum": [
+            "published",
+            "personal",
+            "synthetic"
+          ],
+          "title": "Source Type",
+          "type": "string"
+        },
+        "source_uri": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Source Uri",
+          "type": "string"
+        },
+        "source_notes": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Source Notes",
+          "type": "string"
+        },
+        "group_id": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9_-]{1,80}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Group Id"
+        }
+      },
+      "required": [
+        "title",
+        "ingredients",
+        "instructions",
+        "equipment",
+        "time_minutes",
+        "id",
+        "source_type",
+        "source_uri",
+        "source_notes"
+      ],
+      "title": "Recipe",
+      "type": "object"
+    }
+  },
+  "/api/v1/training/options": {
+    "defaults": {
+      "provider": "local",
+      "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "epochs": 3,
+      "learning_rate": 0.0002,
+      "sequence_length": 768,
+      "batch_size": 1,
+      "gradient_accumulation_steps": 2,
+      "seed": 42,
+      "lora_rank": 8,
+      "lora_alpha": null,
+      "lora_dropout": 0.0,
+      "lora_target_policy": "query-value",
+      "method": "lora",
+      "gradient_checkpointing": true,
+      "fireworks_model": null,
+      "fireworks_deployment_shape": null
+    },
+    "parameters": {
+      "provider": "local",
+      "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "epochs": 3,
+      "learning_rate": 0.0002,
+      "sequence_length": 768,
+      "batch_size": 1,
+      "gradient_accumulation_steps": 2,
+      "seed": 42,
+      "lora_rank": 8,
+      "lora_alpha": 16,
+      "lora_dropout": 0.0,
+      "lora_target_policy": "query-value",
+      "method": "lora",
+      "gradient_checkpointing": true,
+      "fireworks_model": null,
+      "fireworks_deployment_shape": null,
+      "effective_batch_size": 2,
+      "base_model": "Qwen/Qwen2.5-0.5B",
+      "base_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+      "objective": "assistant-token causal cross-entropy; EOS supervised; padding masked",
+      "optimizer": "adamw_torch",
+      "weight_decay": 0.0,
+      "scheduler": "constant",
+      "warmup_steps": 0,
+      "eval_batch_size": 1,
+      "max_grad_norm": 1.0,
+      "lora_targets": "inspected full paths: query-value",
+      "device": "cpu",
+      "dtype": "float32",
+      "packing": false,
+      "truncation": "reject overlength locally; managed renderer validation required",
+      "checkpoint_selection": "minimum validation loss, evaluated each epoch",
+      "checkpoint_limit": 2,
+      "benchmark": {
+        "temperature": 0.0,
+        "max_new_tokens": 128,
+        "reasoning": "disabled"
+      }
+    },
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "provider": {
+          "default": "local",
+          "enum": [
+            "local",
+            "fireworks"
+          ],
+          "title": "Provider",
+          "type": "string"
+        },
+        "dataset_version": {
+          "pattern": "^v1-[0-9a-f]{64}$",
+          "title": "Dataset Version",
+          "type": "string"
+        },
+        "epochs": {
+          "default": 3,
+          "maximum": 20,
+          "minimum": 1,
+          "title": "Epochs",
+          "type": "integer"
+        },
+        "learning_rate": {
+          "default": 0.0002,
+          "exclusiveMinimum": 0,
+          "maximum": 0.01,
+          "title": "Learning Rate",
+          "type": "number"
+        },
+        "sequence_length": {
+          "default": 768,
+          "maximum": 2048,
+          "minimum": 128,
+          "title": "Sequence Length",
+          "type": "integer"
+        },
+        "batch_size": {
+          "default": 1,
+          "maximum": 4,
+          "minimum": 1,
+          "title": "Batch Size",
+          "type": "integer"
+        },
+        "gradient_accumulation_steps": {
+          "default": 2,
+          "maximum": 32,
+          "minimum": 1,
+          "title": "Gradient Accumulation Steps",
+          "type": "integer"
+        },
+        "seed": {
+          "default": 42,
+          "maximum": 4294967295,
+          "minimum": 0,
+          "title": "Seed",
+          "type": "integer"
+        },
+        "lora_rank": {
+          "default": 8,
+          "enum": [
+            4,
+            8,
+            16,
+            32
+          ],
+          "title": "Lora Rank",
+          "type": "integer"
+        },
+        "lora_alpha": {
+          "anyOf": [
+            {
+              "maximum": 256,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lora Alpha"
+        },
+        "lora_dropout": {
+          "default": 0.0,
+          "maximum": 0.5,
+          "minimum": 0,
+          "title": "Lora Dropout",
+          "type": "number"
+        },
+        "lora_target_policy": {
+          "default": "query-value",
+          "enum": [
+            "query-value",
+            "attention",
+            "attention-and-mlp"
+          ],
+          "title": "Lora Target Policy",
+          "type": "string"
+        },
+        "lora_layers": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "integer"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lora Layers"
+        },
+        "method": {
+          "default": "lora",
+          "enum": [
+            "lora",
+            "qlora"
+          ],
+          "title": "Method",
+          "type": "string"
+        },
+        "gradient_checkpointing": {
+          "default": true,
+          "title": "Gradient Checkpointing",
+          "type": "boolean"
+        },
+        "fireworks_model": {
+          "anyOf": [
+            {
+              "pattern": "^accounts/[a-z0-9-]+/models/[a-z0-9_.-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fireworks Model"
+        },
+        "fireworks_deployment_shape": {
+          "anyOf": [
+            {
+              "pattern": "^accounts/[a-z0-9-]+/deploymentShapes/[a-z0-9_.-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fireworks Deployment Shape"
+        }
+      },
+      "required": [
+        "dataset_version"
+      ],
+      "title": "SFTConfig",
+      "type": "object"
+    },
+    "seed_dataset": {
+      "version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "content_sha256": "63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+      "created_at": "2026-09-12T15:22:11.567793+00:00",
+      "schema_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "prompt_version": "triage-v1",
+      "system_prompt_sha256": "638015d13def52046cf38a9d80a0373c25a24315ab7197b241dbab2ad1861c90",
+      "status": "teaching-draft",
+      "seed": 42,
+      "requested_ratios": [
+        0.7,
+        0.15,
+        0.15
+      ],
+      "actual_ratios": {
+        "train": 0.7142857142857143,
+        "validation": 0.14285714285714285,
+        "test": 0.14285714285714285
+      },
+      "split_method": "grouped-rare-label-greedy-v1",
+      "label_policy": {
+        "weeknight-30min": "Known total elapsed time <=30 minutes, including waiting; never infer speed from title adjectives.",
+        "weekend-project": "A substantial cooking project taking >30 minutes; passive waiting alone does not qualify.",
+        "needs-special-equipment": "Requires a specialized appliance, such as a blender, food processor, pasta machine, or waffle iron; ordinary kitchen tools do not qualify.",
+        "meal-prep": "Explicitly suitable for preparing portions ahead; record recipe-grounded evidence.",
+        "dessert": "Intended as dessert, not merely sweet.",
+        "have-most-of-this": "Explicit pantry context covers >=80% of ingredient items; never assume the user's pantry. Dataset v1 uses exact normalized ingredient strings for matching.",
+        "unclear": "Insufficient or contradictory evidence; exclusive of all other labels in v1."
+      },
+      "counts": {
+        "train": 5,
+        "validation": 1,
+        "test": 1
+      },
+      "label_distribution": {
+        "train": {
+          "weeknight-30min": 1,
+          "weekend-project": 2,
+          "needs-special-equipment": 1,
+          "meal-prep": 2,
+          "dessert": 0,
+          "have-most-of-this": 0,
+          "unclear": 1
+        },
+        "validation": {
+          "weeknight-30min": 0,
+          "weekend-project": 0,
+          "needs-special-equipment": 1,
+          "meal-prep": 0,
+          "dessert": 0,
+          "have-most-of-this": 0,
+          "unclear": 0
+        },
+        "test": {
+          "weeknight-30min": 0,
+          "weekend-project": 0,
+          "needs-special-equipment": 1,
+          "meal-prep": 0,
+          "dessert": 0,
+          "have-most-of-this": 0,
+          "unclear": 0
+        }
+      },
+      "split_ids": {
+        "train": [
+          "seed-001",
+          "seed-002",
+          "seed-005",
+          "seed-006",
+          "seed-007"
+        ],
+        "validation": [
+          "seed-004"
+        ],
+        "test": [
+          "seed-003"
+        ]
+      },
+      "groups": [
+        [
+          "seed-001"
+        ],
+        [
+          "seed-002"
+        ],
+        [
+          "seed-003"
+        ],
+        [
+          "seed-004"
+        ],
+        [
+          "seed-005"
+        ],
+        [
+          "seed-006"
+        ],
+        [
+          "seed-007"
+        ]
+      ],
+      "fingerprints": {
+        "seed-001": "96292eb80c164be1922407b4c4aed7f9e8a0607d320e72c527b5a45cb1dbebe3",
+        "seed-002": "015c124a3d17e4d1357f0ac73ba036e4470839070bfa35c7666d08094b91226c",
+        "seed-003": "8afe709d0f6d2684baddbfb010479ea08735d4bdee078c1b6e6be1c09904f88b",
+        "seed-004": "d85046cfd2a9ca0eecf00798dc4095dab15d6db65caed79fc35104209e9a9580",
+        "seed-005": "908d342c0df121297f098ff8872b08354a0114a4ed6ab51cdb32a658c212b09e",
+        "seed-006": "d5ce9a6dff8e165ddf8503298030a670ff7a58418d009795e3d853b0a3ca9d8c",
+        "seed-007": "0fc252e20b7eabea2b534fff08c6e1677b39ebc5fa1d559cbbdff0d250650c25"
+      },
+      "sources": [
+        "https://eat-move-save.extension.illinois.edu/eat/recipes/peanut-butter-banana-smoothie",
+        "https://www.kingarthurbaking.com/recipes/homemade-cheese-ravioli-recipe",
+        "https://www.nutrition.gov/recipes/oatmeal-pecan-waffles",
+        "https://www.nutrition.gov/recipes/overnight-oatmeal",
+        "https://www.nutrition.gov/recipes/quick-and-easy-pizza",
+        "https://www.nutrition.gov/recipes/roasted-root-vegetables",
+        "https://www.texaswic.org/recipes/black-bean-quesadillas"
+      ],
+      "input_sha256": "3cf506d053c664aff2ce7f93745003846192a8317c6d0a5570357d806eadd009",
+      "input_rows": 7,
+      "duplicates_removed": [],
+      "warnings": [
+        "Teaching seed only: too small for reliable model-quality estimates.",
+        "Source grouping and exact-body de-duplication do not detect every paraphrase. Assign group_id to known related recipes.",
+        "weeknight-30min: 1 examples; cannot cover all three splits.",
+        "weekend-project: 2 examples; cannot cover all three splits.",
+        "meal-prep: 2 examples; cannot cover all three splits.",
+        "dessert: 0 examples; cannot cover all three splits.",
+        "have-most-of-this: 0 examples; cannot cover all three splits.",
+        "unclear: 1 examples; cannot cover all three splits.",
+        "Unreviewed annotations: this export is a teaching draft, not approved training data."
+      ],
+      "file_sha256": {
+        "train.jsonl": "5d8db796a366dfc38152602efa7ec9a77ecda44ec49861b8dd01caaf741dfe13",
+        "train.chat.jsonl": "bc475d2ccf8bfc35aa632e4fe4d855fb9c6b662d3ee1a7fbf3e3e348020b8a65",
+        "validation.jsonl": "2e47077a8012f83cc163f52d61ed4347f8ecf2ece1c8c9b585d92ff52a898ebb",
+        "validation.chat.jsonl": "162ce9e23371f47c06c752cb001cc23f8f843b6712a108fd1ec6eeecc3099ac6",
+        "test.jsonl": "3fd58ce476b6349cc13b8a0dcb1554c10dc89d4111e269a1dc3bcf90ee1a5541",
+        "test.chat.jsonl": "e9b441c7d70e23583844a9a76a04f613fb959bfe9687c3eeeaaecc6282a2a6a7",
+        "examples.json": "641567475a3c815de992a54fde13d6b37262dfe01dffa6e809e1cf078092d3ab",
+        "raw.json": "bec7328fea7367ad5b44c948b35b517a5880ab949c333a383051c007b508cdfe"
+      }
+    },
+    "fireworks_configured": true,
+    "fireworks_model": "accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b",
+    "fireworks_deployment_shape": null
+  },
+  "/api/v1/training/lora/architecture": {
+    "model": "Qwen/Qwen2.5-0.5B",
+    "layers": 24,
+    "selected_target_paths": [
+      "model.layers.0.self_attn.q_proj",
+      "model.layers.0.self_attn.v_proj",
+      "model.layers.1.self_attn.q_proj",
+      "model.layers.1.self_attn.v_proj",
+      "model.layers.2.self_attn.q_proj",
+      "model.layers.2.self_attn.v_proj",
+      "model.layers.3.self_attn.q_proj",
+      "model.layers.3.self_attn.v_proj",
+      "model.layers.4.self_attn.q_proj",
+      "model.layers.4.self_attn.v_proj",
+      "model.layers.5.self_attn.q_proj",
+      "model.layers.5.self_attn.v_proj",
+      "model.layers.6.self_attn.q_proj",
+      "model.layers.6.self_attn.v_proj",
+      "model.layers.7.self_attn.q_proj",
+      "model.layers.7.self_attn.v_proj",
+      "model.layers.8.self_attn.q_proj",
+      "model.layers.8.self_attn.v_proj",
+      "model.layers.9.self_attn.q_proj",
+      "model.layers.9.self_attn.v_proj",
+      "model.layers.10.self_attn.q_proj",
+      "model.layers.10.self_attn.v_proj",
+      "model.layers.11.self_attn.q_proj",
+      "model.layers.11.self_attn.v_proj",
+      "model.layers.12.self_attn.q_proj",
+      "model.layers.12.self_attn.v_proj",
+      "model.layers.13.self_attn.q_proj",
+      "model.layers.13.self_attn.v_proj",
+      "model.layers.14.self_attn.q_proj",
+      "model.layers.14.self_attn.v_proj",
+      "model.layers.15.self_attn.q_proj",
+      "model.layers.15.self_attn.v_proj",
+      "model.layers.16.self_attn.q_proj",
+      "model.layers.16.self_attn.v_proj",
+      "model.layers.17.self_attn.q_proj",
+      "model.layers.17.self_attn.v_proj",
+      "model.layers.18.self_attn.q_proj",
+      "model.layers.18.self_attn.v_proj",
+      "model.layers.19.self_attn.q_proj",
+      "model.layers.19.self_attn.v_proj",
+      "model.layers.20.self_attn.q_proj",
+      "model.layers.20.self_attn.v_proj",
+      "model.layers.21.self_attn.q_proj",
+      "model.layers.21.self_attn.v_proj",
+      "model.layers.22.self_attn.q_proj",
+      "model.layers.22.self_attn.v_proj",
+      "model.layers.23.self_attn.q_proj",
+      "model.layers.23.self_attn.v_proj"
+    ],
+    "estimates": {
+      "4": 270336,
+      "8": 540672,
+      "16": 1081344,
+      "32": 2162688
+    }
+  },
+  "/api/v1/experiments/options": {
+    "defaults": {
+      "name": "Fixed v1 \u00b7 learning rate \u00d7 rank and NF4 comparison",
+      "runs": [
+        {
+          "provider": "local",
+          "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+          "epochs": 3,
+          "learning_rate": 5e-05,
+          "sequence_length": 768,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 2,
+          "seed": 42,
+          "lora_rank": 4,
+          "lora_alpha": null,
+          "lora_dropout": 0.0,
+          "lora_target_policy": "query-value",
+          "method": "lora",
+          "gradient_checkpointing": true,
+          "fireworks_model": null,
+          "fireworks_deployment_shape": null
+        },
+        {
+          "provider": "local",
+          "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+          "epochs": 3,
+          "learning_rate": 5e-05,
+          "sequence_length": 768,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 2,
+          "seed": 42,
+          "lora_rank": 16,
+          "lora_alpha": null,
+          "lora_dropout": 0.0,
+          "lora_target_policy": "query-value",
+          "method": "lora",
+          "gradient_checkpointing": true,
+          "fireworks_model": null,
+          "fireworks_deployment_shape": null
+        },
+        {
+          "provider": "local",
+          "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+          "epochs": 3,
+          "learning_rate": 0.0002,
+          "sequence_length": 768,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 2,
+          "seed": 42,
+          "lora_rank": 4,
+          "lora_alpha": null,
+          "lora_dropout": 0.0,
+          "lora_target_policy": "query-value",
+          "method": "lora",
+          "gradient_checkpointing": true,
+          "fireworks_model": null,
+          "fireworks_deployment_shape": null
+        },
+        {
+          "provider": "local",
+          "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+          "epochs": 3,
+          "learning_rate": 0.0002,
+          "sequence_length": 768,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 2,
+          "seed": 42,
+          "lora_rank": 16,
+          "lora_alpha": null,
+          "lora_dropout": 0.0,
+          "lora_target_policy": "query-value",
+          "method": "lora",
+          "gradient_checkpointing": true,
+          "fireworks_model": null,
+          "fireworks_deployment_shape": null
+        },
+        {
+          "provider": "local",
+          "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+          "epochs": 3,
+          "learning_rate": 0.0002,
+          "sequence_length": 768,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 2,
+          "seed": 42,
+          "lora_rank": 4,
+          "lora_alpha": null,
+          "lora_dropout": 0.0,
+          "lora_target_policy": "query-value",
+          "method": "qlora",
+          "gradient_checkpointing": true,
+          "fireworks_model": null,
+          "fireworks_deployment_shape": null
+        }
+      ],
+      "mlflow": true
+    },
+    "qlora": {
+      "device": "cpu",
+      "platform": "Linux-7.0.12-linuxkit-aarch64-with-glibc2.41",
+      "supported": true,
+      "compute_dtype": "float32",
+      "quant_type": "nf4",
+      "double_quantization": true,
+      "torch": "2.14.0+cpu",
+      "bitsandbytes": "0.50.2",
+      "error": null
+    },
+    "tracking": "MLflow; training evidence remains in PostgreSQL if tracking export fails",
+    "matrix_limit": 8,
+    "fixed_benchmark": true
+  },
+  "/api/v1/alignment/options": {
+    "defaults": {
+      "learning_rate": 5e-06,
+      "max_steps": 2,
+      "beta": 0.1,
+      "sequence_length": 1024,
+      "seed": 42
+    },
+    "reward_weights": {
+      "label_f1": 0.55,
+      "json_valid": 0.1,
+      "schema_valid": 0.1,
+      "uncertainty": 0.15,
+      "shortcut_consistency": 0.1
+    },
+    "reward_version": "recipe-reward-v1",
+    "reference_available": true,
+    "dpo_minimum_independent_choices": 3,
+    "grpo_production_changed": false
+  },
+  "/api/v1/benchmarks/manifest": {
+    "name": "RecipeTriage-Bench-v1",
+    "description": "Ten fixed, source-linked recipe cases across six categories. Separate from Dataset v1; no generated recipes. Pantry and serving choices are explicit evaluation contexts.",
+    "annotation_status": "provisional-unreviewed",
+    "cases": [
+      {
+        "recipe": {
+          "title": "Stovetop Popcorn",
+          "ingredients": [
+            "popcorn kernels",
+            "vegetable oil",
+            "seasoning"
+          ],
+          "instructions": [
+            "Heat oil in a saucepan, add kernels and cover.",
+            "Shake the covered pan as the kernels pop, then season and serve immediately."
+          ],
+          "equipment": [
+            "saucepan",
+            "lid",
+            "stove"
+          ],
+          "time_minutes": 10,
+          "pantry_items": null,
+          "id": "bench-001",
+          "source_type": "published",
+          "source_uri": "https://foodhero.org/recipes/stovetop-popcorn",
+          "source_notes": "Abbreviated classification summary, accessed 2026-09-09. Total is the stated prep plus cook time.",
+          "group_id": null
+        },
+        "labels": [
+          "weeknight-30min"
+        ],
+        "rationale": "The source gives 5 minutes of preparation and 5 minutes of cooking, using ordinary kitchen tools.",
+        "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+        "reviewed": false,
+        "reviewed_by": null,
+        "category": "normal",
+        "challenge": "A straightforward short recipe; a saucepan is not special equipment."
+      },
+      {
+        "recipe": {
+          "title": "Hazelnut Thumbprint Cookies",
+          "ingredients": [
+            "almond flour",
+            "hazelnut flour",
+            "cinnamon",
+            "maple syrup",
+            "coconut oil",
+            "water",
+            "fruit jam"
+          ],
+          "instructions": [
+            "Mix the flours with syrup, oil and water; shape dough balls and fill their thumbprints with jam.",
+            "Bake for 10 to 12 minutes, then cool completely on the pan before moving these dessert cookies."
+          ],
+          "equipment": [
+            "bowl",
+            "baking sheet",
+            "oven"
+          ],
+          "time_minutes": null,
+          "pantry_items": null,
+          "id": "bench-002",
+          "source_type": "published",
+          "source_uri": "https://foodhero.org/recipes/hazelnut-thumbprint-cookies",
+          "source_notes": "Abbreviated classification summary, accessed 2026-09-09. Uses ready-made nut flours, not the optional home-ground alternative. Prep is 10 minutes; full cooling time is unspecified.",
+          "group_id": null
+        },
+        "labels": [
+          "dessert"
+        ],
+        "rationale": "These jam-filled cookies are dessert; required cooling has no stated duration, so total time is unknown.",
+        "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+        "reviewed": false,
+        "reviewed_by": null,
+        "category": "normal",
+        "challenge": "Dessert recognition does not require guessing an unknown total time."
+      },
+      {
+        "recipe": {
+          "title": "Quick Brown Bread",
+          "ingredients": [
+            "whole-wheat flour",
+            "all-purpose flour",
+            "brown sugar",
+            "baking soda",
+            "salt",
+            "buttermilk"
+          ],
+          "instructions": [
+            "Mix the flours, sugar, baking soda and salt, then stir in buttermilk and fill a bread pan.",
+            "Bake for up to 50 minutes. Cool in the pan for 5 minutes and at least 15 minutes more before slicing."
+          ],
+          "equipment": [
+            "mixing bowl",
+            "bread pan",
+            "oven"
+          ],
+          "time_minutes": 80,
+          "pantry_items": null,
+          "id": "bench-003",
+          "source_type": "published",
+          "source_uri": "https://foodhero.org/recipes/quick-brown-bread",
+          "source_notes": "Abbreviated classification summary, accessed 2026-09-09. 10 prep + 50 cook + at least 20 cooling = 80-minute planning estimate. Calling a full loaf bake a project is a provisional rubric judgment.",
+          "group_id": null
+        },
+        "labels": [
+          "weekend-project"
+        ],
+        "rationale": "The full loaf-baking project includes mixing, baking and cooling and takes about 80 minutes; Quick is not a 30-minute promise.",
+        "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+        "reviewed": false,
+        "reviewed_by": null,
+        "category": "misleading-title",
+        "challenge": "The baking term Quick does not describe total elapsed time."
+      },
+      {
+        "recipe": {
+          "title": "Peach Yogurt Smoothie",
+          "ingredients": [
+            "low-fat yogurt",
+            "nonfat dry milk",
+            "banana",
+            "orange juice",
+            "frozen peaches"
+          ],
+          "instructions": [
+            "Put the yogurt, dry milk, banana, juice and already-frozen peaches into a blender.",
+            "Blend until smooth and serve as a breakfast drink."
+          ],
+          "equipment": [
+            "blender"
+          ],
+          "time_minutes": 10,
+          "pantry_items": null,
+          "id": "bench-004",
+          "source_type": "published",
+          "source_uri": "https://foodhero.org/recipes/peach-yogurt-smoothie",
+          "source_notes": "Abbreviated classification summary, accessed 2026-09-09. The source offers breakfast, snack and dessert uses; this fixed case selects the published breakfast use. Peaches start frozen.",
+          "group_id": null
+        },
+        "labels": [
+          "needs-special-equipment",
+          "weeknight-30min"
+        ],
+        "rationale": "A blender is required and the source lists 10 minutes; this case selects the breakfast serving context.",
+        "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+        "reviewed": false,
+        "reviewed_by": null,
+        "category": "special-equipment",
+        "challenge": "Recognize the required appliance without labeling every sweet drink as dessert."
+      },
+      {
+        "recipe": {
+          "title": "Banana Ice Cream",
+          "ingredients": [
+            "bananas"
+          ],
+          "instructions": [
+            "Peel and freeze bananas for at least three hours.",
+            "Process the frozen bananas in a food processor for about five minutes and serve as a frozen dessert."
+          ],
+          "equipment": [
+            "freezer",
+            "food processor"
+          ],
+          "time_minutes": null,
+          "pantry_items": null,
+          "id": "bench-005",
+          "source_type": "published",
+          "source_uri": "https://www.nutrition.gov/recipes/banana-ice-cream",
+          "source_notes": "Abbreviated classification summary, accessed 2026-09-09. Source credits University of Minnesota Extension. The frozen-dessert use is selected; no pantry inventory is supplied.",
+          "group_id": null
+        },
+        "labels": [
+          "dessert",
+          "needs-special-equipment"
+        ],
+        "rationale": "A food processor is required for this frozen dessert. Freezing takes at least three hours; an exact total is not supplied.",
+        "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+        "reviewed": false,
+        "reviewed_by": null,
+        "category": "special-equipment",
+        "challenge": "One ingredient does not imply fast preparation or a known pantry."
+      },
+      {
+        "recipe": {
+          "title": "Salsa Chicken",
+          "ingredients": [
+            "boneless chicken",
+            "salsa"
+          ],
+          "instructions": [
+            "Coat chicken with salsa in a slow cooker.",
+            "Cook on LOW for 6 to 8 hours, shred with forks, and keep portions refrigerated for up to four days or frozen for later meals."
+          ],
+          "equipment": [
+            "slow cooker",
+            "forks"
+          ],
+          "time_minutes": 485,
+          "pantry_items": [
+            "boneless chicken",
+            "salsa"
+          ],
+          "id": "bench-006",
+          "source_type": "published",
+          "source_uri": "https://foodhero.org/recipes/salsa-chicken",
+          "source_notes": "Abbreviated classification summary, accessed 2026-09-09. LOW method selected; 5 prep + 480 cook = 485-minute planning bound. Pantry is explicit test context, not a claim about the user inventory.",
+          "group_id": null
+        },
+        "labels": [
+          "have-most-of-this",
+          "meal-prep",
+          "needs-special-equipment"
+        ],
+        "rationale": "The slow cooker is required, portions can be kept for later meals, and the supplied pantry includes both ingredients. Passive cooking does not make this a substantial project.",
+        "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+        "reviewed": false,
+        "reviewed_by": null,
+        "category": "multi-label",
+        "challenge": "Find three supported labels while rejecting weekend-project based only on a long wait."
+      },
+      {
+        "recipe": {
+          "title": "Fruit Yogurt Popsicles",
+          "ingredients": [
+            "fruit",
+            "plain yogurt",
+            "sugar"
+          ],
+          "instructions": [
+            "Blend fruit with yogurt and sugar until creamy.",
+            "Divide into small paper cups with sticks and freeze for 2 to 3 hours until solid; keep portions frozen for later dessert servings."
+          ],
+          "equipment": [
+            "blender",
+            "paper cups",
+            "sticks",
+            "freezer"
+          ],
+          "time_minutes": 185,
+          "pantry_items": null,
+          "id": "bench-007",
+          "source_type": "published",
+          "source_uri": "https://foodhero.org/recipes/fruit-yogurt-popsicles",
+          "source_notes": "Abbreviated classification summary, accessed 2026-09-09. 5 prep + up to 180 freezing = 185-minute planning bound. Uses the source paper-cup alternative rather than requiring molds.",
+          "group_id": null
+        },
+        "labels": [
+          "dessert",
+          "meal-prep",
+          "needs-special-equipment"
+        ],
+        "rationale": "The blended frozen dessert is portioned and stored ahead; the blender is required. Freezing dominates the elapsed time.",
+        "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+        "reviewed": false,
+        "reviewed_by": null,
+        "category": "multi-label",
+        "challenge": "Several labels apply; a short preparation step does not remove hours of freezing."
+      },
+      {
+        "recipe": {
+          "title": "Herbed Yogurt Sauce",
+          "ingredients": [
+            "Greek yogurt",
+            "olive oil",
+            "agave syrup",
+            "parsley",
+            "mint",
+            "cilantro",
+            "salt",
+            "black pepper"
+          ],
+          "instructions": [
+            "Mix the yogurt, oil, syrup, chopped herbs and seasonings in a bowl.",
+            "Chill until ready to serve; the chilling duration is not specified."
+          ],
+          "equipment": [
+            "bowl",
+            "refrigerator"
+          ],
+          "time_minutes": null,
+          "pantry_items": null,
+          "id": "bench-008",
+          "source_type": "published",
+          "source_uri": "https://foodhero.org/recipes/herbed-yogurt-sauce",
+          "source_notes": "Abbreviated classification summary, accessed 2026-09-09. The page gives 10 minutes preparation but no time for chilling; total remains null. A refrigerator is an ordinary tool in this policy.",
+          "group_id": null
+        },
+        "labels": [
+          "unclear"
+        ],
+        "rationale": "The required chilling has no duration and no other triage category is clearly established from this input.",
+        "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+        "reviewed": false,
+        "reviewed_by": null,
+        "category": "ambiguous",
+        "challenge": "Keep insufficient evidence explicit rather than filling missing time with a guess."
+      },
+      {
+        "recipe": {
+          "title": "Hummus (no tahini)",
+          "ingredients": [
+            "garbanzo beans",
+            "lemon juice",
+            "vegetable oil",
+            "plain yogurt",
+            "garlic",
+            "black pepper",
+            "cumin"
+          ],
+          "instructions": [
+            "Use the published fork method: mash the cooked garbanzo beans on a plate and mix with the other ingredients in a bowl.",
+            "Add a little water if needed. The source also offers a blender method, but it is optional for this preparation."
+          ],
+          "equipment": [
+            "fork",
+            "plate",
+            "bowl"
+          ],
+          "time_minutes": 5,
+          "pantry_items": [
+            "garbanzo beans",
+            "lemon juice",
+            "vegetable oil",
+            "plain yogurt",
+            "garlic",
+            "black pepper"
+          ],
+          "id": "bench-009",
+          "source_type": "published",
+          "source_uri": "https://foodhero.org/recipes/hummus-no-tahini",
+          "source_notes": "Abbreviated classification summary, accessed 2026-09-09. Selects the source fork alternative. Pantry coverage is fixed evaluation context: 6/7, with cumin absent.",
+          "group_id": null
+        },
+        "labels": [
+          "have-most-of-this",
+          "weeknight-30min"
+        ],
+        "rationale": "The fork method takes the stated five minutes and needs no specialized appliance; six of seven ingredient items are in the supplied pantry.",
+        "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+        "reviewed": false,
+        "reviewed_by": null,
+        "category": "hard",
+        "challenge": "Mentioning a blender does not make it required; compute pantry coverage from explicit items."
+      },
+      {
+        "recipe": {
+          "title": "Turnip Pancakes",
+          "ingredients": [
+            "flour",
+            "black pepper",
+            "egg",
+            "garlic",
+            "soy sauce",
+            "water",
+            "turnip",
+            "carrot",
+            "green onion",
+            "vegetable oil",
+            "rice vinegar",
+            "brown sugar"
+          ],
+          "instructions": [
+            "Grate vegetables and mix a savory batter with flour, egg, garlic, soy sauce and water.",
+            "Shape small pancakes and fry in batches, turning each to brown both sides.",
+            "Mix the vinegar dipping sauce and serve with the savory pancakes."
+          ],
+          "equipment": [
+            "grater",
+            "bowl",
+            "skillet",
+            "stove"
+          ],
+          "time_minutes": 75,
+          "pantry_items": null,
+          "id": "bench-010",
+          "source_type": "published",
+          "source_uri": "https://foodhero.org/recipes/turnip-pancakes",
+          "source_notes": "Abbreviated classification summary, accessed 2026-09-09. Total is the source 30-minute prep plus 45-minute cook time. Uses a regular skillet rather than the optional electric skillet.",
+          "group_id": null
+        },
+        "labels": [
+          "weekend-project"
+        ],
+        "rationale": "Grating vegetables, mixing batter, frying multiple batches and making sauce take 75 minutes. The pancakes are savory and use ordinary tools.",
+        "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+        "reviewed": false,
+        "reviewed_by": null,
+        "category": "hard",
+        "challenge": "Avoid dessert and special-equipment shortcuts triggered by pancakes or a skillet."
+      }
+    ],
+    "benchmark_sha256": "173e79cc1968dd1207a7aafd051dad40d87ff551c7081a17b896c9556a698448",
+    "prompt_version": "triage-v1",
+    "prompt_sha256": "638015d13def52046cf38a9d80a0373c25a24315ab7197b241dbab2ad1861c90",
+    "metrics_version": "1.0.0",
+    "policy_sha256": "a6ab12aefa4fc5979750aca2c284716ce49585d6eb589d8ea49acf8dbb5e2ff8",
+    "category_counts": {
+      "normal": 2,
+      "misleading-title": 1,
+      "special-equipment": 2,
+      "multi-label": 2,
+      "ambiguous": 1,
+      "hard": 2
+    },
+    "label_support": {
+      "weeknight-30min": 3,
+      "weekend-project": 2,
+      "needs-special-equipment": 4,
+      "meal-prep": 2,
+      "dessert": 3,
+      "have-most-of-this": 2,
+      "unclear": 1
+    },
+    "contamination_audit": {
+      "dataset_v1_source_or_body_overlap": [],
+      "pretraining_overlap": "unknown",
+      "paraphrase_detection": "not performed",
+      "training_allowed": false
+    }
+  },
+  "/api/v1/benchmarks/providers": [
+    {
+      "id": "hf-base",
+      "model": "Qwen/Qwen2.5-0.5B",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+      "training_stage": "pretrained-base",
+      "prompt_format": "plain-role-completion-v1",
+      "configured": true
+    },
+    {
+      "id": "fireworks",
+      "model": "accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b",
+      "revision": null,
+      "training_stage": "hosted-model; see provider model card",
+      "prompt_format": "provider-chat-template",
+      "configured": true
+    }
+  ],
+  "/api/v1/deployment/results": {
+    "candidates": [
+      {
+        "name": "base-fp32",
+        "format": "hf-safetensors-fp32",
+        "size_mib": 1899.7621746063232,
+        "peak_ram_mib": 2293.609375,
+        "vram_mib": null,
+        "device": "cpu",
+        "load_seconds": 3.711854833061807,
+        "mean_ms": 4028.3233999999998,
+        "p95_ms": 5151.882,
+        "micro_f1": 0.48484848484848486,
+        "macro_f1": 0.3649659863945578,
+        "schema_validity": 0.4,
+        "json_validity": 0.5,
+        "measurement_scope": "One sequential CPU run. Sampled total process RSS during benchmark; model loading excluded from latency. VRAM not applicable."
+      },
+      {
+        "name": "late-six-merged-fp32",
+        "format": "hf-safetensors-fp32",
+        "size_mib": 1899.7625551223755,
+        "peak_ram_mib": 2327.75,
+        "vram_mib": null,
+        "device": "cpu",
+        "load_seconds": 2.691178165958263,
+        "mean_ms": 3745.2008,
+        "p95_ms": 4944.328,
+        "micro_f1": 0.43243243243243246,
+        "macro_f1": 0.32653061224489793,
+        "schema_validity": 0.5,
+        "json_validity": 0.6,
+        "measurement_scope": "One sequential CPU run. Sampled total process RSS during benchmark; model loading excluded from latency. VRAM not applicable."
+      },
+      {
+        "name": "late-six-merged-nf4",
+        "format": "hf-bitsandbytes-nf4",
+        "size_mib": 711.1028108596802,
+        "peak_ram_mib": 1193.671875,
+        "vram_mib": null,
+        "device": "cpu",
+        "load_seconds": 3.4332063340116292,
+        "mean_ms": 20763.7034,
+        "p95_ms": 23259.773,
+        "micro_f1": 0.0,
+        "macro_f1": 0.0,
+        "schema_validity": 0.0,
+        "json_validity": 0.6,
+        "measurement_scope": "One sequential CPU run. Sampled total process RSS during benchmark; model loading excluded from latency. VRAM not applicable."
+      }
+    ],
+    "constraints": {
+      "min_micro_f1": 0.48,
+      "min_schema_validity": 0.4,
+      "max_ram_mib": 4096,
+      "max_size_mib": 3072,
+      "max_p95_ms": 15000
+    },
+    "selection": {
+      "recommended": "base-fp32",
+      "constraints": {
+        "min_micro_f1": 0.48,
+        "min_schema_validity": 0.4,
+        "max_ram_mib": 4096,
+        "max_size_mib": 3072,
+        "max_p95_ms": 15000
+      },
+      "failed_constraints": {
+        "base-fp32": [],
+        "late-six-merged-fp32": [
+          "micro_f1"
+        ],
+        "late-six-merged-nf4": [
+          "micro_f1",
+          "schema_validity",
+          "p95_ms"
+        ]
+      },
+      "selection": "Highest Micro-F1, then schema validity, then latency among feasible candidates; size is only a limit.",
+      "production_changed": false,
+      "note": "Operational recommendation is separate from the stricter model-registry promotion gate."
+    }
+  },
+  "/api/v1/models/gate-config": {
+    "min_macro_f1": 0.45,
+    "min_json_validity": 0.95,
+    "min_schema_validity": 0.95,
+    "min_shortcut_accuracy": 0.67,
+    "min_shortcut_pair_coverage": 1.0,
+    "max_prediction_flip_rate": 0.0,
+    "max_per_label_f1_regression": 0.05,
+    "important_labels": [
+      "weeknight-30min",
+      "weekend-project",
+      "needs-special-equipment",
+      "meal-prep",
+      "dessert",
+      "have-most-of-this",
+      "unclear"
+    ]
+  },
+  "/api/v1/playground/models": {
+    "models": [
+      {
+        "key": "fireworks",
+        "title": "Fireworks",
+        "model": "accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b",
+        "available": true,
+        "reason": "Requires FIREWORKS_API_KEY",
+        "hosted": true
+      },
+      {
+        "key": "base",
+        "title": "Local base",
+        "model": "Qwen/Qwen2.5-0.5B",
+        "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+        "available": true,
+        "hosted": false
+      },
+      {
+        "key": "instruct",
+        "title": "Local instruct",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "available": true,
+        "hosted": false
+      },
+      {
+        "key": "sft",
+        "title": "SFT",
+        "model": "Qwen/Qwen2.5-0.5B+recipetriage-lora/30f1b50c-52b3-4336-ae9e-b4d7d2586e08",
+        "revision": "1326c654341d537b65795c1854f84bb15edad428ac0e428747c3fbd5d6607f8d",
+        "available": true,
+        "hosted": false,
+        "reason": "Install the delivered reference adapter; see USE_CASES.md"
+      },
+      {
+        "key": "lora",
+        "title": "LoRA",
+        "model": "Qwen/Qwen2.5-0.5B+recipetriage-lora/771d20b1-77df-446b-b34d-b8259ddbc585",
+        "revision": "4a5ac5bdd2f131d468d899dc8575173aa77f2d0196d1d37626394880d2d83f67",
+        "available": true,
+        "hosted": false,
+        "reason": "Install the delivered reference adapter; see USE_CASES.md"
+      },
+      {
+        "key": "qlora",
+        "title": "QLoRA",
+        "model": "Qwen/Qwen2.5-0.5B+recipetriage-lora/041818c9-7e00-4802-b53d-f7d567616e2b",
+        "revision": "744ed4988c3d7d0fb015d797c306f18876de10842ec86fb025efda095918bdf6",
+        "available": true,
+        "hosted": false,
+        "reason": "Install the delivered reference adapter; see USE_CASES.md"
+      },
+      {
+        "key": "dpo",
+        "title": "DPO",
+        "available": false,
+        "hosted": false,
+        "reason": "No completed DPO checkpoint; explicit human preferences are still required"
+      },
+      {
+        "key": "production",
+        "title": "Registered production",
+        "available": false,
+        "model": null,
+        "hosted": false,
+        "reason": "No model has passed the production gate"
+      }
+    ],
+    "default_models": [
+      "fireworks",
+      "base"
+    ],
+    "note": "Local models run sequentially. Opening this page does not generate responses."
+  },
+  "/api/v1/recipes": {
+    "examples": [],
+    "labels": [
+      "weeknight-30min",
+      "weekend-project",
+      "needs-special-equipment",
+      "meal-prep",
+      "dessert",
+      "have-most-of-this",
+      "unclear"
+    ],
+    "policy": {
+      "weeknight-30min": "Known total elapsed time <=30 minutes, including waiting; never infer speed from title adjectives.",
+      "weekend-project": "A substantial cooking project taking >30 minutes; passive waiting alone does not qualify.",
+      "needs-special-equipment": "Requires a specialized appliance, such as a blender, food processor, pasta machine, or waffle iron; ordinary kitchen tools do not qualify.",
+      "meal-prep": "Explicitly suitable for preparing portions ahead; record recipe-grounded evidence.",
+      "dessert": "Intended as dessert, not merely sweet.",
+      "have-most-of-this": "Explicit pantry context covers >=80% of ingredient items; never assume the user's pantry. Dataset v1 uses exact normalized ingredient strings for matching.",
+      "unclear": "Insufficient or contradictory evidence; exclusive of all other labels in v1."
+    }
+  },
+  "/api/v1/datasets/versions": [],
+  "/api/v1/curation/candidates": [],
+  "/api/v1/training/runs": [],
+  "/api/v1/training/lora/experiments": [],
+  "/api/v1/experiments": [],
+  "/api/v1/alignment/pairs": [],
+  "/api/v1/alignment/jobs": [],
+  "/api/v1/analysis/sources": [],
+  "/api/v1/analysis/failures": [],
+  "/api/v1/analysis/diagnostics": [],
+  "/api/v1/benchmarks/runs": [],
+  "/api/v1/models": [],
+  "/api/v1/models/history": [],
+  "/api/v1/playground/comparisons": [],
+  "/health": {
+    "status": "ok",
+    "database": "ok"
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "name": "RecipeTriage-Bench-v1",
+  "description": "Ten fixed, source-linked recipe cases across six categories. Separate from Dataset v1; no generated recipes. Pantry and serving choices are explicit evaluation contexts.",
+  "annotation_status": "provisional-unreviewed",
+  "cases": [
+    {
+      "recipe": {
+        "id": "bench-001",
+        "title": "Stovetop Popcorn",
+        "ingredients": [
+          "popcorn kernels",
+          "vegetable oil",
+          "seasoning"
+        ],
+        "instructions": [
+          "Heat oil in a saucepan, add kernels and cover.",
+          "Shake the covered pan as the kernels pop, then season and serve immediately."
+        ],
+        "equipment": [
+          "saucepan",
+          "lid",
+          "stove"
+        ],
+        "time_minutes": 10,
+        "pantry_items": null,
+        "source_type": "published",
+        "source_uri": "https://foodhero.org/recipes/stovetop-popcorn",
+        "source_notes": "Abbreviated classification summary, accessed 2026-09-09. Total is the stated prep plus cook time.",
+        "group_id": null
+      },
+      "labels": [
+        "weeknight-30min"
+      ],
+      "rationale": "The source gives 5 minutes of preparation and 5 minutes of cooking, using ordinary kitchen tools.",
+      "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+      "reviewed": false,
+      "reviewed_by": null,
+      "category": "normal",
+      "challenge": "A straightforward short recipe; a saucepan is not special equipment."
+    },
+    {
+      "recipe": {
+        "id": "bench-002",
+        "title": "Hazelnut Thumbprint Cookies",
+        "ingredients": [
+          "almond flour",
+          "hazelnut flour",
+          "cinnamon",
+          "maple syrup",
+          "coconut oil",
+          "water",
+          "fruit jam"
+        ],
+        "instructions": [
+          "Mix the flours with syrup, oil and water; shape dough balls and fill their thumbprints with jam.",
+          "Bake for 10 to 12 minutes, then cool completely on the pan before moving these dessert cookies."
+        ],
+        "equipment": [
+          "bowl",
+          "baking sheet",
+          "oven"
+        ],
+        "time_minutes": null,
+        "pantry_items": null,
+        "source_type": "published",
+        "source_uri": "https://foodhero.org/recipes/hazelnut-thumbprint-cookies",
+        "source_notes": "Abbreviated classification summary, accessed 2026-09-09. Uses ready-made nut flours, not the optional home-ground alternative. Prep is 10 minutes; full cooling time is unspecified.",
+        "group_id": null
+      },
+      "labels": [
+        "dessert"
+      ],
+      "rationale": "These jam-filled cookies are dessert; required cooling has no stated duration, so total time is unknown.",
+      "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+      "reviewed": false,
+      "reviewed_by": null,
+      "category": "normal",
+      "challenge": "Dessert recognition does not require guessing an unknown total time."
+    },
+    {
+      "recipe": {
+        "id": "bench-003",
+        "title": "Quick Brown Bread",
+        "ingredients": [
+          "whole-wheat flour",
+          "all-purpose flour",
+          "brown sugar",
+          "baking soda",
+          "salt",
+          "buttermilk"
+        ],
+        "instructions": [
+          "Mix the flours, sugar, baking soda and salt, then stir in buttermilk and fill a bread pan.",
+          "Bake for up to 50 minutes. Cool in the pan for 5 minutes and at least 15 minutes more before slicing."
+        ],
+        "equipment": [
+          "mixing bowl",
+          "bread pan",
+          "oven"
+        ],
+        "time_minutes": 80,
+        "pantry_items": null,
+        "source_type": "published",
+        "source_uri": "https://foodhero.org/recipes/quick-brown-bread",
+        "source_notes": "Abbreviated classification summary, accessed 2026-09-09. 10 prep + 50 cook + at least 20 cooling = 80-minute planning estimate. Calling a full loaf bake a project is a provisional rubric judgment.",
+        "group_id": null
+      },
+      "labels": [
+        "weekend-project"
+      ],
+      "rationale": "The full loaf-baking project includes mixing, baking and cooling and takes about 80 minutes; Quick is not a 30-minute promise.",
+      "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+      "reviewed": false,
+      "reviewed_by": null,
+      "category": "misleading-title",
+      "challenge": "The baking term Quick does not describe total elapsed time."
+    },
+    {
+      "recipe": {
+        "id": "bench-004",
+        "title": "Peach Yogurt Smoothie",
+        "ingredients": [
+          "low-fat yogurt",
+          "nonfat dry milk",
+          "banana",
+          "orange juice",
+          "frozen peaches"
+        ],
+        "instructions": [
+          "Put the yogurt, dry milk, banana, juice and already-frozen peaches into a blender.",
+          "Blend until smooth and serve as a breakfast drink."
+        ],
+        "equipment": [
+          "blender"
+        ],
+        "time_minutes": 10,
+        "pantry_items": null,
+        "source_type": "published",
+        "source_uri": "https://foodhero.org/recipes/peach-yogurt-smoothie",
+        "source_notes": "Abbreviated classification summary, accessed 2026-09-09. The source offers breakfast, snack and dessert uses; this fixed case selects the published breakfast use. Peaches start frozen.",
+        "group_id": null
+      },
+      "labels": [
+        "weeknight-30min",
+        "needs-special-equipment"
+      ],
+      "rationale": "A blender is required and the source lists 10 minutes; this case selects the breakfast serving context.",
+      "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+      "reviewed": false,
+      "reviewed_by": null,
+      "category": "special-equipment",
+      "challenge": "Recognize the required appliance without labeling every sweet drink as dessert."
+    },
+    {
+      "recipe": {
+        "id": "bench-005",
+        "title": "Banana Ice Cream",
+        "ingredients": [
+          "bananas"
+        ],
+        "instructions": [
+          "Peel and freeze bananas for at least three hours.",
+          "Process the frozen bananas in a food processor for about five minutes and serve as a frozen dessert."
+        ],
+        "equipment": [
+          "freezer",
+          "food processor"
+        ],
+        "time_minutes": null,
+        "pantry_items": null,
+        "source_type": "published",
+        "source_uri": "https://www.nutrition.gov/recipes/banana-ice-cream",
+        "source_notes": "Abbreviated classification summary, accessed 2026-09-09. Source credits University of Minnesota Extension. The frozen-dessert use is selected; no pantry inventory is supplied.",
+        "group_id": null
+      },
+      "labels": [
+        "dessert",
+        "needs-special-equipment"
+      ],
+      "rationale": "A food processor is required for this frozen dessert. Freezing takes at least three hours; an exact total is not supplied.",
+      "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+      "reviewed": false,
+      "reviewed_by": null,
+      "category": "special-equipment",
+      "challenge": "One ingredient does not imply fast preparation or a known pantry."
+    },
+    {
+      "recipe": {
+        "id": "bench-006",
+        "title": "Salsa Chicken",
+        "ingredients": [
+          "boneless chicken",
+          "salsa"
+        ],
+        "instructions": [
+          "Coat chicken with salsa in a slow cooker.",
+          "Cook on LOW for 6 to 8 hours, shred with forks, and keep portions refrigerated for up to four days or frozen for later meals."
+        ],
+        "equipment": [
+          "slow cooker",
+          "forks"
+        ],
+        "time_minutes": 485,
+        "pantry_items": [
+          "boneless chicken",
+          "salsa"
+        ],
+        "source_type": "published",
+        "source_uri": "https://foodhero.org/recipes/salsa-chicken",
+        "source_notes": "Abbreviated classification summary, accessed 2026-09-09. LOW method selected; 5 prep + 480 cook = 485-minute planning bound. Pantry is explicit test context, not a claim about the user inventory.",
+        "group_id": null
+      },
+      "labels": [
+        "needs-special-equipment",
+        "meal-prep",
+        "have-most-of-this"
+      ],
+      "rationale": "The slow cooker is required, portions can be kept for later meals, and the supplied pantry includes both ingredients. Passive cooking does not make this a substantial project.",
+      "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+      "reviewed": false,
+      "reviewed_by": null,
+      "category": "multi-label",
+      "challenge": "Find three supported labels while rejecting weekend-project based only on a long wait."
+    },
+    {
+      "recipe": {
+        "id": "bench-007",
+        "title": "Fruit Yogurt Popsicles",
+        "ingredients": [
+          "fruit",
+          "plain yogurt",
+          "sugar"
+        ],
+        "instructions": [
+          "Blend fruit with yogurt and sugar until creamy.",
+          "Divide into small paper cups with sticks and freeze for 2 to 3 hours until solid; keep portions frozen for later dessert servings."
+        ],
+        "equipment": [
+          "blender",
+          "paper cups",
+          "sticks",
+          "freezer"
+        ],
+        "time_minutes": 185,
+        "pantry_items": null,
+        "source_type": "published",
+        "source_uri": "https://foodhero.org/recipes/fruit-yogurt-popsicles",
+        "source_notes": "Abbreviated classification summary, accessed 2026-09-09. 5 prep + up to 180 freezing = 185-minute planning bound. Uses the source paper-cup alternative rather than requiring molds.",
+        "group_id": null
+      },
+      "labels": [
+        "dessert",
+        "needs-special-equipment",
+        "meal-prep"
+      ],
+      "rationale": "The blended frozen dessert is portioned and stored ahead; the blender is required. Freezing dominates the elapsed time.",
+      "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+      "reviewed": false,
+      "reviewed_by": null,
+      "category": "multi-label",
+      "challenge": "Several labels apply; a short preparation step does not remove hours of freezing."
+    },
+    {
+      "recipe": {
+        "id": "bench-008",
+        "title": "Herbed Yogurt Sauce",
+        "ingredients": [
+          "Greek yogurt",
+          "olive oil",
+          "agave syrup",
+          "parsley",
+          "mint",
+          "cilantro",
+          "salt",
+          "black pepper"
+        ],
+        "instructions": [
+          "Mix the yogurt, oil, syrup, chopped herbs and seasonings in a bowl.",
+          "Chill until ready to serve; the chilling duration is not specified."
+        ],
+        "equipment": [
+          "bowl",
+          "refrigerator"
+        ],
+        "time_minutes": null,
+        "pantry_items": null,
+        "source_type": "published",
+        "source_uri": "https://foodhero.org/recipes/herbed-yogurt-sauce",
+        "source_notes": "Abbreviated classification summary, accessed 2026-09-09. The page gives 10 minutes preparation but no time for chilling; total remains null. A refrigerator is an ordinary tool in this policy.",
+        "group_id": null
+      },
+      "labels": [
+        "unclear"
+      ],
+      "rationale": "The required chilling has no duration and no other triage category is clearly established from this input.",
+      "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+      "reviewed": false,
+      "reviewed_by": null,
+      "category": "ambiguous",
+      "challenge": "Keep insufficient evidence explicit rather than filling missing time with a guess."
+    },
+    {
+      "recipe": {
+        "id": "bench-009",
+        "title": "Hummus (no tahini)",
+        "ingredients": [
+          "garbanzo beans",
+          "lemon juice",
+          "vegetable oil",
+          "plain yogurt",
+          "garlic",
+          "black pepper",
+          "cumin"
+        ],
+        "instructions": [
+          "Use the published fork method: mash the cooked garbanzo beans on a plate and mix with the other ingredients in a bowl.",
+          "Add a little water if needed. The source also offers a blender method, but it is optional for this preparation."
+        ],
+        "equipment": [
+          "fork",
+          "plate",
+          "bowl"
+        ],
+        "time_minutes": 5,
+        "pantry_items": [
+          "garbanzo beans",
+          "lemon juice",
+          "vegetable oil",
+          "plain yogurt",
+          "garlic",
+          "black pepper"
+        ],
+        "source_type": "published",
+        "source_uri": "https://foodhero.org/recipes/hummus-no-tahini",
+        "source_notes": "Abbreviated classification summary, accessed 2026-09-09. Selects the source fork alternative. Pantry coverage is fixed evaluation context: 6/7, with cumin absent.",
+        "group_id": null
+      },
+      "labels": [
+        "weeknight-30min",
+        "have-most-of-this"
+      ],
+      "rationale": "The fork method takes the stated five minutes and needs no specialized appliance; six of seven ingredient items are in the supplied pantry.",
+      "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+      "reviewed": false,
+      "reviewed_by": null,
+      "category": "hard",
+      "challenge": "Mentioning a blender does not make it required; compute pantry coverage from explicit items."
+    },
+    {
+      "recipe": {
+        "id": "bench-010",
+        "title": "Turnip Pancakes",
+        "ingredients": [
+          "flour",
+          "black pepper",
+          "egg",
+          "garlic",
+          "soy sauce",
+          "water",
+          "turnip",
+          "carrot",
+          "green onion",
+          "vegetable oil",
+          "rice vinegar",
+          "brown sugar"
+        ],
+        "instructions": [
+          "Grate vegetables and mix a savory batter with flour, egg, garlic, soy sauce and water.",
+          "Shape small pancakes and fry in batches, turning each to brown both sides.",
+          "Mix the vinegar dipping sauce and serve with the savory pancakes."
+        ],
+        "equipment": [
+          "grater",
+          "bowl",
+          "skillet",
+          "stove"
+        ],
+        "time_minutes": 75,
+        "pantry_items": null,
+        "source_type": "published",
+        "source_uri": "https://foodhero.org/recipes/turnip-pancakes",
+        "source_notes": "Abbreviated classification summary, accessed 2026-09-09. Total is the source 30-minute prep plus 45-minute cook time. Uses a regular skillet rather than the optional electric skillet.",
+        "group_id": null
+      },
+      "labels": [
+        "weekend-project"
+      ],
+      "rationale": "Grating vegetables, mixing batter, frying multiple batches and making sauce take 75 minutes. The pancakes are savory and use ordinary tools.",
+      "annotation_notes": "Assistant-proposed answer key from source evidence; requires independent human review.",
+      "reviewed": false,
+      "reviewed_by": null,
+      "category": "hard",
+      "challenge": "Avoid dessert and special-equipment shortcuts triggered by pancakes or a skillet."
+    }
+  ]
+}

@@ -1,0 +1,1093 @@
+{
+  "before": [
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 0,
+      "tokens": 323,
+      "mean": -3.033360007975716e-05,
+      "std": 0.015530898235738277,
+      "rms": 0.01553092710673809,
+      "max_abs": 0.11669921875,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 1,
+      "tokens": 323,
+      "mean": -0.000590061245020479,
+      "std": 0.18925988674163818,
+      "rms": 0.1892608106136322,
+      "max_abs": 2.6234095096588135,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 2,
+      "tokens": 323,
+      "mean": -0.00110441236756742,
+      "std": 0.27108246088027954,
+      "rms": 0.2710846960544586,
+      "max_abs": 5.36955451965332,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 3,
+      "tokens": 323,
+      "mean": 0.0035554496571421623,
+      "std": 1.356114387512207,
+      "rms": 1.3561190366744995,
+      "max_abs": 695.7034912109375,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 4,
+      "tokens": 323,
+      "mean": 0.0077241952531039715,
+      "std": 2.997129440307617,
+      "rms": 2.9971392154693604,
+      "max_abs": 1578.816162109375,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 5,
+      "tokens": 323,
+      "mean": 0.005955864209681749,
+      "std": 3.004770278930664,
+      "rms": 3.0047762393951416,
+      "max_abs": 1580.5701904296875,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 6,
+      "tokens": 323,
+      "mean": 0.007618584670126438,
+      "std": 3.0592846870422363,
+      "rms": 3.0592942237854004,
+      "max_abs": 1607.684814453125,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 7,
+      "tokens": 323,
+      "mean": 0.007462081033736467,
+      "std": 3.066787004470825,
+      "rms": 3.066795825958252,
+      "max_abs": 1608.291259765625,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 8,
+      "tokens": 323,
+      "mean": 0.009842640720307827,
+      "std": 3.0718679428100586,
+      "rms": 3.0718836784362793,
+      "max_abs": 1608.7564697265625,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 9,
+      "tokens": 323,
+      "mean": 0.005959615111351013,
+      "std": 3.0747764110565186,
+      "rms": 3.074782609939575,
+      "max_abs": 1609.4437255859375,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 10,
+      "tokens": 323,
+      "mean": 0.005885404068976641,
+      "std": 3.077141523361206,
+      "rms": 3.0771474838256836,
+      "max_abs": 1610.0201416015625,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 11,
+      "tokens": 323,
+      "mean": 0.00824201200157404,
+      "std": 3.082242250442505,
+      "rms": 3.0822534561157227,
+      "max_abs": 1611.4107666015625,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 12,
+      "tokens": 323,
+      "mean": 0.009551492519676685,
+      "std": 3.0866448879241943,
+      "rms": 3.0866596698760986,
+      "max_abs": 1612.475830078125,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 13,
+      "tokens": 323,
+      "mean": 0.008239280432462692,
+      "std": 3.0938851833343506,
+      "rms": 3.0938961505889893,
+      "max_abs": 1613.59033203125,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 14,
+      "tokens": 323,
+      "mean": 0.005527299828827381,
+      "std": 3.097990036010742,
+      "rms": 3.0979952812194824,
+      "max_abs": 1614.26611328125,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 15,
+      "tokens": 323,
+      "mean": 0.009813922457396984,
+      "std": 3.1119368076324463,
+      "rms": 3.111952066421509,
+      "max_abs": 1615.5462646484375,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 16,
+      "tokens": 323,
+      "mean": 0.011700685136020184,
+      "std": 3.1340036392211914,
+      "rms": 3.1340255737304688,
+      "max_abs": 1617.625732421875,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 17,
+      "tokens": 323,
+      "mean": 0.01582556776702404,
+      "std": 3.1668453216552734,
+      "rms": 3.1668851375579834,
+      "max_abs": 1617.8125,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 18,
+      "tokens": 323,
+      "mean": 0.01707104966044426,
+      "std": 3.2249207496643066,
+      "rms": 3.224966049194336,
+      "max_abs": 1618.2003173828125,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 19,
+      "tokens": 323,
+      "mean": 0.01752062700688839,
+      "std": 3.2737512588500977,
+      "rms": 3.273798704147339,
+      "max_abs": 1617.53857421875,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 20,
+      "tokens": 323,
+      "mean": 0.02624259889125824,
+      "std": 3.3510985374450684,
+      "rms": 3.351201295852661,
+      "max_abs": 1615.8211669921875,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 21,
+      "tokens": 323,
+      "mean": 0.03945394977927208,
+      "std": 3.53771710395813,
+      "rms": 3.5379369258880615,
+      "max_abs": 1612.2999267578125,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 22,
+      "tokens": 323,
+      "mean": 0.05108414962887764,
+      "std": 2.2726006507873535,
+      "rms": 2.273175001144409,
+      "max_abs": 68.99836730957031,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 23,
+      "tokens": 323,
+      "mean": 0.055452167987823486,
+      "std": 2.483306884765625,
+      "rms": 2.4839258193969727,
+      "max_abs": 72.11474609375,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 24,
+      "tokens": 323,
+      "mean": 0.16892074048519135,
+      "std": 9.480224609375,
+      "rms": 9.481729507446289,
+      "max_abs": 209.53858947753906,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 0,
+      "tokens": 344,
+      "mean": -5.087452882435173e-05,
+      "std": 0.015500348061323166,
+      "rms": 0.015500431880354881,
+      "max_abs": 0.11669921875,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 1,
+      "tokens": 344,
+      "mean": -0.0006059212028048933,
+      "std": 0.19074256718158722,
+      "rms": 0.190743550658226,
+      "max_abs": 2.6234095096588135,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 2,
+      "tokens": 344,
+      "mean": -0.0010753375245258212,
+      "std": 0.27232855558395386,
+      "rms": 0.27233070135116577,
+      "max_abs": 5.351045608520508,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 3,
+      "tokens": 344,
+      "mean": 0.0034072138369083405,
+      "std": 1.316917061805725,
+      "rms": 1.316921353340149,
+      "max_abs": 695.7034912109375,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 4,
+      "tokens": 344,
+      "mean": 0.007176305633038282,
+      "std": 2.9057705402374268,
+      "rms": 2.9057791233062744,
+      "max_abs": 1578.816162109375,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 5,
+      "tokens": 344,
+      "mean": 0.005695033352822065,
+      "std": 2.913825035095215,
+      "rms": 2.9138309955596924,
+      "max_abs": 1580.5701904296875,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 6,
+      "tokens": 344,
+      "mean": 0.007343313656747341,
+      "std": 2.966872453689575,
+      "rms": 2.966881513595581,
+      "max_abs": 1607.684814453125,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 7,
+      "tokens": 344,
+      "mean": 0.007156898733228445,
+      "std": 2.9742133617401123,
+      "rms": 2.97422194480896,
+      "max_abs": 1608.291259765625,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 8,
+      "tokens": 344,
+      "mean": 0.009485774673521519,
+      "std": 2.9793384075164795,
+      "rms": 2.979353666305542,
+      "max_abs": 1608.7564697265625,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 9,
+      "tokens": 344,
+      "mean": 0.005831084679812193,
+      "std": 2.982325315475464,
+      "rms": 2.9823312759399414,
+      "max_abs": 1609.4437255859375,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 10,
+      "tokens": 344,
+      "mean": 0.00543407304212451,
+      "std": 2.9848294258117676,
+      "rms": 2.984834909439087,
+      "max_abs": 1610.0201416015625,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 11,
+      "tokens": 344,
+      "mean": 0.007669458165764809,
+      "std": 2.9897570610046387,
+      "rms": 2.989767074584961,
+      "max_abs": 1611.4107666015625,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 12,
+      "tokens": 344,
+      "mean": 0.008905855007469654,
+      "std": 2.9942843914031982,
+      "rms": 2.994297504425049,
+      "max_abs": 1612.475830078125,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 13,
+      "tokens": 344,
+      "mean": 0.008369429968297482,
+      "std": 3.0015172958374023,
+      "rms": 3.0015292167663574,
+      "max_abs": 1613.59033203125,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 14,
+      "tokens": 344,
+      "mean": 0.005136517807841301,
+      "std": 3.005941390991211,
+      "rms": 3.005946159362793,
+      "max_abs": 1614.26611328125,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 15,
+      "tokens": 344,
+      "mean": 0.008148238994181156,
+      "std": 3.019798755645752,
+      "rms": 3.0198092460632324,
+      "max_abs": 1615.5462646484375,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 16,
+      "tokens": 344,
+      "mean": 0.010694378986954689,
+      "std": 3.042367935180664,
+      "rms": 3.042386770248413,
+      "max_abs": 1617.625732421875,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 17,
+      "tokens": 344,
+      "mean": 0.014674874022603035,
+      "std": 3.0769102573394775,
+      "rms": 3.0769455432891846,
+      "max_abs": 1617.8125,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 18,
+      "tokens": 344,
+      "mean": 0.01609613746404648,
+      "std": 3.136303663253784,
+      "rms": 3.136345148086548,
+      "max_abs": 1618.2003173828125,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 19,
+      "tokens": 344,
+      "mean": 0.016521913930773735,
+      "std": 3.1875338554382324,
+      "rms": 3.18757700920105,
+      "max_abs": 1617.53857421875,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 20,
+      "tokens": 344,
+      "mean": 0.02562970668077469,
+      "std": 3.267500638961792,
+      "rms": 3.2676007747650146,
+      "max_abs": 1615.8211669921875,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 21,
+      "tokens": 344,
+      "mean": 0.037408530712127686,
+      "std": 3.4586985111236572,
+      "rms": 3.4589004516601562,
+      "max_abs": 1612.2999267578125,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 22,
+      "tokens": 344,
+      "mean": 0.04638795554637909,
+      "std": 2.2745795249938965,
+      "rms": 2.275052309036255,
+      "max_abs": 68.99836730957031,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 23,
+      "tokens": 344,
+      "mean": 0.05352021008729935,
+      "std": 2.4793972969055176,
+      "rms": 2.4799747467041016,
+      "max_abs": 72.11474609375,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 24,
+      "tokens": 344,
+      "mean": 0.1723666936159134,
+      "std": 9.455160140991211,
+      "rms": 9.456730842590332,
+      "max_abs": 209.53858947753906,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    }
+  ],
+  "after": [
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 0,
+      "tokens": 323,
+      "mean": -3.033360007975716e-05,
+      "std": 0.015530898235738277,
+      "rms": 0.01553092710673809,
+      "max_abs": 0.11669921875,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 1,
+      "tokens": 323,
+      "mean": -0.0005278422613628209,
+      "std": 0.18941465020179749,
+      "rms": 0.18941539525985718,
+      "max_abs": 2.6322484016418457,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 2,
+      "tokens": 323,
+      "mean": -0.001054252847097814,
+      "std": 0.2710646390914917,
+      "rms": 0.27106669545173645,
+      "max_abs": 5.38291072845459,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 3,
+      "tokens": 323,
+      "mean": 0.003534182207658887,
+      "std": 1.3399184942245483,
+      "rms": 1.3399231433868408,
+      "max_abs": 686.90087890625,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 4,
+      "tokens": 323,
+      "mean": 0.0076692597940564156,
+      "std": 2.980884552001953,
+      "rms": 2.980893850326538,
+      "max_abs": 1570.1505126953125,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 5,
+      "tokens": 323,
+      "mean": 0.006049261428415775,
+      "std": 2.9886739253997803,
+      "rms": 2.9886796474456787,
+      "max_abs": 1571.907958984375,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 6,
+      "tokens": 323,
+      "mean": 0.007775645237416029,
+      "std": 3.0431742668151855,
+      "rms": 3.043184280395508,
+      "max_abs": 1599.023193359375,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 7,
+      "tokens": 323,
+      "mean": 0.007401128299534321,
+      "std": 3.0506980419158936,
+      "rms": 3.0507068634033203,
+      "max_abs": 1599.629150390625,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 8,
+      "tokens": 323,
+      "mean": 0.009840858168900013,
+      "std": 3.055806875228882,
+      "rms": 3.0558223724365234,
+      "max_abs": 1600.094482421875,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 9,
+      "tokens": 323,
+      "mean": 0.005974415224045515,
+      "std": 3.058781623840332,
+      "rms": 3.0587880611419678,
+      "max_abs": 1600.7822265625,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 10,
+      "tokens": 323,
+      "mean": 0.005906570237129927,
+      "std": 3.0611255168914795,
+      "rms": 3.0611307621002197,
+      "max_abs": 1601.358642578125,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 11,
+      "tokens": 323,
+      "mean": 0.008273627609014511,
+      "std": 3.066269874572754,
+      "rms": 3.066281318664551,
+      "max_abs": 1602.75,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 12,
+      "tokens": 323,
+      "mean": 0.009663657285273075,
+      "std": 3.0707337856292725,
+      "rms": 3.070748805999756,
+      "max_abs": 1603.815673828125,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 13,
+      "tokens": 323,
+      "mean": 0.008068487979471684,
+      "std": 3.0781023502349854,
+      "rms": 3.078113079071045,
+      "max_abs": 1604.9305419921875,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 14,
+      "tokens": 323,
+      "mean": 0.005420167930424213,
+      "std": 3.082258701324463,
+      "rms": 3.082263231277466,
+      "max_abs": 1605.60693359375,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 15,
+      "tokens": 323,
+      "mean": 0.009814074262976646,
+      "std": 3.096544027328491,
+      "rms": 3.096560001373291,
+      "max_abs": 1606.8875732421875,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 16,
+      "tokens": 323,
+      "mean": 0.011742589063942432,
+      "std": 3.1189541816711426,
+      "rms": 3.11897611618042,
+      "max_abs": 1608.96728515625,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 17,
+      "tokens": 323,
+      "mean": 0.015987861901521683,
+      "std": 3.1521832942962646,
+      "rms": 3.1522231101989746,
+      "max_abs": 1609.154541015625,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 18,
+      "tokens": 323,
+      "mean": 0.017253944650292397,
+      "std": 3.211144208908081,
+      "rms": 3.211190938949585,
+      "max_abs": 1609.5426025390625,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 19,
+      "tokens": 323,
+      "mean": 0.01776791922748089,
+      "std": 3.260286808013916,
+      "rms": 3.260335683822632,
+      "max_abs": 1608.8812255859375,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 20,
+      "tokens": 323,
+      "mean": 0.02670333720743656,
+      "std": 3.3386948108673096,
+      "rms": 3.338801622390747,
+      "max_abs": 1607.1885986328125,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 21,
+      "tokens": 323,
+      "mean": 0.03952817991375923,
+      "std": 3.526787519454956,
+      "rms": 3.5270092487335205,
+      "max_abs": 1603.667724609375,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 22,
+      "tokens": 323,
+      "mean": 0.0512000136077404,
+      "std": 2.2802863121032715,
+      "rms": 2.2808611392974854,
+      "max_abs": 69.2249755859375,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 23,
+      "tokens": 323,
+      "mean": 0.05514516681432724,
+      "std": 2.4887800216674805,
+      "rms": 2.4893908500671387,
+      "max_abs": 72.0060043334961,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-001",
+      "hidden_state_index": 24,
+      "tokens": 323,
+      "mean": 0.16942448914051056,
+      "std": 9.493566513061523,
+      "rms": 9.495078086853027,
+      "max_abs": 210.195068359375,
+      "input_ids_sha256": "a615958dfd3ef04174838b98ae8c0bef8f68f732fb436fb0d35f97dcfb2358a4"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 0,
+      "tokens": 344,
+      "mean": -5.087452882435173e-05,
+      "std": 0.015500348061323166,
+      "rms": 0.015500431880354881,
+      "max_abs": 0.11669921875,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 1,
+      "tokens": 344,
+      "mean": -0.0005410874728113413,
+      "std": 0.1909210979938507,
+      "rms": 0.1909218728542328,
+      "max_abs": 2.6322484016418457,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 2,
+      "tokens": 344,
+      "mean": -0.0010228826431557536,
+      "std": 0.27232825756073,
+      "rms": 0.2723301947116852,
+      "max_abs": 5.346097469329834,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 3,
+      "tokens": 344,
+      "mean": 0.0033883245196193457,
+      "std": 1.301249623298645,
+      "rms": 1.301254153251648,
+      "max_abs": 686.90087890625,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 4,
+      "tokens": 344,
+      "mean": 0.007136629428714514,
+      "std": 2.890030860900879,
+      "rms": 2.8900392055511475,
+      "max_abs": 1570.1505126953125,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 5,
+      "tokens": 344,
+      "mean": 0.005791031289845705,
+      "std": 2.89825439453125,
+      "rms": 2.8982598781585693,
+      "max_abs": 1571.907958984375,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 6,
+      "tokens": 344,
+      "mean": 0.0075090122409164906,
+      "std": 2.951268196105957,
+      "rms": 2.951277732849121,
+      "max_abs": 1599.023193359375,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 7,
+      "tokens": 344,
+      "mean": 0.007111317943781614,
+      "std": 2.9586362838745117,
+      "rms": 2.9586446285247803,
+      "max_abs": 1599.629150390625,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 8,
+      "tokens": 344,
+      "mean": 0.00949510745704174,
+      "std": 2.9637911319732666,
+      "rms": 2.963806629180908,
+      "max_abs": 1600.094482421875,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 9,
+      "tokens": 344,
+      "mean": 0.005861650686711073,
+      "std": 2.966838836669922,
+      "rms": 2.9668447971343994,
+      "max_abs": 1600.7822265625,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 10,
+      "tokens": 344,
+      "mean": 0.005476006772369146,
+      "std": 2.9693334102630615,
+      "rms": 2.9693379402160645,
+      "max_abs": 1601.358642578125,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 11,
+      "tokens": 344,
+      "mean": 0.00772126717492938,
+      "std": 2.9743082523345947,
+      "rms": 2.974318504333496,
+      "max_abs": 1602.75,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 12,
+      "tokens": 344,
+      "mean": 0.009023175574839115,
+      "std": 2.9788835048675537,
+      "rms": 2.9788970947265625,
+      "max_abs": 1603.815673828125,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 13,
+      "tokens": 344,
+      "mean": 0.008219162933528423,
+      "std": 2.986241102218628,
+      "rms": 2.986252784729004,
+      "max_abs": 1604.9305419921875,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 14,
+      "tokens": 344,
+      "mean": 0.0050382548943161964,
+      "std": 2.990734338760376,
+      "rms": 2.9907383918762207,
+      "max_abs": 1605.60693359375,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 15,
+      "tokens": 344,
+      "mean": 0.008165785111486912,
+      "std": 3.004910469055176,
+      "rms": 3.0049214363098145,
+      "max_abs": 1606.8875732421875,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 16,
+      "tokens": 344,
+      "mean": 0.010738189332187176,
+      "std": 3.027812957763672,
+      "rms": 3.027831792831421,
+      "max_abs": 1608.96728515625,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 17,
+      "tokens": 344,
+      "mean": 0.014823715202510357,
+      "std": 3.062753438949585,
+      "rms": 3.062788724899292,
+      "max_abs": 1609.154541015625,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 18,
+      "tokens": 344,
+      "mean": 0.016238581389188766,
+      "std": 3.122992753982544,
+      "rms": 3.123035192489624,
+      "max_abs": 1609.5426025390625,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 19,
+      "tokens": 344,
+      "mean": 0.016719603911042213,
+      "std": 3.174527406692505,
+      "rms": 3.1745717525482178,
+      "max_abs": 1608.8812255859375,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 20,
+      "tokens": 344,
+      "mean": 0.026024717837572098,
+      "std": 3.255537748336792,
+      "rms": 3.2556419372558594,
+      "max_abs": 1607.1885986328125,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 21,
+      "tokens": 344,
+      "mean": 0.03745101019740105,
+      "std": 3.4481537342071533,
+      "rms": 3.448357343673706,
+      "max_abs": 1603.667724609375,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 22,
+      "tokens": 344,
+      "mean": 0.04650894179940224,
+      "std": 2.2813754081726074,
+      "rms": 2.2818493843078613,
+      "max_abs": 69.2249755859375,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 23,
+      "tokens": 344,
+      "mean": 0.05322033166885376,
+      "std": 2.484297275543213,
+      "rms": 2.4848673343658447,
+      "max_abs": 72.0060043334961,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    },
+    {
+      "recipe_id": "seed-002",
+      "hidden_state_index": 24,
+      "tokens": 344,
+      "mean": 0.17249175906181335,
+      "std": 9.46713924407959,
+      "rms": 9.468710899353027,
+      "max_abs": 210.195068359375,
+      "input_ids_sha256": "efb1ea162ddb05cd3aa3214ddc58de63852377588b0757ca08560a5465de15a0"
+    }
+  ],
+  "adapter": [
+    {
+      "module": "base_model.model.model.layers.0.self_attn.q_proj",
+      "a_norm": 1.1627010107040405,
+      "b_norm": 0.0796806737780571,
+      "delta_frobenius": 0.09350147843360901,
+      "relative_update_norm": 0.0015408805338665843
+    },
+    {
+      "module": "base_model.model.model.layers.0.self_attn.v_proj",
+      "a_norm": 1.1708005666732788,
+      "b_norm": 0.02933311089873314,
+      "delta_frobenius": 0.03453793376684189,
+      "relative_update_norm": 0.008790179155766964
+    },
+    {
+      "module": "base_model.model.model.layers.1.self_attn.q_proj",
+      "a_norm": 1.1760824918746948,
+      "b_norm": 0.075734943151474,
+      "delta_frobenius": 0.08899150788784027,
+      "relative_update_norm": 0.0034217520151287317
+    },
+    {
+      "module": "base_model.model.model.layers.1.self_attn.v_proj",
+      "a_norm": 1.158000111579895,
+      "b_norm": 0.02908172458410263,
+      "delta_frobenius": 0.03394373133778572,
+      "relative_update_norm": 0.008466335013508797
+    },
+    {
+      "module": "base_model.model.model.layers.2.self_attn.q_proj",
+      "a_norm": 1.1733574867248535,
+      "b_norm": 0.07547949254512787,
+      "delta_frobenius": 0.08944983035326004,
+      "relative_update_norm": 0.003838676493614912
+    },
+    {
+      "module": "base_model.model.model.layers.2.self_attn.v_proj",
+      "a_norm": 1.1665738821029663,
+      "b_norm": 0.030841926112771034,
+      "delta_frobenius": 0.037766341120004654,
+      "relative_update_norm": 0.009734757244586945
+    },
+    {
+      "module": "base_model.model.model.layers.3.self_attn.q_proj",
+      "a_norm": 1.1525943279266357,
+      "b_norm": 0.07603441178798676,
+      "delta_frobenius": 0.08650561422109604,
+      "relative_update_norm": 0.004143317695707083
+    },
+    {
+      "module": "base_model.model.model.layers.3.self_attn.v_proj",
+      "a_norm": 1.153906226158142,
+      "b_norm": 0.02973555214703083,
+      "delta_frobenius": 0.034550465643405914,
+      "relative_update_norm": 0.0062165348790585995
+    },
+    {
+      "module": "base_model.model.model.layers.4.self_attn.q_proj",
+      "a_norm": 1.1572041511535645,
+      "b_norm": 0.07810088247060776,
+      "delta_frobenius": 0.09040454030036926,
+      "relative_update_norm": 0.004313695710152388
+    },
+    {
+      "module": "base_model.model.model.layers.4.self_attn.v_proj",
+      "a_norm": 1.1631817817687988,
+      "b_norm": 0.029523879289627075,
+      "delta_frobenius": 0.034944456070661545,
+      "relative_update_norm": 0.005589277017861605
+    },
+    {
+      "module": "base_model.model.model.layers.5.self_attn.q_proj",
+      "a_norm": 1.1522587537765503,
+      "b_norm": 0.07760917395353317,
+      "delta_frobenius": 0.09145180135965347,
+      "relative_update_norm": 0.0045464313589036465
+    },
+    {
+      "module": "base_model.model.model.layers.5.self_attn.v_proj",
+      "a_norm": 1.164548397064209,
+      "b_norm": 0.029358744621276855,
+      "delta_frobenius": 0.03396621719002724,
+      "relative_update_norm": 0.005283336620777845
+    }
+  ],
+  "scope": "Same two training recipes, token positions and eval-mode forward pass. Descriptive diagnostics, not causal attributions."
+}

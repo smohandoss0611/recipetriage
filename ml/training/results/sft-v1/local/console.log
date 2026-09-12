@@ -1,0 +1,51 @@
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'eval_loss': 2.8582310676574707, 'eval_model_preparation_time': 0.0026, 'eval_runtime': 0.6048, 'eval_samples_per_second': 1.653, 'eval_steps_per_second': 1.653, 'eval_entropy': 2.612621307373047, 'eval_num_tokens': 0.0, 'eval_mean_token_accuracy': 0.3928571343421936}
+{'loss': 2.4271, 'grad_norm': 3.520129442214966, 'learning_rate': 0.0002, 'entropy': 2.6260679960250854, 'num_tokens': 807.0, 'mean_token_accuracy': 0.4781976640224457, 'epoch': 0.4}
+{'loss': 2.7735, 'grad_norm': 4.232198238372803, 'learning_rate': 0.0002, 'entropy': 2.6764001846313477, 'num_tokens': 1550.0, 'mean_token_accuracy': 0.5370370447635651, 'epoch': 0.8}
+{'loss': 2.3362, 'grad_norm': 3.8787577152252197, 'learning_rate': 0.0002, 'entropy': 2.7151124477386475, 'num_tokens': 1921.0, 'mean_token_accuracy': 0.5555555820465088, 'epoch': 1.0}
+{'eval_loss': 2.5792641639709473, 'eval_model_preparation_time': 0.0026, 'eval_runtime': 0.5763, 'eval_samples_per_second': 1.735, 'eval_steps_per_second': 1.735, 'eval_entropy': 2.6403369903564453, 'eval_num_tokens': 1921.0, 'eval_mean_token_accuracy': 0.3928571343421936, 'epoch': 1.0}
+{'loss': 2.4197, 'grad_norm': 3.3658082485198975, 'learning_rate': 0.0002, 'entropy': 2.6713509559631348, 'num_tokens': 2685.0, 'mean_token_accuracy': 0.5601851940155029, 'epoch': 1.4}
+{'loss': 2.0709, 'grad_norm': 3.1323630809783936, 'learning_rate': 0.0002, 'entropy': 2.663151264190674, 'num_tokens': 3492.0, 'mean_token_accuracy': 0.5094476640224457, 'epoch': 1.8}
+{'loss': 2.3386, 'grad_norm': 5.26351261138916, 'learning_rate': 0.0002, 'entropy': 2.7822763919830322, 'num_tokens': 3842.0, 'mean_token_accuracy': 0.5555555820465088, 'epoch': 2.0}
+{'eval_loss': 2.3155364990234375, 'eval_model_preparation_time': 0.0026, 'eval_runtime': 0.5353, 'eval_samples_per_second': 1.868, 'eval_steps_per_second': 1.868, 'eval_entropy': 2.660494804382324, 'eval_num_tokens': 3842.0, 'eval_mean_token_accuracy': 0.4285714328289032, 'epoch': 2.0}
+{'loss': 1.9176, 'grad_norm': 3.023994207382202, 'learning_rate': 0.0002, 'entropy': 2.677074670791626, 'num_tokens': 4649.0, 'mean_token_accuracy': 0.521075576543808, 'epoch': 2.4}
+{'loss': 2.0951, 'grad_norm': 2.9101624488830566, 'learning_rate': 0.0002, 'entropy': 2.692529082298279, 'num_tokens': 5413.0, 'mean_token_accuracy': 0.6064814627170563, 'epoch': 2.8}
+{'loss': 2.0172, 'grad_norm': 4.623836517333984, 'learning_rate': 0.0002, 'entropy': 2.7931172847747803, 'num_tokens': 5763.0, 'mean_token_accuracy': 0.5925925970077515, 'epoch': 3.0}
+{'eval_loss': 2.128405809402466, 'eval_model_preparation_time': 0.0026, 'eval_runtime': 0.5372, 'eval_samples_per_second': 1.861, 'eval_steps_per_second': 1.861, 'eval_entropy': 2.659153938293457, 'eval_num_tokens': 5763.0, 'eval_mean_token_accuracy': 0.5357142686843872, 'epoch': 3.0}
+{'train_runtime': 26.01, 'train_samples_per_second': 0.577, 'train_steps_per_second': 0.346, 'train_loss': 2.2662129402160645, 'epoch': 3.0}
+{
+  "run_id": "30f1b50c-52b3-4336-ae9e-b4d7d2586e08",
+  "status": "completed",
+  "comparison": {
+    "comparable": true,
+    "baseline_run_id": "632e510c-d918-4e46-beb8-8826d079a71b",
+    "trained_run_id": "8b1c66e8-1698-4eb8-beee-4ab2c09237b3",
+    "before": {
+      "micro_f1": 0.48484848484848486,
+      "macro_f1": 0.3649659863945578,
+      "exact_match": 0,
+      "json_validity": 0.5
+    },
+    "after": {
+      "micro_f1": 0.3870967741935484,
+      "macro_f1": 0.16363636363636364,
+      "exact_match": 0,
+      "json_validity": 0.9
+    },
+    "delta": {
+      "micro_f1": -0.09775171065493649,
+      "macro_f1": -0.20132962275819416,
+      "exact_match": 0,
+      "json_validity": 0.4
+    },
+    "claim": "No measured Micro-F1 improvement on these ten fixed cases. This is descriptive evidence only, not proof of generalization; annotations are provisional."
+  }
+}

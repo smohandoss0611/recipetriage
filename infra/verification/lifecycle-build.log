@@ -1,0 +1,191 @@
+ Image recipetriage-backend Building 
+ Image recipetriage-frontend Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.08kB done
+#1 DONE 0.0s
+
+#2 [backend internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.46kB 0.0s done
+#2 DONE 0.0s
+
+#3 [frontend internal] load build definition from Dockerfile
+#3 transferring dockerfile: 345B done
+#3 DONE 0.0s
+
+#4 [frontend internal] load metadata for docker.io/nginxinc/nginx-unprivileged:stable-alpine
+#4 ...
+
+#5 [backend internal] load metadata for docker.io/library/python:3.12-slim
+#5 DONE 0.8s
+
+#4 [frontend internal] load metadata for docker.io/nginxinc/nginx-unprivileged:stable-alpine
+#4 DONE 0.8s
+
+#6 [frontend internal] load metadata for docker.io/library/node:22-alpine
+#6 DONE 0.8s
+
+#7 [backend internal] load .dockerignore
+#7 transferring context: 683B done
+#7 DONE 0.0s
+
+#8 [frontend runtime 1/3] FROM docker.io/nginxinc/nginx-unprivileged:stable-alpine@sha256:442753882674b49ae2c1de83ed67896131c0777f56df5005e356e62bc3f7e7ce
+#8 resolve docker.io/nginxinc/nginx-unprivileged:stable-alpine@sha256:442753882674b49ae2c1de83ed67896131c0777f56df5005e356e62bc3f7e7ce 0.0s done
+#8 DONE 0.0s
+
+#9 [frontend build 1/6] FROM docker.io/library/node:22-alpine@sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32
+#9 resolve docker.io/library/node:22-alpine@sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32 0.0s done
+#9 DONE 0.0s
+
+#10 [backend base  1/14] FROM docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#10 resolve docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 0.0s done
+#10 DONE 0.0s
+
+#11 [frontend internal] load build context
+#11 transferring context: 1.64kB 0.0s done
+#11 DONE 0.0s
+
+#12 [frontend runtime 2/3] COPY --chmod=644 infra/nginx.conf /etc/nginx/conf.d/default.conf
+#12 CACHED
+
+#13 [frontend build 5/6] COPY frontend/ ./
+#13 CACHED
+
+#14 [frontend build 2/6] WORKDIR /app
+#14 CACHED
+
+#15 [frontend build 4/6] RUN npm ci
+#15 CACHED
+
+#16 [frontend build 3/6] COPY frontend/package*.json ./
+#16 CACHED
+
+#17 [frontend build 6/6] RUN npm run build
+#17 CACHED
+
+#18 [frontend runtime 3/3] COPY --from=build /app/dist /usr/share/nginx/html
+#18 CACHED
+
+#19 [backend internal] load build context
+#19 transferring context: 116.41kB 0.1s done
+#19 DONE 0.1s
+
+#20 [backend base  2/14] WORKDIR /app
+#20 CACHED
+
+#21 [backend base  3/14] COPY backend/requirements.lock /app/requirements.lock
+#21 CACHED
+
+#22 [backend base  4/14] RUN pip install --no-cache-dir -r requirements.lock
+#22 CACHED
+
+#23 [backend base  8/14] RUN pip install --no-cache-dir -r requirements-sft.lock
+#23 CACHED
+
+#24 [backend base  5/14] COPY ml/requirements-hf.lock /app/requirements-hf.lock
+#24 CACHED
+
+#25 [backend base  6/14] RUN pip install --no-cache-dir torch==2.14.0 --index-url https://download.pytorch.org/whl/cpu     && pip install --no-cache-dir -r requirements-hf.lock
+#25 CACHED
+
+#26 [backend base  9/14] COPY ml/requirements-experiments.lock /app/requirements-experiments.lock
+#26 CACHED
+
+#27 [backend base  7/14] COPY ml/requirements-sft.lock /app/requirements-sft.lock
+#27 CACHED
+
+#28 [backend base 10/14] RUN pip install --no-cache-dir -r requirements-experiments.lock
+#28 CACHED
+
+#29 [frontend] exporting to image
+#29 exporting layers done
+#29 exporting manifest sha256:2119adcb27095e80ec098a0c4ca63dc5bf031dcb90c4ba7fbf3a2b4459916d8f done
+#29 exporting config sha256:aa7e465115dd46680557df60852c329fbb3164f10083ba3f4f65e6fa312762b6 done
+#29 exporting attestation manifest sha256:8daac3177046028697e47bbe819fa5af9487827c53957195b9a23fad9711480b done
+#29 exporting manifest list sha256:4605a8616d181867ccdb2c729b75a01e852e09ca5d02473bd3d086d41a529ca1 done
+#29 naming to docker.io/library/recipetriage-frontend:latest done
+#29 unpacking to docker.io/library/recipetriage-frontend:latest done
+#29 DONE 0.1s
+
+#30 [frontend] resolving provenance for metadata file
+#30 DONE 0.0s
+
+#31 [backend base 11/14] COPY ml /app/ml
+#31 DONE 0.3s
+
+#32 [backend base 12/14] RUN pip install --no-cache-dir --no-deps ./ml
+#32 0.921 Processing ./ml
+#32 0.923   Installing build dependencies: started
+#32 2.788   Installing build dependencies: finished with status 'done'
+#32 2.789   Getting requirements to build wheel: started
+#32 3.057   Getting requirements to build wheel: finished with status 'done'
+#32 3.058   Preparing metadata (pyproject.toml): started
+#32 3.320   Preparing metadata (pyproject.toml): finished with status 'done'
+#32 3.323 Building wheels for collected packages: recipetriage-ml
+#32 3.325   Building wheel for recipetriage-ml (pyproject.toml): started
+#32 3.609   Building wheel for recipetriage-ml (pyproject.toml): finished with status 'done'
+#32 3.610   Created wheel for recipetriage-ml: filename=recipetriage_ml-0.5.0-py3-none-any.whl size=106610 sha256=8b8b6a3a1c4f30724342130aeb2a3ab17638889ea3e6b2152d00f0308f508fb8
+#32 3.610   Stored in directory: /tmp/pip-ephem-wheel-cache-_aj3_5kw/wheels/e9/52/42/880e8708ffb587e896e0a120f834ff8f3866e143bd15f65246
+#32 3.612 Successfully built recipetriage-ml
+#32 3.612 Installing collected packages: recipetriage-ml
+#32 3.658 Successfully installed recipetriage-ml-0.5.0
+#32 3.658 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#32 3.820 
+#32 3.820 [notice] A new release of pip is available: 25.0.1 -> 26.2.1
+#32 3.820 [notice] To update, run: pip install --upgrade pip
+#32 DONE 3.9s
+
+#33 [backend base 13/14] COPY backend /app/backend
+#33 DONE 0.0s
+
+#34 [backend base 14/14] RUN pip install --no-cache-dir --no-deps ./backend && useradd --create-home appuser && mkdir -p /models /training && chown appuser:appuser /models /training
+#34 0.659 Processing ./backend
+#34 0.661   Installing build dependencies: started
+#34 1.750   Installing build dependencies: finished with status 'done'
+#34 1.750   Getting requirements to build wheel: started
+#34 2.045   Getting requirements to build wheel: finished with status 'done'
+#34 2.046   Preparing metadata (pyproject.toml): started
+#34 2.299   Preparing metadata (pyproject.toml): finished with status 'done'
+#34 2.301 Building wheels for collected packages: recipetriage-backend
+#34 2.303   Building wheel for recipetriage-backend (pyproject.toml): started
+#34 2.578   Building wheel for recipetriage-backend (pyproject.toml): finished with status 'done'
+#34 2.578   Created wheel for recipetriage-backend: filename=recipetriage_backend-0.1.0-py3-none-any.whl size=35362 sha256=e541564af59e46de5664a858bd6f7bb1fa00270d0bafa1c45cbf4cd84dd35dd8
+#34 2.578   Stored in directory: /tmp/pip-ephem-wheel-cache-rddotded/wheels/91/0a/7b/e1306506b94d5eedf38bd9e74910a6a2271d810c5fb6bdbeda
+#34 2.580 Successfully built recipetriage-backend
+#34 2.580 Installing collected packages: recipetriage-backend
+#34 2.600 Successfully installed recipetriage-backend-0.1.0
+#34 2.600 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#34 2.767 
+#34 2.767 [notice] A new release of pip is available: 25.0.1 -> 26.2.1
+#34 2.767 [notice] To update, run: pip install --upgrade pip
+#34 DONE 2.8s
+
+#35 [backend] exporting to image
+#35 exporting layers 0.1s done
+#35 exporting manifest sha256:e3f079c441e3d50c0d0546e3505f662a60172f90ba5ffda701c23025989628e8 done
+#35 exporting config sha256:569d2c626a94d87f3844397e25fe472488c24c99275d6764b83975f1f09991b1 done
+#35 exporting attestation manifest sha256:6af0e8801d3a50fb28a431a4d20448bca15ed4dd0a8d6eb3737ba0472909bae2 done
+#35 exporting manifest list sha256:9e8459ae16f0da2950e5a599390f9e675c9a60cbed5465ff077bffeed6d3b137 done
+#35 naming to docker.io/library/recipetriage-backend:latest done
+#35 unpacking to docker.io/library/recipetriage-backend:latest 0.1s done
+#35 DONE 0.2s
+
+#36 [backend] resolving provenance for metadata file
+#36 DONE 0.0s
+ Image recipetriage-backend Built 
+ Image recipetriage-frontend Built 
+ Container recipetriage-frontend-1 Running 
+ Container recipetriage-postgres-1 Running 
+ Container recipetriage-backend-1 Recreate 
+ Container recipetriage-backend-1 Recreated 
+ Container recipetriage-postgres-1 Waiting 
+ Container recipetriage-postgres-1 Healthy 
+ Container recipetriage-backend-1 Starting 
+ Container recipetriage-backend-1 Started 
+ Container recipetriage-backend-1 Waiting 
+ Container recipetriage-backend-1 Healthy 
+ Container recipetriage-postgres-1 Waiting 
+ Container recipetriage-backend-1 Waiting 
+ Container recipetriage-frontend-1 Waiting 
+ Container recipetriage-frontend-1 Healthy 
+ Container recipetriage-postgres-1 Healthy 
+ Container recipetriage-backend-1 Healthy 

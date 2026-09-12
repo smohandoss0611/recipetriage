@@ -1,0 +1,44 @@
+{
+  "recipes": {
+    "total": 7,
+    "reviewed": 0
+  },
+  "curation/candidates": {
+    "total": 13,
+    "statuses": [
+      "pending",
+      "pending",
+      "pending",
+      "pending",
+      "pending",
+      "pending",
+      "pending",
+      "pending",
+      "pending",
+      "pending",
+      "pending",
+      "pending",
+      "pending"
+    ]
+  },
+  "alignment/pairs": {
+    "total": 5,
+    "choices": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "models": {
+    "total": 5,
+    "stages": [
+      "candidate",
+      "candidate",
+      "candidate",
+      "candidate",
+      "candidate"
+    ]
+  }
+}

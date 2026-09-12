@@ -1,0 +1,11 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B+grpo/51f8acba-4be6-41c8-b57c-a51d12e8cd10",
+  "revision": "744ed4988c3d7d0fb015d797c306f18876de10842ec86fb025efda095918bdf6",
+  "base_model": "Qwen/Qwen2.5-0.5B",
+  "base_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "training_stage": "grpo",
+  "prompt_format": "plain-role-completion-v1",
+  "quantization": "nf4-double-float32",
+  "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+  "parent_checkpoint": "744ed4988c3d7d0fb015d797c306f18876de10842ec86fb025efda095918bdf6"
+}

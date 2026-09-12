@@ -1,0 +1,72 @@
+{
+  "before": [
+    {
+      "model": "accounts/fireworks/models/llama-v3p3-70b-instruct",
+      "upstream_status": 404,
+      "api_status": 503
+    },
+    {
+      "model": "accounts/fireworks/models/qwen3p7-plus",
+      "upstream_status": 404,
+      "api_status": 503
+    }
+  ],
+  "request": {
+    "provider": "fireworks",
+    "recipe": {
+      "title": "Traditional Ravioli",
+      "ingredients": [
+        "flour",
+        "eggs",
+        "salt",
+        "optional water",
+        "ricotta",
+        "fresh herbs",
+        "Parmesan",
+        "pecorino Romano",
+        "pepper",
+        "nutmeg"
+      ],
+      "instructions": [
+        "Process the dough ingredients, knead briefly, and allow at least a half-hour rest.",
+        "Combine the cheese filling. Roll thin sheets with a pasta machine, portion filling, seal and cut.",
+        "Boil the filled pasta for 6\u20138 minutes. Uncooked portions may be frozen for later meals."
+      ],
+      "equipment": [
+        "food processor",
+        "pasta machine",
+        "pot"
+      ],
+      "time_minutes": 70,
+      "pantry_items": null
+    },
+    "temperature": 0,
+    "max_new_tokens": 128
+  },
+  "after": {
+    "http_status": 200,
+    "result": {
+      "raw_output": "{\n  \"labels\": [\"weekend-project\", \"needs-special-equipment\"],\n  \"explanation\": \"The recipe uses a pasta machine and food processor, requires 70 minutes total time, and involves a substantial multi-step cooking project.\"\n}",
+      "model": "accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b",
+      "revision": null,
+      "finish_reason": "stop",
+      "input_tokens": 406,
+      "output_tokens": 53,
+      "provider": "fireworks",
+      "prompt_version": "triage-v1",
+      "temperature": 0.0,
+      "max_new_tokens": 128,
+      "latency_ms": 594,
+      "prediction": {
+        "labels": [
+          "weekend-project",
+          "needs-special-equipment"
+        ],
+        "explanation": "The recipe uses a pasta machine and food processor, requires 70 minutes total time, and involves a substantial multi-step cooking project."
+      },
+      "valid_json": true,
+      "error": null
+    }
+  },
+  "training_data_created": false
+}

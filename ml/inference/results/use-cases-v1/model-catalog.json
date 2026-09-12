@@ -1,0 +1,74 @@
+{
+  "models": [
+    {
+      "key": "fireworks",
+      "title": "Fireworks",
+      "model": "accounts/fireworks/models/qwen3p7-plus",
+      "available": true,
+      "reason": "Requires FIREWORKS_API_KEY",
+      "hosted": true
+    },
+    {
+      "key": "base",
+      "title": "Local base",
+      "model": "Qwen/Qwen2.5-0.5B",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+      "available": true,
+      "hosted": false
+    },
+    {
+      "key": "instruct",
+      "title": "Local instruct",
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "available": true,
+      "hosted": false
+    },
+    {
+      "key": "sft",
+      "title": "SFT",
+      "model": "Qwen/Qwen2.5-0.5B+recipetriage-lora/30f1b50c-52b3-4336-ae9e-b4d7d2586e08",
+      "revision": "1326c654341d537b65795c1854f84bb15edad428ac0e428747c3fbd5d6607f8d",
+      "available": true,
+      "hosted": false,
+      "reason": "Install the delivered reference adapter; see USE_CASES.md"
+    },
+    {
+      "key": "lora",
+      "title": "LoRA",
+      "model": "Qwen/Qwen2.5-0.5B+recipetriage-lora/771d20b1-77df-446b-b34d-b8259ddbc585",
+      "revision": "4a5ac5bdd2f131d468d899dc8575173aa77f2d0196d1d37626394880d2d83f67",
+      "available": true,
+      "hosted": false,
+      "reason": "Install the delivered reference adapter; see USE_CASES.md"
+    },
+    {
+      "key": "qlora",
+      "title": "QLORA",
+      "model": "Qwen/Qwen2.5-0.5B+recipetriage-lora/041818c9-7e00-4802-b53d-f7d567616e2b",
+      "revision": "744ed4988c3d7d0fb015d797c306f18876de10842ec86fb025efda095918bdf6",
+      "available": true,
+      "hosted": false,
+      "reason": "Install the delivered reference adapter; see USE_CASES.md"
+    },
+    {
+      "key": "dpo",
+      "title": "DPO",
+      "available": false,
+      "hosted": false,
+      "reason": "No completed DPO checkpoint; explicit human preferences are still required"
+    },
+    {
+      "key": "production",
+      "title": "Registered production",
+      "available": false,
+      "model": null,
+      "hosted": false,
+      "reason": "No model has passed the production gate"
+    }
+  ],
+  "default_models": [
+    "fireworks",
+    "base"
+  ],
+  "note": "Local models run sequentially. Opening this page does not generate responses."
+}

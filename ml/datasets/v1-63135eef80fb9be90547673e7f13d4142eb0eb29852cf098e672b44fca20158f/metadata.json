@@ -1,0 +1,145 @@
+{
+  "version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+  "content_sha256": "63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f",
+  "created_at": "2026-09-09T12:45:37.942789+00:00",
+  "schema_version": "1.0.0",
+  "pipeline_version": "1.0.0",
+  "prompt_version": "triage-v1",
+  "system_prompt_sha256": "638015d13def52046cf38a9d80a0373c25a24315ab7197b241dbab2ad1861c90",
+  "status": "teaching-draft",
+  "seed": 42,
+  "requested_ratios": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "actual_ratios": {
+    "train": 0.7142857142857143,
+    "validation": 0.14285714285714285,
+    "test": 0.14285714285714285
+  },
+  "split_method": "grouped-rare-label-greedy-v1",
+  "label_policy": {
+    "weeknight-30min": "Known total elapsed time <=30 minutes, including waiting; never infer speed from title adjectives.",
+    "weekend-project": "A substantial cooking project taking >30 minutes; passive waiting alone does not qualify.",
+    "needs-special-equipment": "Requires a specialized appliance, such as a blender, food processor, pasta machine, or waffle iron; ordinary kitchen tools do not qualify.",
+    "meal-prep": "Explicitly suitable for preparing portions ahead; record recipe-grounded evidence.",
+    "dessert": "Intended as dessert, not merely sweet.",
+    "have-most-of-this": "Explicit pantry context covers >=80% of ingredient items; never assume the user's pantry. Dataset v1 uses exact normalized ingredient strings for matching.",
+    "unclear": "Insufficient or contradictory evidence; exclusive of all other labels in v1."
+  },
+  "counts": {
+    "train": 5,
+    "validation": 1,
+    "test": 1
+  },
+  "label_distribution": {
+    "train": {
+      "weeknight-30min": 1,
+      "weekend-project": 2,
+      "needs-special-equipment": 1,
+      "meal-prep": 2,
+      "dessert": 0,
+      "have-most-of-this": 0,
+      "unclear": 1
+    },
+    "validation": {
+      "weeknight-30min": 0,
+      "weekend-project": 0,
+      "needs-special-equipment": 1,
+      "meal-prep": 0,
+      "dessert": 0,
+      "have-most-of-this": 0,
+      "unclear": 0
+    },
+    "test": {
+      "weeknight-30min": 0,
+      "weekend-project": 0,
+      "needs-special-equipment": 1,
+      "meal-prep": 0,
+      "dessert": 0,
+      "have-most-of-this": 0,
+      "unclear": 0
+    }
+  },
+  "split_ids": {
+    "train": [
+      "seed-001",
+      "seed-002",
+      "seed-005",
+      "seed-006",
+      "seed-007"
+    ],
+    "validation": [
+      "seed-004"
+    ],
+    "test": [
+      "seed-003"
+    ]
+  },
+  "groups": [
+    [
+      "seed-001"
+    ],
+    [
+      "seed-002"
+    ],
+    [
+      "seed-003"
+    ],
+    [
+      "seed-004"
+    ],
+    [
+      "seed-005"
+    ],
+    [
+      "seed-006"
+    ],
+    [
+      "seed-007"
+    ]
+  ],
+  "fingerprints": {
+    "seed-001": "96292eb80c164be1922407b4c4aed7f9e8a0607d320e72c527b5a45cb1dbebe3",
+    "seed-002": "015c124a3d17e4d1357f0ac73ba036e4470839070bfa35c7666d08094b91226c",
+    "seed-003": "8afe709d0f6d2684baddbfb010479ea08735d4bdee078c1b6e6be1c09904f88b",
+    "seed-004": "d85046cfd2a9ca0eecf00798dc4095dab15d6db65caed79fc35104209e9a9580",
+    "seed-005": "908d342c0df121297f098ff8872b08354a0114a4ed6ab51cdb32a658c212b09e",
+    "seed-006": "d5ce9a6dff8e165ddf8503298030a670ff7a58418d009795e3d853b0a3ca9d8c",
+    "seed-007": "0fc252e20b7eabea2b534fff08c6e1677b39ebc5fa1d559cbbdff0d250650c25"
+  },
+  "sources": [
+    "https://eat-move-save.extension.illinois.edu/eat/recipes/peanut-butter-banana-smoothie",
+    "https://www.kingarthurbaking.com/recipes/homemade-cheese-ravioli-recipe",
+    "https://www.nutrition.gov/recipes/oatmeal-pecan-waffles",
+    "https://www.nutrition.gov/recipes/overnight-oatmeal",
+    "https://www.nutrition.gov/recipes/quick-and-easy-pizza",
+    "https://www.nutrition.gov/recipes/roasted-root-vegetables",
+    "https://www.texaswic.org/recipes/black-bean-quesadillas"
+  ],
+  "input_sha256": "3cf506d053c664aff2ce7f93745003846192a8317c6d0a5570357d806eadd009",
+  "input_rows": 7,
+  "duplicates_removed": [],
+  "warnings": [
+    "Teaching seed only: too small for reliable model-quality estimates.",
+    "Source grouping and exact-body de-duplication do not detect every paraphrase. Assign group_id to known related recipes.",
+    "weeknight-30min: 1 examples; cannot cover all three splits.",
+    "weekend-project: 2 examples; cannot cover all three splits.",
+    "meal-prep: 2 examples; cannot cover all three splits.",
+    "dessert: 0 examples; cannot cover all three splits.",
+    "have-most-of-this: 0 examples; cannot cover all three splits.",
+    "unclear: 1 examples; cannot cover all three splits.",
+    "Unreviewed annotations: this export is a teaching draft, not approved training data."
+  ],
+  "file_sha256": {
+    "train.jsonl": "5d8db796a366dfc38152602efa7ec9a77ecda44ec49861b8dd01caaf741dfe13",
+    "train.chat.jsonl": "bc475d2ccf8bfc35aa632e4fe4d855fb9c6b662d3ee1a7fbf3e3e348020b8a65",
+    "validation.jsonl": "2e47077a8012f83cc163f52d61ed4347f8ecf2ece1c8c9b585d92ff52a898ebb",
+    "validation.chat.jsonl": "162ce9e23371f47c06c752cb001cc23f8f843b6712a108fd1ec6eeecc3099ac6",
+    "test.jsonl": "3fd58ce476b6349cc13b8a0dcb1554c10dc89d4111e269a1dc3bcf90ee1a5541",
+    "test.chat.jsonl": "e9b441c7d70e23583844a9a76a04f613fb959bfe9687c3eeeaaecc6282a2a6a7",
+    "examples.json": "641567475a3c815de992a54fde13d6b37262dfe01dffa6e809e1cf078092d3ab",
+    "raw.json": "bec7328fea7367ad5b44c948b35b517a5880ab949c333a383051c007b508cdfe"
+  }
+}

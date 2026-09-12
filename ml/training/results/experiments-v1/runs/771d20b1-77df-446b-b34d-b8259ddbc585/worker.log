@@ -1,0 +1,22 @@
+{'eval_loss': 2.8582310676574707, 'eval_model_preparation_time': 0.0023, 'eval_runtime': 0.9311, 'eval_samples_per_second': 1.074, 'eval_steps_per_second': 1.074, 'eval_entropy': 2.612621307373047, 'eval_num_tokens': 0.0, 'eval_mean_token_accuracy': 0.3928571343421936}
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+{'loss': 2.4271, 'grad_norm': 2.3673553466796875, 'learning_rate': 0.0002, 'entropy': 2.6260679960250854, 'num_tokens': 807.0, 'mean_token_accuracy': 0.4781976640224457, 'epoch': 0.4}
+{'loss': 2.8095, 'grad_norm': 2.9428696632385254, 'learning_rate': 0.0002, 'entropy': 2.669410228729248, 'num_tokens': 1550.0, 'mean_token_accuracy': 0.5370370447635651, 'epoch': 0.8}
+{'loss': 2.4019, 'grad_norm': 2.805297613143921, 'learning_rate': 0.0002, 'entropy': 2.7035768032073975, 'num_tokens': 1921.0, 'mean_token_accuracy': 0.5555555820465088, 'epoch': 1.0}
+{'eval_loss': 2.709198236465454, 'eval_model_preparation_time': 0.0023, 'eval_runtime': 0.5654, 'eval_samples_per_second': 1.769, 'eval_steps_per_second': 1.769, 'eval_entropy': 2.624680995941162, 'eval_num_tokens': 1921.0, 'eval_mean_token_accuracy': 0.3928571343421936, 'epoch': 1.0}
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 2.5293, 'grad_norm': 2.4926674365997314, 'learning_rate': 0.0002, 'entropy': 2.6561577320098877, 'num_tokens': 2685.0, 'mean_token_accuracy': 0.5555555820465088, 'epoch': 1.4}
+{'loss': 2.2363, 'grad_norm': 2.366171360015869, 'learning_rate': 0.0002, 'entropy': 2.642656922340393, 'num_tokens': 3492.0, 'mean_token_accuracy': 0.5094476640224457, 'epoch': 1.8}
+{'loss': 2.607, 'grad_norm': 4.392916202545166, 'learning_rate': 0.0002, 'entropy': 2.755424976348877, 'num_tokens': 3842.0, 'mean_token_accuracy': 0.5185185074806213, 'epoch': 2.0}
+{'eval_loss': 2.538949728012085, 'eval_model_preparation_time': 0.0023, 'eval_runtime': 0.5904, 'eval_samples_per_second': 1.694, 'eval_steps_per_second': 1.694, 'eval_entropy': 2.6366348266601562, 'eval_num_tokens': 3842.0, 'eval_mean_token_accuracy': 0.3928571343421936, 'epoch': 2.0}
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 2.1405, 'grad_norm': 2.4116625785827637, 'learning_rate': 0.0002, 'entropy': 2.6518383026123047, 'num_tokens': 4649.0, 'mean_token_accuracy': 0.5094476640224457, 'epoch': 2.4}
+{'loss': 2.3288, 'grad_norm': 2.49530029296875, 'learning_rate': 0.0002, 'entropy': 2.671186685562134, 'num_tokens': 5413.0, 'mean_token_accuracy': 0.5601851940155029, 'epoch': 2.8}
+{'loss': 2.3812, 'grad_norm': 4.087469100952148, 'learning_rate': 0.0002, 'entropy': 2.7716763019561768, 'num_tokens': 5763.0, 'mean_token_accuracy': 0.5185185074806213, 'epoch': 3.0}
+{'eval_loss': 2.37314772605896, 'eval_model_preparation_time': 0.0023, 'eval_runtime': 0.5669, 'eval_samples_per_second': 1.764, 'eval_steps_per_second': 1.764, 'eval_entropy': 2.6505978107452393, 'eval_num_tokens': 5763.0, 'eval_mean_token_accuracy': 0.3928571343421936, 'epoch': 3.0}
+/Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'train_runtime': 26.9428, 'train_samples_per_second': 0.557, 'train_steps_per_second': 0.334, 'train_loss': 2.429062101576063, 'epoch': 3.0}
+2026/09/09 11:34:23 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at /Users/smohandoss/Documents/Codex/2026-09-09/files-mentioned-by-the-user-recipetriage/outputs/recipetriage/.venv/lib/python3.12/site-packages/mlflow/assistant/skills/instrumenting-with-mlflow-tracing/SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.

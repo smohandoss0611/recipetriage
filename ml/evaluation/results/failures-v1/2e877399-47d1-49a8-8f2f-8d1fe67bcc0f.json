@@ -1,0 +1,428 @@
+{
+  "version": "failure-analysis-v1",
+  "source_run_id": "2e877399-47d1-49a8-8f2f-8d1fe67bcc0f",
+  "source_sha256": "93af924f9e64e7fbac0e25c3a7986c387836a04999a9d49d56bb2cce1ecdbc43",
+  "model_config": {
+    "model": "Qwen/Qwen2.5-0.5B+recipetriage-lora/95639818-0ed3-4a06-8df0-14fff7074aa4",
+    "revision": "a0ea814887456bbc427e712114aac0601737370546f88b7078ff8368df887420",
+    "base_model": "Qwen/Qwen2.5-0.5B",
+    "base_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "training_stage": "supervised-fine-tuned-lora",
+    "prompt_format": "plain-role-completion-v1",
+    "quantization": "none",
+    "dataset_version": "v1-63135eef80fb9be90547673e7f13d4142eb0eb29852cf098e672b44fca20158f"
+  },
+  "benchmark_sha256": "173e79cc1968dd1207a7aafd051dad40d87ff551c7081a17b896c9556a698448",
+  "category_counts": {
+    "invalid_json": 6,
+    "incomplete_generation": 6,
+    "false_positive": 1,
+    "false_negative": 2,
+    "time_reasoning": 1,
+    "equipment_reasoning": 2,
+    "dessert_reasoning": 1,
+    "multi_label_omission": 1,
+    "schema_violation": 2
+  },
+  "failed_cases": 10,
+  "total_cases": 10,
+  "misleading_title_accuracy": 0.0,
+  "misleading_title_correct": 0,
+  "misleading_title_total": 1,
+  "findings": [
+    {
+      "case_id": "bench-001",
+      "title": "Stovetop Popcorn",
+      "benchmark_category": "normal",
+      "expected_labels": [
+        "weeknight-30min"
+      ],
+      "predicted_labels": null,
+      "usable": false,
+      "exact_match": false,
+      "missing_labels": [
+        "weeknight-30min"
+      ],
+      "extra_labels": [],
+      "failure_categories": [
+        "invalid_json",
+        "incomplete_generation"
+      ],
+      "error": "Unterminated string starting at: line 11 column 18 (char 186)",
+      "raw_output": "{\n  \"labels\": [\n    \"weeknight-30min\",\n    \"weekend-project\",\n    \"needs-special-equipment\",\n    \"meal-prep\",\n    \"dessert\",\n    \"have-most-of-this\",\n    \"unclear\"\n  ],\n  \"explanation\": \"This recipe is suitable for cooking popcorn in a stovetop. It requires a saucepan, lid, and stove. The ingredients include popcorn kernels, vegetable oil, and seasoning. The instructions are simple and straightforward, with a focus on preparation and serving. The pantry items are not explicitly mentioned, but they are included in the ingredients list.",
+      "time_minutes": 10,
+      "equipment": [
+        "saucepan",
+        "lid",
+        "stove"
+      ],
+      "source_uri": "https://foodhero.org/recipes/stovetop-popcorn"
+    },
+    {
+      "case_id": "bench-002",
+      "title": "Hazelnut Thumbprint Cookies",
+      "benchmark_category": "normal",
+      "expected_labels": [
+        "dessert"
+      ],
+      "predicted_labels": null,
+      "usable": false,
+      "exact_match": false,
+      "missing_labels": [
+        "dessert"
+      ],
+      "extra_labels": [],
+      "failure_categories": [
+        "invalid_json",
+        "incomplete_generation"
+      ],
+      "error": "Unterminated string starting at: line 11 column 18 (char 186)",
+      "raw_output": "{\n  \"labels\": [\n    \"weeknight-30min\",\n    \"weekend-project\",\n    \"needs-special-equipment\",\n    \"meal-prep\",\n    \"dessert\",\n    \"have-most-of-this\",\n    \"unclear\"\n  ],\n  \"explanation\": \"These cookies are a traditional dessert made with almond flour, hazelnut flour, cinnamon, maple syrup, coconut oil, water, and fruit jam. They are baked in an oven and have a sweet and creamy texture. The recipe requires a pasta machine, food processor, blender, waffle iron, and other specialized appliances. The ingredients are easy",
+      "time_minutes": null,
+      "equipment": [
+        "bowl",
+        "baking sheet",
+        "oven"
+      ],
+      "source_uri": "https://foodhero.org/recipes/hazelnut-thumbprint-cookies"
+    },
+    {
+      "case_id": "bench-003",
+      "title": "Quick Brown Bread",
+      "benchmark_category": "misleading-title",
+      "expected_labels": [
+        "weekend-project"
+      ],
+      "predicted_labels": [
+        "weeknight-30min",
+        "needs-special-equipment",
+        "meal-prep",
+        "dessert"
+      ],
+      "usable": true,
+      "exact_match": false,
+      "missing_labels": [
+        "weekend-project"
+      ],
+      "extra_labels": [
+        "dessert",
+        "meal-prep",
+        "needs-special-equipment",
+        "weeknight-30min"
+      ],
+      "failure_categories": [
+        "false_positive",
+        "false_negative",
+        "time_reasoning",
+        "equipment_reasoning",
+        "dessert_reasoning"
+      ],
+      "error": null,
+      "raw_output": "{\n  \"labels\": [\"weeknight-30min\", \"needs-special-equipment\", \"meal-prep\", \"dessert\"],\n  \"explanation\": \"A substantial cooking project taking more than 30 minutes; passive waiting alone is insufficient.\"\n}",
+      "time_minutes": 80,
+      "equipment": [
+        "mixing bowl",
+        "bread pan",
+        "oven"
+      ],
+      "source_uri": "https://foodhero.org/recipes/quick-brown-bread"
+    },
+    {
+      "case_id": "bench-004",
+      "title": "Peach Yogurt Smoothie",
+      "benchmark_category": "special-equipment",
+      "expected_labels": [
+        "needs-special-equipment",
+        "weeknight-30min"
+      ],
+      "predicted_labels": [
+        "weeknight-30min"
+      ],
+      "usable": true,
+      "exact_match": false,
+      "missing_labels": [
+        "needs-special-equipment"
+      ],
+      "extra_labels": [],
+      "failure_categories": [
+        "false_negative",
+        "equipment_reasoning",
+        "multi_label_omission"
+      ],
+      "error": null,
+      "raw_output": "{\n  \"labels\": [\"weeknight-30min\"],\n  \"explanation\": \"A substantial cooking project taking more than 30 minutes; passive waiting alone is insufficient.\"\n}",
+      "time_minutes": 10,
+      "equipment": [
+        "blender"
+      ],
+      "source_uri": "https://foodhero.org/recipes/peach-yogurt-smoothie"
+    },
+    {
+      "case_id": "bench-005",
+      "title": "Banana Ice Cream",
+      "benchmark_category": "special-equipment",
+      "expected_labels": [
+        "dessert",
+        "needs-special-equipment"
+      ],
+      "predicted_labels": null,
+      "usable": false,
+      "exact_match": false,
+      "missing_labels": [
+        "dessert",
+        "needs-special-equipment"
+      ],
+      "extra_labels": [],
+      "failure_categories": [
+        "schema_violation"
+      ],
+      "error": "1 validation error for Prediction\n  Value error, unclear cannot accompany other labels [type=value_error, input_value={'labels': ['weeknight-30...on': 'Banana Ice Cream'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "raw_output": "{\n  \"labels\": [\n    \"weeknight-30min\",\n    \"weekend-project\",\n    \"needs-special-equipment\",\n    \"meal-prep\",\n    \"dessert\",\n    \"have-most-of-this\",\n    \"unclear\"\n  ],\n  \"explanation\": \"Banana Ice Cream\"\n}",
+      "time_minutes": null,
+      "equipment": [
+        "freezer",
+        "food processor"
+      ],
+      "source_uri": "https://www.nutrition.gov/recipes/banana-ice-cream"
+    },
+    {
+      "case_id": "bench-006",
+      "title": "Salsa Chicken",
+      "benchmark_category": "multi-label",
+      "expected_labels": [
+        "have-most-of-this",
+        "meal-prep",
+        "needs-special-equipment"
+      ],
+      "predicted_labels": null,
+      "usable": false,
+      "exact_match": false,
+      "missing_labels": [
+        "have-most-of-this",
+        "meal-prep",
+        "needs-special-equipment"
+      ],
+      "extra_labels": [],
+      "failure_categories": [
+        "invalid_json",
+        "incomplete_generation"
+      ],
+      "error": "Expecting property name enclosed in double quotes: line 11 column 300 (char 468)",
+      "raw_output": "{\n  \"labels\": [\n    \"weeknight-30min\",\n    \"weekend-project\",\n    \"needs-special-equipment\",\n    \"meal-prep\",\n    \"dessert\",\n    \"have-most-of-this\",\n    \"unclear\"\n  ],\n  \"explanation\": \"Coat chicken with salsa in a slow cooker.\", \"ingredients\": [\"boneless chicken\", \"salsa\"], \"instructions\": [\"Coat chicken with salsa in a slow cooker.\", \"Cook on LOW for 6 to 8 hours, shred with forks, and keep portions refrigerated for up to four days or frozen for later meals.\"],",
+      "time_minutes": 485,
+      "equipment": [
+        "slow cooker",
+        "forks"
+      ],
+      "source_uri": "https://foodhero.org/recipes/salsa-chicken"
+    },
+    {
+      "case_id": "bench-007",
+      "title": "Fruit Yogurt Popsicles",
+      "benchmark_category": "multi-label",
+      "expected_labels": [
+        "dessert",
+        "meal-prep",
+        "needs-special-equipment"
+      ],
+      "predicted_labels": null,
+      "usable": false,
+      "exact_match": false,
+      "missing_labels": [
+        "dessert",
+        "meal-prep",
+        "needs-special-equipment"
+      ],
+      "extra_labels": [],
+      "failure_categories": [
+        "schema_violation"
+      ],
+      "error": "1 validation error for Prediction\n  Value error, unclear cannot accompany other labels [type=value_error, input_value={'labels': ['weeknight-30...Fruit Yogurt Popsicles'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "raw_output": "{\n  \"labels\": [\n    \"weeknight-30min\",\n    \"weekend-project\",\n    \"needs-special-equipment\",\n    \"meal-prep\",\n    \"dessert\",\n    \"have-most-of-this\",\n    \"unclear\"\n  ],\n  \"explanation\": \"Fruit Yogurt Popsicles\"\n}",
+      "time_minutes": 185,
+      "equipment": [
+        "blender",
+        "paper cups",
+        "sticks",
+        "freezer"
+      ],
+      "source_uri": "https://foodhero.org/recipes/fruit-yogurt-popsicles"
+    },
+    {
+      "case_id": "bench-008",
+      "title": "Herbed Yogurt Sauce",
+      "benchmark_category": "ambiguous",
+      "expected_labels": [
+        "unclear"
+      ],
+      "predicted_labels": null,
+      "usable": false,
+      "exact_match": false,
+      "missing_labels": [
+        "unclear"
+      ],
+      "extra_labels": [],
+      "failure_categories": [
+        "invalid_json",
+        "incomplete_generation"
+      ],
+      "error": "Unterminated string starting at: line 11 column 18 (char 186)",
+      "raw_output": "{\n  \"labels\": [\n    \"weeknight-30min\",\n    \"weekend-project\",\n    \"needs-special-equipment\",\n    \"meal-prep\",\n    \"dessert\",\n    \"have-most-of-this\",\n    \"unclear\"\n  ],\n  \"explanation\": \"The Herbed Yogurt Sauce recipe is suitable for cooking and is prepared in a bowl, using Greek yogurt, olive oil, agave syrup, chopped herbs, seasonings, and chilling until ready to serve. It is not explicitly suitable for preparing portions ahead, and the chilling duration is not specified. The recipe requires a pasta machine, food processor",
+      "time_minutes": null,
+      "equipment": [
+        "bowl",
+        "refrigerator"
+      ],
+      "source_uri": "https://foodhero.org/recipes/herbed-yogurt-sauce"
+    },
+    {
+      "case_id": "bench-009",
+      "title": "Hummus (no tahini)",
+      "benchmark_category": "hard",
+      "expected_labels": [
+        "have-most-of-this",
+        "weeknight-30min"
+      ],
+      "predicted_labels": null,
+      "usable": false,
+      "exact_match": false,
+      "missing_labels": [
+        "have-most-of-this",
+        "weeknight-30min"
+      ],
+      "extra_labels": [],
+      "failure_categories": [
+        "invalid_json",
+        "incomplete_generation"
+      ],
+      "error": "Unterminated string starting at: line 11 column 280 (char 448)",
+      "raw_output": "{\n  \"labels\": [\n    \"weeknight-30min\",\n    \"weekend-project\",\n    \"needs-special-equipment\",\n    \"meal-prep\",\n    \"dessert\",\n    \"have-most-of-this\",\n    \"unclear\"\n  ],\n  \"explanation\": \"Use the published fork method: mash the cooked garbanzo beans on a plate and mix with the other ingredients in a bowl.\", \"ingredients\": [\"garbanzo beans\", \"lemon juice\", \"vegetable oil\", \"plain yogurt\", \"garlic\", \"black pepper\", \"cumin\"], \"equipment\": [\"fork\", \"plate",
+      "time_minutes": 5,
+      "equipment": [
+        "fork",
+        "plate",
+        "bowl"
+      ],
+      "source_uri": "https://foodhero.org/recipes/hummus-no-tahini"
+    },
+    {
+      "case_id": "bench-010",
+      "title": "Turnip Pancakes",
+      "benchmark_category": "hard",
+      "expected_labels": [
+        "weekend-project"
+      ],
+      "predicted_labels": null,
+      "usable": false,
+      "exact_match": false,
+      "missing_labels": [
+        "weekend-project"
+      ],
+      "extra_labels": [],
+      "failure_categories": [
+        "invalid_json",
+        "incomplete_generation"
+      ],
+      "error": "Unterminated string starting at: line 11 column 18 (char 186)",
+      "raw_output": "{\n  \"labels\": [\n    \"weeknight-30min\",\n    \"weekend-project\",\n    \"needs-special-equipment\",\n    \"meal-prep\",\n    \"dessert\",\n    \"have-most-of-this\",\n    \"unclear\"\n  ],\n  \"explanation\": \"Turnip Pancakes are a traditional and simple dish that can be prepared in a weeknight or weekend. They require a basic cooking project, a pasta machine, food processor, blender, waffle iron or other specialized appliance, and a large pot. The recipe includes a savory batter, a savory filling, and a dipping sauce. The instructions are",
+      "time_minutes": 75,
+      "equipment": [
+        "grater",
+        "bowl",
+        "skillet",
+        "stove"
+      ],
+      "source_uri": "https://foodhero.org/recipes/turnip-pancakes"
+    }
+  ],
+  "category_descriptions": {
+    "missing_result": "No recorded result for this benchmark case.",
+    "provider_error": "The provider did not return a response.",
+    "invalid_json": "The complete response is not syntactically valid JSON.",
+    "schema_violation": "JSON violates the required labels/explanation schema.",
+    "incomplete_generation": "Generation did not finish normally.",
+    "false_positive": "A usable response included an unsupported label.",
+    "false_negative": "A usable response omitted an expected label.",
+    "time_reasoning": "The predicted time-related label differs from the answer key.",
+    "equipment_reasoning": "The required-equipment label differs from the answer key.",
+    "pantry_reasoning": "The pantry-coverage label differs from the answer key.",
+    "dessert_reasoning": "The dessert label differs from the answer key.",
+    "ambiguity_handling": "The unclear decision differs from the answer key.",
+    "multi_label_omission": "A usable answer omitted part of a multi-label set."
+  },
+  "limitations": "Categories can overlap. Semantic diagnoses require a usable answer. The provisional answer key is not a verified ground truth; title correlation alone does not establish a shortcut.",
+  "collection_priorities": [
+    {
+      "priority": 1,
+      "topic": "Complete structured answers",
+      "observed_cases": 8,
+      "case_ids": [
+        "bench-001",
+        "bench-002",
+        "bench-005",
+        "bench-006",
+        "bench-007",
+        "bench-008",
+        "bench-009",
+        "bench-010"
+      ],
+      "action": "Collect human-reviewed recipe/answer pairs with both labels and a concise explanation, including long and short outputs. Check the output-token budget before attributing truncation to missing data.",
+      "basis": "observed benchmark failures",
+      "split_rule": "New sources only; exclude existing benchmark/shortcut/red-team cases and group related recipes before splitting."
+    },
+    {
+      "priority": 2,
+      "topic": "Required versus optional equipment",
+      "observed_cases": 2,
+      "case_ids": [
+        "bench-003",
+        "bench-004"
+      ],
+      "action": "Collect matched natural examples with required appliances, optional appliance alternatives and ordinary tools. Annotate the selected preparation method.",
+      "basis": "observed benchmark failures",
+      "split_rule": "New sources only; exclude existing benchmark/shortcut/red-team cases and group related recipes before splitting."
+    },
+    {
+      "priority": 3,
+      "topic": "Complete multi-label combinations",
+      "observed_cases": 1,
+      "case_ids": [
+        "bench-004"
+      ],
+      "action": "Collect recipes with two or three independently supported labels. Ask reviewers to justify every positive label and plausible exclusion.",
+      "basis": "observed benchmark failures",
+      "split_rule": "New sources only; exclude existing benchmark/shortcut/red-team cases and group related recipes before splitting."
+    },
+    {
+      "priority": 4,
+      "topic": "Elapsed time and active work",
+      "observed_cases": 1,
+      "case_ids": [
+        "bench-003"
+      ],
+      "action": "Collect source-linked recipes around the 30-minute boundary, with separate prep/cook/rest/cooling evidence. Include quick-sounding titles on long recipes and slow-sounding titles on short recipes.",
+      "basis": "observed benchmark failures",
+      "split_rule": "New sources only; exclude existing benchmark/shortcut/red-team cases and group related recipes before splitting."
+    },
+    {
+      "priority": 5,
+      "topic": "Serving-context contrasts",
+      "observed_cases": 1,
+      "case_ids": [
+        "bench-003"
+      ],
+      "action": "Collect savory pancakes, breakfast drinks and actual desserts with explicit serving context, rather than using dish-name keywords as labels.",
+      "basis": "observed benchmark failures",
+      "split_rule": "New sources only; exclude existing benchmark/shortcut/red-team cases and group related recipes before splitting."
+    },
+    {
+      "priority": 6,
+      "topic": "Label coverage and annotation review",
+      "observed_cases": null,
+      "case_ids": [],
+      "action": "Independently review the provisional seed labels, then collect new training examples for dessert and have-most-of-this, which are absent from the current five-example training split. Expand validation beyond one recipe.",
+      "basis": "known teaching-dataset coverage limitation, not a measured causal explanation",
+      "split_rule": "New sources only; exclude existing benchmark/shortcut/red-team cases and group related recipes before splitting."
+    }
+  ]
+}

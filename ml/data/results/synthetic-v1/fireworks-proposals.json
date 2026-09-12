@@ -1,0 +1,602 @@
+{
+  "generation_id": "7fd24933-fead-4f2a-b60c-a4bda51e5c71",
+  "created_at": "2026-09-09T17:50:12.857238+00:00",
+  "status": "completed",
+  "items": [
+    {
+      "candidate_id": "85b22a74-753f-4bd2-9465-2674480277c3",
+      "revision": 1,
+      "kind": "synthetic",
+      "status": "pending",
+      "created_at": "2026-09-09T17:50:12.859640+00:00",
+      "generation_id": "7fd24933-fead-4f2a-b60c-a4bda51e5c71",
+      "category": "misleading-title",
+      "prompt_version": "synthetic-fireworks-v1",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Generate fictional recipe proposals as JSON for human review. Never approve your own output."
+        },
+        {
+          "role": "user",
+          "content": "You propose fictional RecipeTriage training examples for HUMAN REVIEW ONLY.\nDo not claim a human reviewed them. Do not invent published URLs or citations.\nReturn exactly one JSON object with recipe, labels, rationale, category and challenge_notes.\nrecipe has title, ingredients (strings), instructions (strings), equipment (strings),\ntime_minutes (integer or null), pantry_items (strings or null).\nUse 3\u20136 ingredients and 2\u20134 short steps. Keep the entire example under 180 words.\nEvery timing/tool/serving-context claim must be supported by the recipe body.\nPrefer vegetarian recipes; avoid food-safety-sensitive handling instructions.\nFor misleading-title: use Quick, Easy or Simple while total elapsed time exceeds 30\nminutes. Distinguish passive waiting from substantial active cooking projects.\nFor ambiguous: omit or explicitly contradict information so the correct answer is\nunclear alone. Do not add a decisive dessert, specialized tool or meal-prep cue.\nUse varied dishes and ingredients. Do not paraphrase an evaluation example.\nThe rationale must be concise, address all proposed labels and ignore title adjectives.\nTreat the following label policy as authoritative:\n{\"weeknight-30min\": \"Known total elapsed time <=30 minutes, including waiting; never infer speed from title adjectives.\", \"weekend-project\": \"A substantial cooking project taking >30 minutes; passive waiting alone does not qualify.\", \"needs-special-equipment\": \"Requires a specialized appliance, such as a blender, food processor, pasta machine, or waffle iron; ordinary kitchen tools do not qualify.\", \"meal-prep\": \"Explicitly suitable for preparing portions ahead; record recipe-grounded evidence.\", \"dessert\": \"Intended as dessert, not merely sweet.\", \"have-most-of-this\": \"Explicit pantry context covers >=80% of ingredient items; never assume the user's pantry. Dataset v1 uses exact normalized ingredient strings for matching.\", \"unclear\": \"Insufficient or contradictory evidence; exclusive of all other labels in v1.\"}\nRequested focus: misleading-title\nIndependent variation brief: A savory stuffed vegetable with substantial active preparation.\nRequired JSON schema: {\"$defs\": {\"Recipe\": {\"additionalProperties\": false, \"properties\": {\"title\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Title\", \"type\": \"string\"}, \"ingredients\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Ingredients\", \"type\": \"array\"}, \"instructions\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Instructions\", \"type\": \"array\"}, \"equipment\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 30, \"title\": \"Equipment\", \"type\": \"array\"}, \"time_minutes\": {\"anyOf\": [{\"maximum\": 10080, \"minimum\": 1, \"type\": \"integer\"}, {\"type\": \"null\"}], \"title\": \"Time Minutes\"}, \"pantry_items\": {\"anyOf\": [{\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 100, \"type\": \"array\"}, {\"type\": \"null\"}], \"default\": null, \"title\": \"Pantry Items\"}}, \"required\": [\"title\", \"ingredients\", \"instructions\", \"equipment\", \"time_minutes\"], \"title\": \"Recipe\", \"type\": \"object\"}}, \"additionalProperties\": false, \"properties\": {\"recipe\": {\"$ref\": \"#/$defs/Recipe\"}, \"labels\": {\"items\": {\"enum\": [\"weeknight-30min\", \"weekend-project\", \"needs-special-equipment\", \"meal-prep\", \"dessert\", \"have-most-of-this\", \"unclear\"], \"type\": \"string\"}, \"maxItems\": 7, \"minItems\": 1, \"title\": \"Labels\", \"type\": \"array\"}, \"rationale\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Rationale\", \"type\": \"string\"}, \"category\": {\"enum\": [\"misleading-title\", \"ambiguous\"], \"title\": \"Category\", \"type\": \"string\"}, \"challenge_notes\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Challenge Notes\", \"type\": \"string\"}}, \"required\": [\"recipe\", \"labels\", \"rationale\", \"category\", \"challenge_notes\"], \"title\": \"Draft\", \"type\": \"object\"}\n"
+        }
+      ],
+      "prompt_sha256": "02ef7a21b97d7cfde568a95ff48533d447c257850d9c89350ecdfd037b852de2",
+      "model": "accounts/fireworks/models/qwen3p7-plus",
+      "original": {
+        "recipe": {
+          "title": "Quick Stuffed Bell Peppers",
+          "ingredients": [
+            "4 large bell peppers",
+            "2 cups cooked rice",
+            "1 cup ground beef",
+            "1 cup tomato sauce",
+            "1/2 cup chopped onion",
+            "1 tsp garlic powder"
+          ],
+          "instructions": [
+            "Preheat oven to 375\u00b0F. Slice peppers in half lengthwise and remove seeds.",
+            "Saut\u00e9 onion and beef in a skillet for 10 minutes until browned.",
+            "Mix beef, rice, sauce, and garlic. Fill pepper halves with mixture.",
+            "Bake peppers on a baking sheet for 25 minutes until tender."
+          ],
+          "equipment": [
+            "oven",
+            "skillet",
+            "baking sheet"
+          ],
+          "time_minutes": 45,
+          "pantry_items": null
+        },
+        "labels": [
+          "weekend-project"
+        ],
+        "rationale": "The title claims 'Quick', but the total elapsed time is 45 minutes, exceeding the 30-minute threshold for weeknight-30min. The active cooking steps (saut\u00e9ing, baking) constitute a substantial project rather than passive waiting, fitting weekend-project. No specialized equipment or dessert intent is present.",
+        "category": "misleading-title",
+        "challenge_notes": "Verify that the 45-minute duration is correctly identified as exceeding the weeknight limit despite the 'Quick' adjective. Ensure the distinction between active cooking time and passive waiting is clear in the rationale."
+      },
+      "draft": {
+        "recipe": {
+          "title": "Quick Stuffed Bell Peppers",
+          "ingredients": [
+            "4 large bell peppers",
+            "2 cups cooked rice",
+            "1 cup ground beef",
+            "1 cup tomato sauce",
+            "1/2 cup chopped onion",
+            "1 tsp garlic powder"
+          ],
+          "instructions": [
+            "Preheat oven to 375\u00b0F. Slice peppers in half lengthwise and remove seeds.",
+            "Saut\u00e9 onion and beef in a skillet for 10 minutes until browned.",
+            "Mix beef, rice, sauce, and garlic. Fill pepper halves with mixture.",
+            "Bake peppers on a baking sheet for 25 minutes until tender."
+          ],
+          "equipment": [
+            "oven",
+            "skillet",
+            "baking sheet"
+          ],
+          "time_minutes": 45,
+          "pantry_items": null
+        },
+        "labels": [
+          "weekend-project"
+        ],
+        "rationale": "The title claims 'Quick', but the total elapsed time is 45 minutes, exceeding the 30-minute threshold for weeknight-30min. The active cooking steps (saut\u00e9ing, baking) constitute a substantial project rather than passive waiting, fitting weekend-project. No specialized equipment or dessert intent is present.",
+        "category": "misleading-title",
+        "challenge_notes": "Verify that the 45-minute duration is correctly identified as exceeding the weeknight limit despite the 'Quick' adjective. Ensure the distinction between active cooking time and passive waiting is clear in the rationale."
+      },
+      "raw_output": "{\n  \"recipe\": {\n    \"title\": \"Quick Stuffed Bell Peppers\",\n    \"ingredients\": [\n      \"4 large bell peppers\",\n      \"2 cups cooked rice\",\n      \"1 cup ground beef\",\n      \"1 cup tomato sauce\",\n      \"1/2 cup chopped onion\",\n      \"1 tsp garlic powder\"\n    ],\n    \"instructions\": [\n      \"Preheat oven to 375\u00b0F. Slice peppers in half lengthwise and remove seeds.\",\n      \"Saut\u00e9 onion and beef in a skillet for 10 minutes until browned.\",\n      \"Mix beef, rice, sauce, and garlic. Fill pepper halves with mixture.\",\n      \"Bake peppers on a baking sheet for 25 minutes until tender.\"\n    ],\n    \"equipment\": [\n      \"oven\",\n      \"skillet\",\n      \"baking sheet\"\n    ],\n    \"time_minutes\": 45,\n    \"pantry_items\": null\n  },\n  \"labels\": [\n    \"weekend-project\"\n  ],\n  \"rationale\": \"The title claims 'Quick', but the total elapsed time is 45 minutes, exceeding the 30-minute threshold for weeknight-30min. The active cooking steps (saut\u00e9ing, baking) constitute a substantial project rather than passive waiting, fitting weekend-project. No specialized equipment or dessert intent is present.\",\n  \"category\": \"misleading-title\",\n  \"challenge_notes\": \"Verify that the 45-minute duration is correctly identified as exceeding the weeknight limit despite the 'Quick' adjective. Ensure the distinction between active cooking time and passive waiting is clear in the rationale.\"\n}",
+      "finish_reason": "stop",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "warnings": [
+          "Human must check plausibility, label evidence and semantic overlap; automated checks cannot establish correctness.",
+          "Synthetic proposal; no published recipe source and no human approval yet."
+        ],
+        "version": "synthetic-quality-v1"
+      },
+      "review": null,
+      "history": [],
+      "error": null,
+      "input_tokens": 1060,
+      "output_tokens": 364,
+      "model_revision": null
+    },
+    {
+      "candidate_id": "a879b5b2-9109-4d4b-8431-808df7177837",
+      "revision": 1,
+      "kind": "synthetic",
+      "status": "pending",
+      "created_at": "2026-09-09T17:50:14.151523+00:00",
+      "generation_id": "7fd24933-fead-4f2a-b60c-a4bda51e5c71",
+      "category": "ambiguous",
+      "prompt_version": "synthetic-fireworks-v1",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Generate fictional recipe proposals as JSON for human review. Never approve your own output."
+        },
+        {
+          "role": "user",
+          "content": "You propose fictional RecipeTriage training examples for HUMAN REVIEW ONLY.\nDo not claim a human reviewed them. Do not invent published URLs or citations.\nReturn exactly one JSON object with recipe, labels, rationale, category and challenge_notes.\nrecipe has title, ingredients (strings), instructions (strings), equipment (strings),\ntime_minutes (integer or null), pantry_items (strings or null).\nUse 3\u20136 ingredients and 2\u20134 short steps. Keep the entire example under 180 words.\nEvery timing/tool/serving-context claim must be supported by the recipe body.\nPrefer vegetarian recipes; avoid food-safety-sensitive handling instructions.\nFor misleading-title: use Quick, Easy or Simple while total elapsed time exceeds 30\nminutes. Distinguish passive waiting from substantial active cooking projects.\nFor ambiguous: omit or explicitly contradict information so the correct answer is\nunclear alone. Do not add a decisive dessert, specialized tool or meal-prep cue.\nUse varied dishes and ingredients. Do not paraphrase an evaluation example.\nThe rationale must be concise, address all proposed labels and ignore title adjectives.\nTreat the following label policy as authoritative:\n{\"weeknight-30min\": \"Known total elapsed time <=30 minutes, including waiting; never infer speed from title adjectives.\", \"weekend-project\": \"A substantial cooking project taking >30 minutes; passive waiting alone does not qualify.\", \"needs-special-equipment\": \"Requires a specialized appliance, such as a blender, food processor, pasta machine, or waffle iron; ordinary kitchen tools do not qualify.\", \"meal-prep\": \"Explicitly suitable for preparing portions ahead; record recipe-grounded evidence.\", \"dessert\": \"Intended as dessert, not merely sweet.\", \"have-most-of-this\": \"Explicit pantry context covers >=80% of ingredient items; never assume the user's pantry. Dataset v1 uses exact normalized ingredient strings for matching.\", \"unclear\": \"Insufficient or contradictory evidence; exclusive of all other labels in v1.\"}\nRequested focus: ambiguous\nIndependent variation brief: A grain-and-herb skillet with unknown timing and contradictory effort notes.\nRequired JSON schema: {\"$defs\": {\"Recipe\": {\"additionalProperties\": false, \"properties\": {\"title\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Title\", \"type\": \"string\"}, \"ingredients\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Ingredients\", \"type\": \"array\"}, \"instructions\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Instructions\", \"type\": \"array\"}, \"equipment\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 30, \"title\": \"Equipment\", \"type\": \"array\"}, \"time_minutes\": {\"anyOf\": [{\"maximum\": 10080, \"minimum\": 1, \"type\": \"integer\"}, {\"type\": \"null\"}], \"title\": \"Time Minutes\"}, \"pantry_items\": {\"anyOf\": [{\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 100, \"type\": \"array\"}, {\"type\": \"null\"}], \"default\": null, \"title\": \"Pantry Items\"}}, \"required\": [\"title\", \"ingredients\", \"instructions\", \"equipment\", \"time_minutes\"], \"title\": \"Recipe\", \"type\": \"object\"}}, \"additionalProperties\": false, \"properties\": {\"recipe\": {\"$ref\": \"#/$defs/Recipe\"}, \"labels\": {\"items\": {\"enum\": [\"weeknight-30min\", \"weekend-project\", \"needs-special-equipment\", \"meal-prep\", \"dessert\", \"have-most-of-this\", \"unclear\"], \"type\": \"string\"}, \"maxItems\": 7, \"minItems\": 1, \"title\": \"Labels\", \"type\": \"array\"}, \"rationale\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Rationale\", \"type\": \"string\"}, \"category\": {\"enum\": [\"misleading-title\", \"ambiguous\"], \"title\": \"Category\", \"type\": \"string\"}, \"challenge_notes\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Challenge Notes\", \"type\": \"string\"}}, \"required\": [\"recipe\", \"labels\", \"rationale\", \"category\", \"challenge_notes\"], \"title\": \"Draft\", \"type\": \"object\"}\n"
+        }
+      ],
+      "prompt_sha256": "78cb0ea74354a4a0d3f9b3fd13434bed9604c48826d298e9f8187edab4b9d0ab",
+      "model": "accounts/fireworks/models/qwen3p7-plus",
+      "original": {
+        "recipe": {
+          "title": "Quick Herb Rice Skillet",
+          "ingredients": [
+            "1 cup dried rice",
+            "2 cups water",
+            "1 tbsp olive oil",
+            "1 tsp dried herbs"
+          ],
+          "instructions": [
+            "Rinse rice and place in skillet with water.",
+            "Cover and cook until tender, then stir in oil and herbs."
+          ],
+          "equipment": [
+            "Skillet",
+            "Lid"
+          ],
+          "time_minutes": null,
+          "pantry_items": null
+        },
+        "labels": [
+          "unclear"
+        ],
+        "rationale": "The recipe lacks specific timing for cooking the rice, making total elapsed time unknown. The instruction 'cook until tender' is subjective and varies by method. No evidence supports weeknight-30min or weekend-project labels. No specialized equipment or meal-prep context is provided. The title claims 'Quick' but provides no data to verify speed, creating ambiguity.",
+        "category": "ambiguous",
+        "challenge_notes": "This example tests the 'unclear' label by omitting critical timing data and using vague cooking instructions. The title's 'Quick' claim is unsupported by the body, preventing classification as misleading-title because the core issue is insufficient information rather than a direct contradiction of a stated time."
+      },
+      "draft": {
+        "recipe": {
+          "title": "Quick Herb Rice Skillet",
+          "ingredients": [
+            "1 cup dried rice",
+            "2 cups water",
+            "1 tbsp olive oil",
+            "1 tsp dried herbs"
+          ],
+          "instructions": [
+            "Rinse rice and place in skillet with water.",
+            "Cover and cook until tender, then stir in oil and herbs."
+          ],
+          "equipment": [
+            "Skillet",
+            "Lid"
+          ],
+          "time_minutes": null,
+          "pantry_items": null
+        },
+        "labels": [
+          "unclear"
+        ],
+        "rationale": "The recipe lacks specific timing for cooking the rice, making total elapsed time unknown. The instruction 'cook until tender' is subjective and varies by method. No evidence supports weeknight-30min or weekend-project labels. No specialized equipment or meal-prep context is provided. The title claims 'Quick' but provides no data to verify speed, creating ambiguity.",
+        "category": "ambiguous",
+        "challenge_notes": "This example tests the 'unclear' label by omitting critical timing data and using vague cooking instructions. The title's 'Quick' claim is unsupported by the body, preventing classification as misleading-title because the core issue is insufficient information rather than a direct contradiction of a stated time."
+      },
+      "raw_output": "{\n  \"recipe\": {\n    \"title\": \"Quick Herb Rice Skillet\",\n    \"ingredients\": [\n      \"1 cup dried rice\",\n      \"2 cups water\",\n      \"1 tbsp olive oil\",\n      \"1 tsp dried herbs\"\n    ],\n    \"instructions\": [\n      \"Rinse rice and place in skillet with water.\",\n      \"Cover and cook until tender, then stir in oil and herbs.\"\n    ],\n    \"equipment\": [\n      \"Skillet\",\n      \"Lid\"\n    ],\n    \"time_minutes\": null,\n    \"pantry_items\": null\n  },\n  \"labels\": [\n    \"unclear\"\n  ],\n  \"rationale\": \"The recipe lacks specific timing for cooking the rice, making total elapsed time unknown. The instruction 'cook until tender' is subjective and varies by method. No evidence supports weeknight-30min or weekend-project labels. No specialized equipment or meal-prep context is provided. The title claims 'Quick' but provides no data to verify speed, creating ambiguity.\",\n  \"category\": \"ambiguous\",\n  \"challenge_notes\": \"This example tests the 'unclear' label by omitting critical timing data and using vague cooking instructions. The title's 'Quick' claim is unsupported by the body, preventing classification as misleading-title because the core issue is insufficient information rather than a direct contradiction of a stated time.\"\n}",
+      "finish_reason": "stop",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "warnings": [
+          "Human must check plausibility, label evidence and semantic overlap; automated checks cannot establish correctness.",
+          "Synthetic proposal; no published recipe source and no human approval yet."
+        ],
+        "version": "synthetic-quality-v1"
+      },
+      "review": null,
+      "history": [],
+      "error": null,
+      "input_tokens": 1065,
+      "output_tokens": 306,
+      "model_revision": null
+    },
+    {
+      "candidate_id": "8352fcd3-41a1-482c-b666-fc1c7bed9bee",
+      "revision": 1,
+      "kind": "synthetic",
+      "status": "pending",
+      "created_at": "2026-09-09T17:50:15.401494+00:00",
+      "generation_id": "7fd24933-fead-4f2a-b60c-a4bda51e5c71",
+      "category": "misleading-title",
+      "prompt_version": "synthetic-fireworks-v1",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Generate fictional recipe proposals as JSON for human review. Never approve your own output."
+        },
+        {
+          "role": "user",
+          "content": "You propose fictional RecipeTriage training examples for HUMAN REVIEW ONLY.\nDo not claim a human reviewed them. Do not invent published URLs or citations.\nReturn exactly one JSON object with recipe, labels, rationale, category and challenge_notes.\nrecipe has title, ingredients (strings), instructions (strings), equipment (strings),\ntime_minutes (integer or null), pantry_items (strings or null).\nUse 3\u20136 ingredients and 2\u20134 short steps. Keep the entire example under 180 words.\nEvery timing/tool/serving-context claim must be supported by the recipe body.\nPrefer vegetarian recipes; avoid food-safety-sensitive handling instructions.\nFor misleading-title: use Quick, Easy or Simple while total elapsed time exceeds 30\nminutes. Distinguish passive waiting from substantial active cooking projects.\nFor ambiguous: omit or explicitly contradict information so the correct answer is\nunclear alone. Do not add a decisive dessert, specialized tool or meal-prep cue.\nUse varied dishes and ingredients. Do not paraphrase an evaluation example.\nThe rationale must be concise, address all proposed labels and ignore title adjectives.\nTreat the following label policy as authoritative:\n{\"weeknight-30min\": \"Known total elapsed time <=30 minutes, including waiting; never infer speed from title adjectives.\", \"weekend-project\": \"A substantial cooking project taking >30 minutes; passive waiting alone does not qualify.\", \"needs-special-equipment\": \"Requires a specialized appliance, such as a blender, food processor, pasta machine, or waffle iron; ordinary kitchen tools do not qualify.\", \"meal-prep\": \"Explicitly suitable for preparing portions ahead; record recipe-grounded evidence.\", \"dessert\": \"Intended as dessert, not merely sweet.\", \"have-most-of-this\": \"Explicit pantry context covers >=80% of ingredient items; never assume the user's pantry. Dataset v1 uses exact normalized ingredient strings for matching.\", \"unclear\": \"Insufficient or contradictory evidence; exclusive of all other labels in v1.\"}\nRequested focus: misleading-title\nIndependent variation brief: A bean dish with a long passive rest; avoid claiming a weekend project.\nRequired JSON schema: {\"$defs\": {\"Recipe\": {\"additionalProperties\": false, \"properties\": {\"title\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Title\", \"type\": \"string\"}, \"ingredients\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Ingredients\", \"type\": \"array\"}, \"instructions\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Instructions\", \"type\": \"array\"}, \"equipment\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 30, \"title\": \"Equipment\", \"type\": \"array\"}, \"time_minutes\": {\"anyOf\": [{\"maximum\": 10080, \"minimum\": 1, \"type\": \"integer\"}, {\"type\": \"null\"}], \"title\": \"Time Minutes\"}, \"pantry_items\": {\"anyOf\": [{\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 100, \"type\": \"array\"}, {\"type\": \"null\"}], \"default\": null, \"title\": \"Pantry Items\"}}, \"required\": [\"title\", \"ingredients\", \"instructions\", \"equipment\", \"time_minutes\"], \"title\": \"Recipe\", \"type\": \"object\"}}, \"additionalProperties\": false, \"properties\": {\"recipe\": {\"$ref\": \"#/$defs/Recipe\"}, \"labels\": {\"items\": {\"enum\": [\"weeknight-30min\", \"weekend-project\", \"needs-special-equipment\", \"meal-prep\", \"dessert\", \"have-most-of-this\", \"unclear\"], \"type\": \"string\"}, \"maxItems\": 7, \"minItems\": 1, \"title\": \"Labels\", \"type\": \"array\"}, \"rationale\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Rationale\", \"type\": \"string\"}, \"category\": {\"enum\": [\"misleading-title\", \"ambiguous\"], \"title\": \"Category\", \"type\": \"string\"}, \"challenge_notes\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Challenge Notes\", \"type\": \"string\"}}, \"required\": [\"recipe\", \"labels\", \"rationale\", \"category\", \"challenge_notes\"], \"title\": \"Draft\", \"type\": \"object\"}\n"
+        }
+      ],
+      "prompt_sha256": "632e50e72f957cfd72c15e1121c1db24e7f8c8208817e8a12e43fe0d806bf7df",
+      "model": "accounts/fireworks/models/qwen3p7-plus",
+      "original": {
+        "recipe": {
+          "title": "Quick Marinated Beans",
+          "ingredients": [
+            "1 cup dried black beans",
+            "2 cups water",
+            "1 tbsp olive oil",
+            "1 tsp salt",
+            "1 tsp dried oregano"
+          ],
+          "instructions": [
+            "Combine beans and water in a pot.",
+            "Bring to a boil, then reduce heat and simmer for 10 minutes.",
+            "Remove from heat and let sit covered for 45 minutes until tender.",
+            "Drain and mix with oil, salt, and oregano."
+          ],
+          "equipment": [
+            "pot",
+            "lid"
+          ],
+          "time_minutes": 55,
+          "pantry_items": null
+        },
+        "labels": [
+          "weekend-project"
+        ],
+        "rationale": "The title claims 'Quick', but the total elapsed time is 55 minutes, exceeding the 30-minute threshold for weeknight-30min. The process involves substantial active cooking (boiling/simmering) followed by a long rest, qualifying it as a weekend-project rather than a quick meal. No special equipment or dessert intent is present.",
+        "category": "misleading-title",
+        "challenge_notes": "The title uses 'Quick' to mislead, while the actual time (55 mins) violates the weeknight-30min label. The passive rest is part of a cooking process that exceeds 30 minutes total."
+      },
+      "draft": {
+        "recipe": {
+          "title": "Quick Marinated Beans",
+          "ingredients": [
+            "1 cup dried black beans",
+            "2 cups water",
+            "1 tbsp olive oil",
+            "1 tsp salt",
+            "1 tsp dried oregano"
+          ],
+          "instructions": [
+            "Combine beans and water in a pot.",
+            "Bring to a boil, then reduce heat and simmer for 10 minutes.",
+            "Remove from heat and let sit covered for 45 minutes until tender.",
+            "Drain and mix with oil, salt, and oregano."
+          ],
+          "equipment": [
+            "pot",
+            "lid"
+          ],
+          "time_minutes": 55,
+          "pantry_items": null
+        },
+        "labels": [
+          "weekend-project"
+        ],
+        "rationale": "The title claims 'Quick', but the total elapsed time is 55 minutes, exceeding the 30-minute threshold for weeknight-30min. The process involves substantial active cooking (boiling/simmering) followed by a long rest, qualifying it as a weekend-project rather than a quick meal. No special equipment or dessert intent is present.",
+        "category": "misleading-title",
+        "challenge_notes": "The title uses 'Quick' to mislead, while the actual time (55 mins) violates the weeknight-30min label. The passive rest is part of a cooking process that exceeds 30 minutes total."
+      },
+      "raw_output": "{\n  \"recipe\": {\n    \"title\": \"Quick Marinated Beans\",\n    \"ingredients\": [\n      \"1 cup dried black beans\",\n      \"2 cups water\",\n      \"1 tbsp olive oil\",\n      \"1 tsp salt\",\n      \"1 tsp dried oregano\"\n    ],\n    \"instructions\": [\n      \"Combine beans and water in a pot.\",\n      \"Bring to a boil, then reduce heat and simmer for 10 minutes.\",\n      \"Remove from heat and let sit covered for 45 minutes until tender.\",\n      \"Drain and mix with oil, salt, and oregano.\"\n    ],\n    \"equipment\": [\n      \"pot\",\n      \"lid\"\n    ],\n    \"time_minutes\": 55,\n    \"pantry_items\": null\n  },\n  \"labels\": [\n    \"weekend-project\"\n  ],\n  \"rationale\": \"The title claims 'Quick', but the total elapsed time is 55 minutes, exceeding the 30-minute threshold for weeknight-30min. The process involves substantial active cooking (boiling/simmering) followed by a long rest, qualifying it as a weekend-project rather than a quick meal. No special equipment or dessert intent is present.\",\n  \"category\": \"misleading-title\",\n  \"challenge_notes\": \"The title uses 'Quick' to mislead, while the actual time (55 mins) violates the weeknight-30min label. The passive rest is part of a cooking process that exceeds 30 minutes total.\"\n}",
+      "finish_reason": "stop",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "warnings": [
+          "Human must check plausibility, label evidence and semantic overlap; automated checks cannot establish correctness.",
+          "Synthetic proposal; no published recipe source and no human approval yet."
+        ],
+        "version": "synthetic-quality-v1"
+      },
+      "review": null,
+      "history": [],
+      "error": null,
+      "input_tokens": 1066,
+      "output_tokens": 343,
+      "model_revision": null
+    },
+    {
+      "candidate_id": "cd5c0928-5834-4abc-8bdf-e946252b073b",
+      "revision": 1,
+      "kind": "synthetic",
+      "status": "pending",
+      "created_at": "2026-09-09T17:50:16.604836+00:00",
+      "generation_id": "7fd24933-fead-4f2a-b60c-a4bda51e5c71",
+      "category": "ambiguous",
+      "prompt_version": "synthetic-fireworks-v1",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Generate fictional recipe proposals as JSON for human review. Never approve your own output."
+        },
+        {
+          "role": "user",
+          "content": "You propose fictional RecipeTriage training examples for HUMAN REVIEW ONLY.\nDo not claim a human reviewed them. Do not invent published URLs or citations.\nReturn exactly one JSON object with recipe, labels, rationale, category and challenge_notes.\nrecipe has title, ingredients (strings), instructions (strings), equipment (strings),\ntime_minutes (integer or null), pantry_items (strings or null).\nUse 3\u20136 ingredients and 2\u20134 short steps. Keep the entire example under 180 words.\nEvery timing/tool/serving-context claim must be supported by the recipe body.\nPrefer vegetarian recipes; avoid food-safety-sensitive handling instructions.\nFor misleading-title: use Quick, Easy or Simple while total elapsed time exceeds 30\nminutes. Distinguish passive waiting from substantial active cooking projects.\nFor ambiguous: omit or explicitly contradict information so the correct answer is\nunclear alone. Do not add a decisive dessert, specialized tool or meal-prep cue.\nUse varied dishes and ingredients. Do not paraphrase an evaluation example.\nThe rationale must be concise, address all proposed labels and ignore title adjectives.\nTreat the following label policy as authoritative:\n{\"weeknight-30min\": \"Known total elapsed time <=30 minutes, including waiting; never infer speed from title adjectives.\", \"weekend-project\": \"A substantial cooking project taking >30 minutes; passive waiting alone does not qualify.\", \"needs-special-equipment\": \"Requires a specialized appliance, such as a blender, food processor, pasta machine, or waffle iron; ordinary kitchen tools do not qualify.\", \"meal-prep\": \"Explicitly suitable for preparing portions ahead; record recipe-grounded evidence.\", \"dessert\": \"Intended as dessert, not merely sweet.\", \"have-most-of-this\": \"Explicit pantry context covers >=80% of ingredient items; never assume the user's pantry. Dataset v1 uses exact normalized ingredient strings for matching.\", \"unclear\": \"Insufficient or contradictory evidence; exclusive of all other labels in v1.\"}\nRequested focus: ambiguous\nIndependent variation brief: A lentil and vegetable dish with missing timing and no decisive supported label.\nRequired JSON schema: {\"$defs\": {\"Recipe\": {\"additionalProperties\": false, \"properties\": {\"title\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Title\", \"type\": \"string\"}, \"ingredients\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Ingredients\", \"type\": \"array\"}, \"instructions\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Instructions\", \"type\": \"array\"}, \"equipment\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 30, \"title\": \"Equipment\", \"type\": \"array\"}, \"time_minutes\": {\"anyOf\": [{\"maximum\": 10080, \"minimum\": 1, \"type\": \"integer\"}, {\"type\": \"null\"}], \"title\": \"Time Minutes\"}, \"pantry_items\": {\"anyOf\": [{\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 100, \"type\": \"array\"}, {\"type\": \"null\"}], \"default\": null, \"title\": \"Pantry Items\"}}, \"required\": [\"title\", \"ingredients\", \"instructions\", \"equipment\", \"time_minutes\"], \"title\": \"Recipe\", \"type\": \"object\"}}, \"additionalProperties\": false, \"properties\": {\"recipe\": {\"$ref\": \"#/$defs/Recipe\"}, \"labels\": {\"items\": {\"enum\": [\"weeknight-30min\", \"weekend-project\", \"needs-special-equipment\", \"meal-prep\", \"dessert\", \"have-most-of-this\", \"unclear\"], \"type\": \"string\"}, \"maxItems\": 7, \"minItems\": 1, \"title\": \"Labels\", \"type\": \"array\"}, \"rationale\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Rationale\", \"type\": \"string\"}, \"category\": {\"enum\": [\"misleading-title\", \"ambiguous\"], \"title\": \"Category\", \"type\": \"string\"}, \"challenge_notes\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Challenge Notes\", \"type\": \"string\"}}, \"required\": [\"recipe\", \"labels\", \"rationale\", \"category\", \"challenge_notes\"], \"title\": \"Draft\", \"type\": \"object\"}\n"
+        }
+      ],
+      "prompt_sha256": "911431787f898a854dd48facfc815c28cbd811df8ff122eaceace6ed382ee7e4",
+      "model": "accounts/fireworks/models/qwen3p7-plus",
+      "original": {
+        "recipe": {
+          "title": "Lentil and Vegetable Mix",
+          "ingredients": [
+            "1 cup dried lentils",
+            "2 cups chopped vegetables",
+            "1 tbsp oil",
+            "salt"
+          ],
+          "instructions": [
+            "Combine lentils and vegetables in a pot.",
+            "Add oil and salt.",
+            "Cook until ready."
+          ],
+          "equipment": [
+            "pot"
+          ],
+          "time_minutes": null,
+          "pantry_items": null
+        },
+        "labels": [
+          "unclear"
+        ],
+        "rationale": "The instructions lack specific timing, heat levels, or completion criteria, making it impossible to determine if the total elapsed time is under 30 minutes or requires a longer project. No specialized equipment is listed, and there is no evidence for meal-prep or pantry coverage. The ambiguity of 'cook until ready' prevents assigning any definitive label other than unclear.",
+        "category": "ambiguous",
+        "challenge_notes": "This example tests the system's ability to identify insufficient evidence. The missing time_minutes and vague instructions prevent classification as weeknight-30min or weekend-project. It avoids misleading titles by not using speed adjectives, focusing purely on the lack of decisive data."
+      },
+      "draft": {
+        "recipe": {
+          "title": "Lentil and Vegetable Mix",
+          "ingredients": [
+            "1 cup dried lentils",
+            "2 cups chopped vegetables",
+            "1 tbsp oil",
+            "salt"
+          ],
+          "instructions": [
+            "Combine lentils and vegetables in a pot.",
+            "Add oil and salt.",
+            "Cook until ready."
+          ],
+          "equipment": [
+            "pot"
+          ],
+          "time_minutes": null,
+          "pantry_items": null
+        },
+        "labels": [
+          "unclear"
+        ],
+        "rationale": "The instructions lack specific timing, heat levels, or completion criteria, making it impossible to determine if the total elapsed time is under 30 minutes or requires a longer project. No specialized equipment is listed, and there is no evidence for meal-prep or pantry coverage. The ambiguity of 'cook until ready' prevents assigning any definitive label other than unclear.",
+        "category": "ambiguous",
+        "challenge_notes": "This example tests the system's ability to identify insufficient evidence. The missing time_minutes and vague instructions prevent classification as weeknight-30min or weekend-project. It avoids misleading titles by not using speed adjectives, focusing purely on the lack of decisive data."
+      },
+      "raw_output": "{\n  \"recipe\": {\n    \"title\": \"Lentil and Vegetable Mix\",\n    \"ingredients\": [\n      \"1 cup dried lentils\",\n      \"2 cups chopped vegetables\",\n      \"1 tbsp oil\",\n      \"salt\"\n    ],\n    \"instructions\": [\n      \"Combine lentils and vegetables in a pot.\",\n      \"Add oil and salt.\",\n      \"Cook until ready.\"\n    ],\n    \"equipment\": [\n      \"pot\"\n    ],\n    \"time_minutes\": null,\n    \"pantry_items\": null\n  },\n  \"labels\": [\n    \"unclear\"\n  ],\n  \"rationale\": \"The instructions lack specific timing, heat levels, or completion criteria, making it impossible to determine if the total elapsed time is under 30 minutes or requires a longer project. No specialized equipment is listed, and there is no evidence for meal-prep or pantry coverage. The ambiguity of 'cook until ready' prevents assigning any definitive label other than unclear.\",\n  \"category\": \"ambiguous\",\n  \"challenge_notes\": \"This example tests the system's ability to identify insufficient evidence. The missing time_minutes and vague instructions prevent classification as weeknight-30min or weekend-project. It avoids misleading titles by not using speed adjectives, focusing purely on the lack of decisive data.\"\n}",
+      "finish_reason": "stop",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "warnings": [
+          "Human must check plausibility, label evidence and semantic overlap; automated checks cannot establish correctness.",
+          "Synthetic proposal; no published recipe source and no human approval yet."
+        ],
+        "version": "synthetic-quality-v1"
+      },
+      "review": null,
+      "history": [],
+      "error": null,
+      "input_tokens": 1065,
+      "output_tokens": 290,
+      "model_revision": null
+    },
+    {
+      "candidate_id": "1ed43109-f7f3-4c76-95d6-da2dd5a75fc5",
+      "revision": 1,
+      "kind": "synthetic",
+      "status": "pending",
+      "created_at": "2026-09-09T17:50:18.188916+00:00",
+      "generation_id": "7fd24933-fead-4f2a-b60c-a4bda51e5c71",
+      "category": "misleading-title",
+      "prompt_version": "synthetic-fireworks-v1",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Generate fictional recipe proposals as JSON for human review. Never approve your own output."
+        },
+        {
+          "role": "user",
+          "content": "You propose fictional RecipeTriage training examples for HUMAN REVIEW ONLY.\nDo not claim a human reviewed them. Do not invent published URLs or citations.\nReturn exactly one JSON object with recipe, labels, rationale, category and challenge_notes.\nrecipe has title, ingredients (strings), instructions (strings), equipment (strings),\ntime_minutes (integer or null), pantry_items (strings or null).\nUse 3\u20136 ingredients and 2\u20134 short steps. Keep the entire example under 180 words.\nEvery timing/tool/serving-context claim must be supported by the recipe body.\nPrefer vegetarian recipes; avoid food-safety-sensitive handling instructions.\nFor misleading-title: use Quick, Easy or Simple while total elapsed time exceeds 30\nminutes. Distinguish passive waiting from substantial active cooking projects.\nFor ambiguous: omit or explicitly contradict information so the correct answer is\nunclear alone. Do not add a decisive dessert, specialized tool or meal-prep cue.\nUse varied dishes and ingredients. Do not paraphrase an evaluation example.\nThe rationale must be concise, address all proposed labels and ignore title adjectives.\nTreat the following label policy as authoritative:\n{\"weeknight-30min\": \"Known total elapsed time <=30 minutes, including waiting; never infer speed from title adjectives.\", \"weekend-project\": \"A substantial cooking project taking >30 minutes; passive waiting alone does not qualify.\", \"needs-special-equipment\": \"Requires a specialized appliance, such as a blender, food processor, pasta machine, or waffle iron; ordinary kitchen tools do not qualify.\", \"meal-prep\": \"Explicitly suitable for preparing portions ahead; record recipe-grounded evidence.\", \"dessert\": \"Intended as dessert, not merely sweet.\", \"have-most-of-this\": \"Explicit pantry context covers >=80% of ingredient items; never assume the user's pantry. Dataset v1 uses exact normalized ingredient strings for matching.\", \"unclear\": \"Insufficient or contradictory evidence; exclusive of all other labels in v1.\"}\nRequested focus: misleading-title\nIndependent variation brief: A dessert with extended cooling and an explicitly required appliance.\nRequired JSON schema: {\"$defs\": {\"Recipe\": {\"additionalProperties\": false, \"properties\": {\"title\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Title\", \"type\": \"string\"}, \"ingredients\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Ingredients\", \"type\": \"array\"}, \"instructions\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Instructions\", \"type\": \"array\"}, \"equipment\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 30, \"title\": \"Equipment\", \"type\": \"array\"}, \"time_minutes\": {\"anyOf\": [{\"maximum\": 10080, \"minimum\": 1, \"type\": \"integer\"}, {\"type\": \"null\"}], \"title\": \"Time Minutes\"}, \"pantry_items\": {\"anyOf\": [{\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 100, \"type\": \"array\"}, {\"type\": \"null\"}], \"default\": null, \"title\": \"Pantry Items\"}}, \"required\": [\"title\", \"ingredients\", \"instructions\", \"equipment\", \"time_minutes\"], \"title\": \"Recipe\", \"type\": \"object\"}}, \"additionalProperties\": false, \"properties\": {\"recipe\": {\"$ref\": \"#/$defs/Recipe\"}, \"labels\": {\"items\": {\"enum\": [\"weeknight-30min\", \"weekend-project\", \"needs-special-equipment\", \"meal-prep\", \"dessert\", \"have-most-of-this\", \"unclear\"], \"type\": \"string\"}, \"maxItems\": 7, \"minItems\": 1, \"title\": \"Labels\", \"type\": \"array\"}, \"rationale\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Rationale\", \"type\": \"string\"}, \"category\": {\"enum\": [\"misleading-title\", \"ambiguous\"], \"title\": \"Category\", \"type\": \"string\"}, \"challenge_notes\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Challenge Notes\", \"type\": \"string\"}}, \"required\": [\"recipe\", \"labels\", \"rationale\", \"category\", \"challenge_notes\"], \"title\": \"Draft\", \"type\": \"object\"}\n"
+        }
+      ],
+      "prompt_sha256": "ecfb9381785a342548873053d9e2838f40f96a7cfc5a0d75319da74169c71051",
+      "model": "accounts/fireworks/models/qwen3p7-plus",
+      "original": {
+        "recipe": {
+          "title": "Quick Vanilla Custard",
+          "ingredients": [
+            "2 cups heavy cream",
+            "4 egg yolks",
+            "1/2 cup sugar",
+            "1 tsp vanilla extract"
+          ],
+          "instructions": [
+            "Whisk cream, yolks, sugar, and vanilla in a bowl.",
+            "Pour mixture into ice cream maker and run for 25 minutes until thick.",
+            "Transfer to container and freeze for 4 hours to set completely."
+          ],
+          "equipment": [
+            "ice cream maker",
+            "mixing bowl",
+            "freezer container"
+          ],
+          "time_minutes": 285,
+          "pantry_items": null
+        },
+        "labels": [
+          "dessert",
+          "needs-special-equipment",
+          "weekend-project"
+        ],
+        "rationale": "The title claims 'Quick' but total elapsed time is 285 minutes, far exceeding 30 minutes. It is a dessert requiring an ice cream maker (specialized appliance). The duration classifies it as a weekend project, not a weeknight meal.",
+        "category": "misleading-title",
+        "challenge_notes": "Verify that the model identifies the contradiction between the title adjective 'Quick' and the explicit 4-hour freezing step plus machine runtime. Ensure 'needs-special-equipment' is triggered by the ice cream maker."
+      },
+      "draft": {
+        "recipe": {
+          "title": "Quick Vanilla Custard",
+          "ingredients": [
+            "2 cups heavy cream",
+            "4 egg yolks",
+            "1/2 cup sugar",
+            "1 tsp vanilla extract"
+          ],
+          "instructions": [
+            "Whisk cream, yolks, sugar, and vanilla in a bowl.",
+            "Pour mixture into ice cream maker and run for 25 minutes until thick.",
+            "Transfer to container and freeze for 4 hours to set completely."
+          ],
+          "equipment": [
+            "ice cream maker",
+            "mixing bowl",
+            "freezer container"
+          ],
+          "time_minutes": 285,
+          "pantry_items": null
+        },
+        "labels": [
+          "dessert",
+          "needs-special-equipment",
+          "weekend-project"
+        ],
+        "rationale": "The title claims 'Quick' but total elapsed time is 285 minutes, far exceeding 30 minutes. It is a dessert requiring an ice cream maker (specialized appliance). The duration classifies it as a weekend project, not a weeknight meal.",
+        "category": "misleading-title",
+        "challenge_notes": "Verify that the model identifies the contradiction between the title adjective 'Quick' and the explicit 4-hour freezing step plus machine runtime. Ensure 'needs-special-equipment' is triggered by the ice cream maker."
+      },
+      "raw_output": "{\n  \"recipe\": {\n    \"title\": \"Quick Vanilla Custard\",\n    \"ingredients\": [\n      \"2 cups heavy cream\",\n      \"4 egg yolks\",\n      \"1/2 cup sugar\",\n      \"1 tsp vanilla extract\"\n    ],\n    \"instructions\": [\n      \"Whisk cream, yolks, sugar, and vanilla in a bowl.\",\n      \"Pour mixture into ice cream maker and run for 25 minutes until thick.\",\n      \"Transfer to container and freeze for 4 hours to set completely.\"\n    ],\n    \"equipment\": [\n      \"ice cream maker\",\n      \"mixing bowl\",\n      \"freezer container\"\n    ],\n    \"time_minutes\": 285,\n    \"pantry_items\": null\n  },\n  \"labels\": [\n    \"dessert\",\n    \"needs-special-equipment\",\n    \"weekend-project\"\n  ],\n  \"rationale\": \"The title claims 'Quick' but total elapsed time is 285 minutes, far exceeding 30 minutes. It is a dessert requiring an ice cream maker (specialized appliance). The duration classifies it as a weekend project, not a weeknight meal.\",\n  \"category\": \"misleading-title\",\n  \"challenge_notes\": \"Verify that the model identifies the contradiction between the title adjective 'Quick' and the explicit 4-hour freezing step plus machine runtime. Ensure 'needs-special-equipment' is triggered by the ice cream maker.\"\n}",
+      "finish_reason": "stop",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "warnings": [
+          "Human must check plausibility, label evidence and semantic overlap; automated checks cannot establish correctness.",
+          "Synthetic proposal; no published recipe source and no human approval yet."
+        ],
+        "version": "synthetic-quality-v1"
+      },
+      "review": null,
+      "history": [],
+      "error": null,
+      "input_tokens": 1062,
+      "output_tokens": 326,
+      "model_revision": null
+    },
+    {
+      "candidate_id": "c6b8d3e8-2506-4830-a78d-bafa06cc2a69",
+      "revision": 1,
+      "kind": "synthetic",
+      "status": "pending",
+      "created_at": "2026-09-09T17:50:19.932643+00:00",
+      "generation_id": "7fd24933-fead-4f2a-b60c-a4bda51e5c71",
+      "category": "misleading-title",
+      "prompt_version": "synthetic-fireworks-v1",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Generate fictional recipe proposals as JSON for human review. Never approve your own output."
+        },
+        {
+          "role": "user",
+          "content": "You propose fictional RecipeTriage training examples for HUMAN REVIEW ONLY.\nDo not claim a human reviewed them. Do not invent published URLs or citations.\nReturn exactly one JSON object with recipe, labels, rationale, category and challenge_notes.\nrecipe has title, ingredients (strings), instructions (strings), equipment (strings),\ntime_minutes (integer or null), pantry_items (strings or null).\nUse 3\u20136 ingredients and 2\u20134 short steps. Keep the entire example under 180 words.\nEvery timing/tool/serving-context claim must be supported by the recipe body.\nPrefer vegetarian recipes; avoid food-safety-sensitive handling instructions.\nFor misleading-title: use Quick, Easy or Simple while total elapsed time exceeds 30\nminutes. Distinguish passive waiting from substantial active cooking projects.\nFor ambiguous: omit or explicitly contradict information so the correct answer is\nunclear alone. Do not add a decisive dessert, specialized tool or meal-prep cue.\nUse varied dishes and ingredients. Do not paraphrase an evaluation example.\nThe rationale must be concise, address all proposed labels and ignore title adjectives.\nTreat the following label policy as authoritative:\n{\"weeknight-30min\": \"Known total elapsed time <=30 minutes, including waiting; never infer speed from title adjectives.\", \"weekend-project\": \"A substantial cooking project taking >30 minutes; passive waiting alone does not qualify.\", \"needs-special-equipment\": \"Requires a specialized appliance, such as a blender, food processor, pasta machine, or waffle iron; ordinary kitchen tools do not qualify.\", \"meal-prep\": \"Explicitly suitable for preparing portions ahead; record recipe-grounded evidence.\", \"dessert\": \"Intended as dessert, not merely sweet.\", \"have-most-of-this\": \"Explicit pantry context covers >=80% of ingredient items; never assume the user's pantry. Dataset v1 uses exact normalized ingredient strings for matching.\", \"unclear\": \"Insufficient or contradictory evidence; exclusive of all other labels in v1.\"}\nRequested focus: misleading-title\nIndependent variation brief: A portioned meal-prep bake with more than 30 minutes of elapsed time.\nRequired JSON schema: {\"$defs\": {\"Recipe\": {\"additionalProperties\": false, \"properties\": {\"title\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Title\", \"type\": \"string\"}, \"ingredients\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Ingredients\", \"type\": \"array\"}, \"instructions\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Instructions\", \"type\": \"array\"}, \"equipment\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 30, \"title\": \"Equipment\", \"type\": \"array\"}, \"time_minutes\": {\"anyOf\": [{\"maximum\": 10080, \"minimum\": 1, \"type\": \"integer\"}, {\"type\": \"null\"}], \"title\": \"Time Minutes\"}, \"pantry_items\": {\"anyOf\": [{\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 100, \"type\": \"array\"}, {\"type\": \"null\"}], \"default\": null, \"title\": \"Pantry Items\"}}, \"required\": [\"title\", \"ingredients\", \"instructions\", \"equipment\", \"time_minutes\"], \"title\": \"Recipe\", \"type\": \"object\"}}, \"additionalProperties\": false, \"properties\": {\"recipe\": {\"$ref\": \"#/$defs/Recipe\"}, \"labels\": {\"items\": {\"enum\": [\"weeknight-30min\", \"weekend-project\", \"needs-special-equipment\", \"meal-prep\", \"dessert\", \"have-most-of-this\", \"unclear\"], \"type\": \"string\"}, \"maxItems\": 7, \"minItems\": 1, \"title\": \"Labels\", \"type\": \"array\"}, \"rationale\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Rationale\", \"type\": \"string\"}, \"category\": {\"enum\": [\"misleading-title\", \"ambiguous\"], \"title\": \"Category\", \"type\": \"string\"}, \"challenge_notes\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Challenge Notes\", \"type\": \"string\"}}, \"required\": [\"recipe\", \"labels\", \"rationale\", \"category\", \"challenge_notes\"], \"title\": \"Draft\", \"type\": \"object\"}\n"
+        }
+      ],
+      "prompt_sha256": "6455c7c9a10e073f2ccaa114cda4b9dda77ddd90f2989c8fb07ccc6e2d6c0e8a",
+      "model": "accounts/fireworks/models/qwen3p7-plus",
+      "original": {
+        "recipe": {
+          "title": "Quick Cheesy Potato Bake",
+          "ingredients": [
+            "4 large potatoes",
+            "1 cup heavy cream",
+            "2 cups shredded cheddar",
+            "1 tsp salt"
+          ],
+          "instructions": [
+            "Peel and slice potatoes into 1/4 inch rounds.",
+            "Layer potatoes in baking dish with cream, cheese, and salt.",
+            "Cover with foil and bake at 375\u00b0F for 45 minutes.",
+            "Remove foil and bake 15 minutes until golden."
+          ],
+          "equipment": [
+            "baking dish",
+            "oven"
+          ],
+          "time_minutes": 60,
+          "pantry_items": null
+        },
+        "labels": [
+          "weekend-project",
+          "meal-prep"
+        ],
+        "rationale": "Total elapsed time is 60 minutes, exceeding the 30-minute threshold for weeknight-30min, classifying it as a weekend-project. The batch-style layering and baking method implies suitability for meal-prep. The title 'Quick' is misleading relative to the actual duration.",
+        "category": "misleading-title",
+        "challenge_notes": "Verify that the 60-minute bake time contradicts the 'Quick' title adjective. Ensure passive baking time counts toward total elapsed time for label determination."
+      },
+      "draft": {
+        "recipe": {
+          "title": "Quick Cheesy Potato Bake",
+          "ingredients": [
+            "4 large potatoes",
+            "1 cup heavy cream",
+            "2 cups shredded cheddar",
+            "1 tsp salt"
+          ],
+          "instructions": [
+            "Peel and slice potatoes into 1/4 inch rounds.",
+            "Layer potatoes in baking dish with cream, cheese, and salt.",
+            "Cover with foil and bake at 375\u00b0F for 45 minutes.",
+            "Remove foil and bake 15 minutes until golden."
+          ],
+          "equipment": [
+            "baking dish",
+            "oven"
+          ],
+          "time_minutes": 60,
+          "pantry_items": null
+        },
+        "labels": [
+          "weekend-project",
+          "meal-prep"
+        ],
+        "rationale": "Total elapsed time is 60 minutes, exceeding the 30-minute threshold for weeknight-30min, classifying it as a weekend-project. The batch-style layering and baking method implies suitability for meal-prep. The title 'Quick' is misleading relative to the actual duration.",
+        "category": "misleading-title",
+        "challenge_notes": "Verify that the 60-minute bake time contradicts the 'Quick' title adjective. Ensure passive baking time counts toward total elapsed time for label determination."
+      },
+      "raw_output": "{\n  \"recipe\": {\n    \"title\": \"Quick Cheesy Potato Bake\",\n    \"ingredients\": [\n      \"4 large potatoes\",\n      \"1 cup heavy cream\",\n      \"2 cups shredded cheddar\",\n      \"1 tsp salt\"\n    ],\n    \"instructions\": [\n      \"Peel and slice potatoes into 1/4 inch rounds.\",\n      \"Layer potatoes in baking dish with cream, cheese, and salt.\",\n      \"Cover with foil and bake at 375\u00b0F for 45 minutes.\",\n      \"Remove foil and bake 15 minutes until golden.\"\n    ],\n    \"equipment\": [\n      \"baking dish\",\n      \"oven\"\n    ],\n    \"time_minutes\": 60,\n    \"pantry_items\": null\n  },\n  \"labels\": [\n    \"weekend-project\",\n    \"meal-prep\"\n  ],\n  \"rationale\": \"Total elapsed time is 60 minutes, exceeding the 30-minute threshold for weeknight-30min, classifying it as a weekend-project. The batch-style layering and baking method implies suitability for meal-prep. The title 'Quick' is misleading relative to the actual duration.\",\n  \"category\": \"misleading-title\",\n  \"challenge_notes\": \"Verify that the 60-minute bake time contradicts the 'Quick' title adjective. Ensure passive baking time counts toward total elapsed time for label determination.\"\n}",
+      "finish_reason": "stop",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "warnings": [
+          "Human must check plausibility, label evidence and semantic overlap; automated checks cannot establish correctness.",
+          "Synthetic proposal; no published recipe source and no human approval yet."
+        ],
+        "version": "synthetic-quality-v1"
+      },
+      "review": null,
+      "history": [],
+      "error": null,
+      "input_tokens": 1069,
+      "output_tokens": 317,
+      "model_revision": null
+    }
+  ],
+  "provider": "fireworks",
+  "requested_model": "accounts/fireworks/models/qwen3p7-plus",
+  "prompt_version": "synthetic-fireworks-v1",
+  "temperature": 0.7,
+  "max_new_tokens": 800,
+  "automatic_retries": 0,
+  "training_exported": false
+}

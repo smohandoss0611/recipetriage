@@ -1,0 +1,67 @@
+{
+  "results": [
+    {
+      "name": "base-fp32",
+      "format": "hf-safetensors-fp32",
+      "size_mib": 1899.7621746063232,
+      "peak_ram_mib": 2293.609375,
+      "load_seconds": 3.711854833061807,
+      "mean_ms": 4028.3233999999998,
+      "p95_ms": 5151.882,
+      "micro_f1": 0.48484848484848486,
+      "macro_f1": 0.3649659863945578,
+      "json_validity": 0.5,
+      "schema_validity": 0.4
+    },
+    {
+      "name": "late-six-merged-fp32",
+      "format": "hf-safetensors-fp32",
+      "size_mib": 1899.7625551223755,
+      "peak_ram_mib": 2327.75,
+      "load_seconds": 2.691178165958263,
+      "mean_ms": 3745.2008,
+      "p95_ms": 4944.328,
+      "micro_f1": 0.43243243243243246,
+      "macro_f1": 0.32653061224489793,
+      "json_validity": 0.6,
+      "schema_validity": 0.5
+    },
+    {
+      "name": "late-six-merged-nf4",
+      "format": "hf-bitsandbytes-nf4",
+      "size_mib": 711.1028108596802,
+      "peak_ram_mib": 1193.671875,
+      "load_seconds": 3.4332063340116292,
+      "mean_ms": 20763.7034,
+      "p95_ms": 23259.773,
+      "micro_f1": 0.0,
+      "macro_f1": 0.0,
+      "json_validity": 0.6,
+      "schema_validity": 0.0
+    }
+  ],
+  "selection": {
+    "recommended": "base-fp32",
+    "constraints": {
+      "min_micro_f1": 0.48,
+      "min_schema_validity": 0.4,
+      "max_ram_mib": 4096,
+      "max_size_mib": 3072,
+      "max_p95_ms": 15000
+    },
+    "failed_constraints": {
+      "base-fp32": [],
+      "late-six-merged-fp32": [
+        "micro_f1"
+      ],
+      "late-six-merged-nf4": [
+        "micro_f1",
+        "schema_validity",
+        "p95_ms"
+      ]
+    },
+    "selection": "Highest Micro-F1, then schema validity, then latency among feasible candidates; size is only a limit.",
+    "production_changed": false,
+    "note": "Operational recommendation is separate from the stricter model-registry promotion gate."
+  }
+}

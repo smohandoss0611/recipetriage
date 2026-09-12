@@ -1,0 +1,51 @@
+{
+  "generation_id": "a6ddc0bb-5004-4733-995b-cd19b2d02324",
+  "created_at": "2026-09-09T17:49:57.321463+00:00",
+  "status": "partial",
+  "items": [
+    {
+      "candidate_id": "53aa88dc-f967-4875-a80e-54949de58da8",
+      "revision": 1,
+      "kind": "synthetic",
+      "status": "pending",
+      "created_at": "2026-09-09T17:49:57.323880+00:00",
+      "generation_id": "a6ddc0bb-5004-4733-995b-cd19b2d02324",
+      "category": "misleading-title",
+      "prompt_version": "synthetic-fireworks-v1",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Generate fictional recipe proposals as JSON for human review. Never approve your own output."
+        },
+        {
+          "role": "user",
+          "content": "You propose fictional RecipeTriage training examples for HUMAN REVIEW ONLY.\nDo not claim a human reviewed them. Do not invent published URLs or citations.\nReturn exactly one JSON object with recipe, labels, rationale, category and challenge_notes.\nrecipe has title, ingredients (strings), instructions (strings), equipment (strings),\ntime_minutes (integer or null), pantry_items (strings or null).\nUse 3\u20136 ingredients and 2\u20134 short steps. Keep the entire example under 180 words.\nEvery timing/tool/serving-context claim must be supported by the recipe body.\nPrefer vegetarian recipes; avoid food-safety-sensitive handling instructions.\nFor misleading-title: use Quick, Easy or Simple while total elapsed time exceeds 30\nminutes. Distinguish passive waiting from substantial active cooking projects.\nFor ambiguous: omit or explicitly contradict information so the correct answer is\nunclear alone. Do not add a decisive dessert, specialized tool or meal-prep cue.\nUse varied dishes and ingredients. Do not paraphrase an evaluation example.\nThe rationale must be concise, address all proposed labels and ignore title adjectives.\nTreat the following label policy as authoritative:\n{\"weeknight-30min\": \"Known total elapsed time <=30 minutes, including waiting; never infer speed from title adjectives.\", \"weekend-project\": \"A substantial cooking project taking >30 minutes; passive waiting alone does not qualify.\", \"needs-special-equipment\": \"Requires a specialized appliance, such as a blender, food processor, pasta machine, or waffle iron; ordinary kitchen tools do not qualify.\", \"meal-prep\": \"Explicitly suitable for preparing portions ahead; record recipe-grounded evidence.\", \"dessert\": \"Intended as dessert, not merely sweet.\", \"have-most-of-this\": \"Explicit pantry context covers >=80% of ingredient items; never assume the user's pantry. Dataset v1 uses exact normalized ingredient strings for matching.\", \"unclear\": \"Insufficient or contradictory evidence; exclusive of all other labels in v1.\"}\nRequested focus: misleading-title\nIndependent variation brief: A savory stuffed vegetable with substantial active preparation.\nRequired JSON schema: {\"$defs\": {\"Recipe\": {\"additionalProperties\": false, \"properties\": {\"title\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Title\", \"type\": \"string\"}, \"ingredients\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Ingredients\", \"type\": \"array\"}, \"instructions\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 60, \"minItems\": 1, \"title\": \"Instructions\", \"type\": \"array\"}, \"equipment\": {\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 30, \"title\": \"Equipment\", \"type\": \"array\"}, \"time_minutes\": {\"anyOf\": [{\"maximum\": 10080, \"minimum\": 1, \"type\": \"integer\"}, {\"type\": \"null\"}], \"title\": \"Time Minutes\"}, \"pantry_items\": {\"anyOf\": [{\"items\": {\"maxLength\": 2000, \"minLength\": 1, \"type\": \"string\"}, \"maxItems\": 100, \"type\": \"array\"}, {\"type\": \"null\"}], \"default\": null, \"title\": \"Pantry Items\"}}, \"required\": [\"title\", \"ingredients\", \"instructions\", \"equipment\", \"time_minutes\"], \"title\": \"Recipe\", \"type\": \"object\"}}, \"additionalProperties\": false, \"properties\": {\"recipe\": {\"$ref\": \"#/$defs/Recipe\"}, \"labels\": {\"items\": {\"enum\": [\"weeknight-30min\", \"weekend-project\", \"needs-special-equipment\", \"meal-prep\", \"dessert\", \"have-most-of-this\", \"unclear\"], \"type\": \"string\"}, \"maxItems\": 7, \"minItems\": 1, \"title\": \"Labels\", \"type\": \"array\"}, \"rationale\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Rationale\", \"type\": \"string\"}, \"category\": {\"enum\": [\"misleading-title\", \"ambiguous\"], \"title\": \"Category\", \"type\": \"string\"}, \"challenge_notes\": {\"maxLength\": 2000, \"minLength\": 1, \"title\": \"Challenge Notes\", \"type\": \"string\"}}, \"required\": [\"recipe\", \"labels\", \"rationale\", \"category\", \"challenge_notes\"], \"title\": \"Draft\", \"type\": \"object\"}\n"
+        }
+      ],
+      "prompt_sha256": "02ef7a21b97d7cfde568a95ff48533d447c257850d9c89350ecdfd037b852de2",
+      "model": "accounts/fireworks/models/llama-v3p3-70b-instruct",
+      "original": null,
+      "draft": null,
+      "raw_output": null,
+      "finish_reason": null,
+      "quality": {
+        "passed": false,
+        "errors": [
+          "Fireworks returned HTTP 404; check model access, credentials and quota"
+        ],
+        "warnings": [],
+        "version": "synthetic-quality-v1"
+      },
+      "review": null,
+      "history": [],
+      "error": "Fireworks returned HTTP 404; check model access, credentials and quota"
+    }
+  ],
+  "provider": "fireworks",
+  "requested_model": "accounts/fireworks/models/llama-v3p3-70b-instruct",
+  "prompt_version": "synthetic-fireworks-v1",
+  "temperature": 0.7,
+  "max_new_tokens": 800,
+  "automatic_retries": 0,
+  "training_exported": false
+}

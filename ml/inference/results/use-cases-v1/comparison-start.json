@@ -1,0 +1,47 @@
+{
+  "run_id": "21651a9b-99f2-42d7-8b86-d9dee3d777aa",
+  "kind": "playground-comparison",
+  "status": "queued",
+  "config": {
+    "recipe": {
+      "title": "Homemade Cheese Ravioli",
+      "ingredients": [
+        "flour",
+        "eggs",
+        "salt",
+        "optional water",
+        "ricotta",
+        "fresh herbs",
+        "Parmesan",
+        "pecorino Romano",
+        "pepper",
+        "nutmeg"
+      ],
+      "instructions": [
+        "Process the dough ingredients, knead briefly, and allow at least a half-hour rest.",
+        "Combine the cheese filling. Roll thin sheets with a pasta machine, portion filling, seal and cut.",
+        "Boil the filled pasta for 6\u20138 minutes. Uncooked portions may be frozen for later meals."
+      ],
+      "equipment": [
+        "food processor",
+        "pasta machine",
+        "pot"
+      ],
+      "time_minutes": 70,
+      "pantry_items": null
+    },
+    "models": [
+      "fireworks",
+      "base",
+      "sft",
+      "lora",
+      "qlora"
+    ],
+    "temperature": 0.0,
+    "max_new_tokens": 128
+  },
+  "created_at": "2026-09-09T19:48:33.774519+00:00",
+  "updated_at": "2026-09-09T19:48:33.774526+00:00",
+  "result": null,
+  "error": null
+}
