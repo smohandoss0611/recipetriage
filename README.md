@@ -2,6 +2,8 @@
 
 React + Vite + Material UI, FastAPI + Pydantic, PostgreSQL + SQLAlchemy, Docker Compose, pytest/Vitest and GitHub Actions.
 
+**Start here:** the [User Guide](USER_GUIDE.md) explains where to click, what each result means and what to do next in the Streamlit app. A [printable PDF](docs/user-guide/RecipeTriage_User_Guide.pdf) and [copy-and-paste starter dataset](docs/user-guide/sample-recipes.json) are included. It covers all seven workspaces, the Data Lab and Alignment Lab flows, training progress and common errors.
+
 Current phase: **Recipe product workflows and the complete learning/model lifecycle**. The [UC-01–UC-15 acceptance map](USE_CASES.md) covers implementation, exact setup commands and remaining model/data prerequisites. Read [HUMAN_LEARNING.md](HUMAN_LEARNING.md) for synthetic review, preferences, DPO and GRPO; [ADVANCED_ANALYSIS.md](ADVANCED_ANALYSIS.md) for layer experiments; [DEPLOYMENT.md](DEPLOYMENT.md) for measured export/quantization results; and [MODEL_REGISTRY.md](MODEL_REGISTRY.md) for versioning, lineage, staging, production gates and rollback.
 
 Data Lab now includes Synthetic Review. Alignment Lab includes Preference Pairs, DPO Training, GRPO Experiment and Reviewed QLoRA. Deployment includes Model Registry and deployment comparisons. Training and Evaluation retain the earlier experiments, QLoRA, LoRA, SFT, failure analysis, shortcut and baseline pages. Recipes now provides text/message/URL/screenshot intake, a saved searchable library, triage, explicit human correction and verified dataset export. Playground includes persistent side-by-side model comparison.
